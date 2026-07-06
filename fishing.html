@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Gulf Shores & Fort Morgan Fishing Guide — Species, Seasons & Charters | Good Tides Only</title>
+<meta name="description" content="Complete fishing guide for Gulf Shores, Fort Morgan, and Orange Beach — Cobia, King Mackerel, Speckled Trout, Redfish. Species, seasons, records, and the best spots on the Alabama Gulf Coast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+:root{
+  --sky:#e8f4f4; --sky-mid:#d0eaea; --teal:#2a8080; --teal-light:#3da8a0;
+  --teal-pale:#e0f2f0; --sand:#f7f0e6; --sand-mid:#ede3d4; --gold:#c8a040;
+  --text:#1a3030; --text-mid:#3a5555; --text-light:#6a8585;
+  --white:#ffffff; --off-white:#fafcfc; --ink:#0d1a1a; --navy:#1c2b4a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+
+/* UTIL BAR */
+.util-bar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--teal);display:flex;justify-content:space-between;align-items:center;padding:.45rem 3rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.util-bar a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
+.util-bar a:hover{color:white}
+.view-counter{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);padding:.3rem .8rem;border-radius:100px}
+.view-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s ease infinite;flex-shrink:0}
+
+/* NAV */
+nav{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,128,128,.1)}
+.nav-top{display:flex;justify-content:center;align-items:center;padding:.5rem 3rem;border-bottom:1px solid rgba(42,128,128,.06);position:relative;min-height:120px}
+.logo{text-decoration:none;display:flex;align-items:center;justify-content:center}
+.logo em{font-style:italic;color:var(--teal-light)}
+.logo-tagline{display:none}
+.nav-phone{position:absolute;left:3rem;font-family:'Lato',sans-serif;font-size:.65rem;color:var(--text-light)}
+.nav-book-top{position:absolute;right:3rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:var(--teal);color:white;padding:.5rem 1.2rem;text-decoration:none;border-radius:2px;transition:background .2s}
+.nav-book-top:hover{background:var(--teal-light)}
+.nav-bottom{display:flex;justify-content:center;padding:.5rem 3rem;overflow-x:auto}
+.nav-links{display:flex;gap:0;list-style:none;flex-wrap:nowrap}
+.nav-links a{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);text-decoration:none;transition:color .2s;padding:.4rem 1rem;white-space:nowrap}
+.nav-links a:hover{color:var(--teal)}
+
+/* SHARED */
+.eyebrow{font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-light);margin-bottom:1rem}
+.h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.2;color:var(--text);margin-bottom:1.5rem}
+.h2 em{font-style:italic;color:var(--teal)}
+.body-text{font-size:1.1rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1.1rem}
+.pill{padding:.4rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:var(--teal);color:white;padding:.9rem 2.2rem;text-decoration:none;border-radius:2px;transition:background .2s;cursor:pointer;border:none;display:inline-block}
+.btn-primary:hover{background:var(--teal-light)}
+.btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:var(--teal);padding:.9rem 2.2rem;border:1.5px solid var(--teal);text-decoration:none;border-radius:2px;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-outline:hover{background:var(--teal-pale)}
+
+/* HERO — SPLIT PANEL */
+.hero{min-height:90vh;padding-top:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#e8f2f0}
+.hero-split{position:absolute;inset:0;display:flex;align-items:stretch;padding:16px 24px 16px 24px;gap:14px;box-sizing:border-box}
+.hero-panel{position:relative;overflow:hidden;border-radius:10px;flex:1}
+.hero-panel-img{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;transition:transform 8s ease}
+.hero-panel:hover .hero-panel-img{transform:scale(1.04)}
+.hero-panel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.15) 100%)}
+.hero-panel-label{position:absolute;bottom:1.2rem;left:0;right:0;text-align:center;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero-content-overlay{position:relative;z-index:2;text-align:center;padding:2rem;max-width:700px}
+.hero-pill{padding:.38rem .85rem;background:rgba(255,255,255,.18);color:white;border-radius:100px;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px)}
+.hero-btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.85rem 2rem;text-decoration:none;border-radius:2px;transition:all .2s;font-weight:600}
+.hero-btn-primary:hover{background:var(--sky)}
+.hero-btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:white;padding:.85rem 2rem;border:1.5px solid rgba(255,255,255,.65);text-decoration:none;border-radius:2px;transition:all .2s}
+.hero-btn-outline:hover{background:rgba(255,255,255,.12);border-color:white}
+.hero-inner{position:relative;z-index:2;padding:2rem;display:flex;flex-direction:column;align-items:center;gap:2rem;max-width:900px;width:100%}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-dot{width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;animation:bounce 1.5s ease infinite}
+
+/* STRIP */
+.strip{background:var(--teal);display:flex;justify-content:center;flex-wrap:wrap}
+.strip-item{flex:1;min-width:120px;max-width:180px;padding:1.6rem 1.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.15)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic;color:white}
+.strip-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.3rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-text{padding:5rem 4rem;background:var(--sand);display:flex;flex-direction:column;justify-content:center}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.5rem}
+.feat{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mid)}
+.feat-dot{width:7px;height:7px;background:var(--teal-light);border-radius:50%;flex-shrink:0}
+.about-media{position:relative;overflow:hidden;min-height:400px}
+.about-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.about-media:hover img{transform:scale(1.04)}
+.about-badge{position:absolute;top:2rem;right:2rem;background:white;padding:1.2rem 1.5rem;box-shadow:0 8px 30px rgba(0,0,0,.1);text-align:center}
+.badge-num{font-family:'DM Serif Display',serif;font-size:2.2rem;font-style:italic;color:var(--teal);line-height:1}
+.badge-sub{font-family:'Lato',sans-serif;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light);margin-top:.2rem}
+
+/* BEACH BANNER */
+.beach-banner{background:var(--sky);padding:3.5rem 5rem;display:flex;align-items:center;justify-content:center;gap:3rem;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid);flex-wrap:wrap}
+.beach-num{font-family:'DM Serif Display',serif;font-size:5rem;font-style:italic;color:var(--teal);line-height:1}
+.beach-text h3{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text)}
+.beach-text p{font-size:1rem;color:var(--text-light);margin-top:.4rem;font-weight:300;line-height:1.6}
+
+/* QUOTE */
+.quote-block{padding:4rem 5rem;text-align:center;position:relative;overflow:hidden}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:5rem;line-height:1;opacity:.2;margin-bottom:.5rem}
+.quote-text{font-family:'DM Serif Display',serif;font-style:italic;line-height:1.65}
+.quote-attr{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1.2rem;opacity:.6}
+
+/* GALLERY */
+.gallery-section{background:var(--off-white);padding:6rem 0}
+.gallery-header{padding:0 5rem;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:flex-end}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 280px;gap:4px}
+.gal-item{overflow:hidden;cursor:pointer;position:relative}
+.gal-item:first-child{grid-row:1/3}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal-item:hover img{transform:scale(1.04)}
+.gal-overlay{position:absolute;inset:0;background:rgba(42,128,128,0);transition:background .3s}
+.gal-item:hover .gal-overlay{background:rgba(42,128,128,.15)}
+.gal-caption{position:absolute;bottom:1rem;left:1.2rem;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:white;background:rgba(26,48,48,.7);padding:.3rem .7rem;border-radius:2px;opacity:0;transition:opacity .3s}
+.gal-item:hover .gal-caption{opacity:1}
+
+/* ARRIVAL */
+.arrival{background:var(--sand);padding:6rem 5rem}
+.arrival-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1200px;margin:0 auto;align-items:center}
+.info-card{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px;transition:border-color .2s}
+.info-card:hover{border-color:var(--teal-light)}
+.info-card-icon{font-size:1.4rem;margin-bottom:.6rem;display:block}
+.info-card-title{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.info-card-body{font-size:.92rem;color:var(--text-light);line-height:1.6;font-weight:300}
+
+/* ROOMS */
+.rooms{background:white;padding:6rem 5rem}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.room-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.room-card:hover{border-color:var(--teal-light);box-shadow:0 8px 30px rgba(42,128,128,.08);transform:translateY(-3px)}
+.room-icon{font-size:1.8rem;margin-bottom:1rem;display:block}
+.room-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:.4rem}
+.room-size{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.8rem}
+.room-details{font-size:.92rem;color:var(--text-light);line-height:1.7;font-weight:300}
+
+/* AMENITIES */
+.amenities{background:var(--sky);padding:6rem 5rem}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.amen-card{background:white;padding:1.8rem 1.5rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s;text-align:center}
+.amen-card:hover{border-color:var(--teal-light);box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.amen-icon{font-size:1.5rem;margin-bottom:.7rem;display:block}
+.amen-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:.35rem;font-weight:700}
+.amen-desc{font-size:.85rem;color:var(--text-light);line-height:1.5;font-weight:300}
+
+/* DOG SECTION */
+.dogs{background:white;padding:6rem 5rem}
+.dogs-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+.dog-tip{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--sky-mid)}
+.dog-tip:last-child{border-bottom:none}
+.dog-tip-icon{font-size:1.2rem;flex-shrink:0}
+.dog-tip-text strong{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem}
+.dog-tip-text span{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+
+/* CALENDAR */
+.calendar-section{background:var(--sand);padding:6rem 5rem}
+.cal-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:3rem}
+.cal-wrap{background:white;border:1px solid var(--sky-mid);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.cal-header{background:var(--teal);color:white;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem}
+.cal-month-title{font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic}
+.cal-nav{background:rgba(255,255,255,.2);border:none;color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.cal-nav:hover{background:rgba(255,255,255,.35)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-dow{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);border-bottom:1px solid var(--sky-mid)}
+.cal-day{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.8rem;cursor:pointer;min-height:36px;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s}
+.cal-day.other-month{color:var(--sky-mid)}
+.cal-day.booked{background:#fee2e2;color:#991b1b;text-decoration:line-through;cursor:not-allowed}
+.cal-day.available:hover{background:var(--teal-pale);color:var(--teal)}
+.cal-day.selected{background:var(--teal);color:white;border-radius:50%}
+.cal-day.today{font-weight:700;color:var(--teal)}
+.cal-legend{display:flex;gap:1.5rem;padding:1rem 1.5rem;border-top:1px solid var(--sky-mid);font-family:'Lato',sans-serif;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light)}
+.legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.platform-badges{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.platform-badge{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border:1.5px solid var(--sky-mid);border-radius:2px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:all .2s}
+.platform-badge:hover{border-color:var(--teal);color:var(--teal)}
+.platform-badge-icon{font-size:1.1rem}
+.cal-sync-note{background:var(--teal-pale);border:1px solid var(--teal-light);border-radius:2px;padding:1rem 1.5rem;margin-top:1rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em;color:var(--teal);display:flex;align-items:flex-start;gap:.6rem}
+
+/* FAQ */
+.faq-section{background:white;padding:6rem 5rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.faq-item{border:1px solid var(--sky-mid);padding:1.5rem;cursor:pointer;transition:border-color .2s}
+.faq-item:hover,.faq-item.open{border-color:var(--teal-light)}
+.faq-q{font-family:'Lato',sans-serif;font-size:.75rem;letter-spacing:.05em;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.faq-chevron{font-size:.8rem;color:var(--teal);transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{font-size:.88rem;color:var(--text-light);line-height:1.7;font-weight:300;margin-top:.8rem;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* HISTORY */
+.history-section{background:var(--ink);padding:6rem 5rem;color:white}
+.history-inner{max-width:900px;margin:0 auto}
+.timeline-line{position:absolute;left:80px;top:0;bottom:0;width:1px;background:rgba(61,168,160,.2)}
+.tl-row{display:grid;grid-template-columns:80px 1fr;gap:2rem;padding-bottom:2.5rem;position:relative}
+.tl-year{text-align:right;padding-top:.2rem;font-family:'DM Serif Display',serif;font-size:1rem;font-style:italic;color:var(--teal-light,var(--teal-light))}
+.tl-dot{position:absolute;left:73px;top:.5rem;width:13px;height:13px;border-radius:50%}
+.tl-label{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light,var(--teal-light));margin-bottom:.4rem}
+.tl-body{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.7;font-weight:300}
+.hurricane-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(201,149,107,.15);border:1px solid rgba(201,149,107,.3);padding:.2rem .6rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:#c9956b;margin-top:.5rem}
+
+/* GUESTBOOK */
+.guestbook{background:var(--teal-pale);padding:6rem 5rem;border-top:1px solid var(--sky-mid)}
+.gb-form{background:white;border:1px solid var(--sky-mid);padding:2rem;margin-top:2rem;border-radius:2px}
+.gb-input{width:100%;border:1px solid var(--sky-mid);padding:.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;border-radius:2px;margin-bottom:1rem;outline:none;transition:border-color .2s}
+.gb-input:focus{border-color:var(--teal-light)}
+.gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.gb-entries{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem}
+.gb-entry{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px}
+.gb-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.gb-entry-name{font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.gb-entry-date{font-family:'Lato',sans-serif;font-size:.6rem;color:var(--text-light)}
+.gb-entry-text{font-size:.92rem;color:var(--text-mid);line-height:1.7;font-style:italic;font-weight:300}
+
+/* REVIEWS */
+.reviews{background:white;padding:6rem 5rem}
+.review-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
+.rating-big{font-family:'DM Serif Display',serif;font-size:4.5rem;font-style:italic;color:var(--teal);line-height:1}
+.rating-sub{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;position:relative;transition:all .3s}
+.review-card:hover{border-color:var(--teal-light);box-shadow:0 8px 30px rgba(42,128,128,.08)}
+.rev-stars{color:#f59e0b;font-size:.8rem;letter-spacing:.05em;margin-bottom:.7rem}
+.rev-meta{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.06em;color:var(--text-light);margin-bottom:.8rem}
+.rev-text{font-size:1rem;line-height:1.8;color:var(--text-mid);font-weight:300;margin-bottom:1.2rem;font-style:italic}
+.rev-author{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.rev-quote{position:absolute;top:1rem;right:1.5rem;font-family:'DM Serif Display',serif;font-size:4rem;color:var(--teal-pale);line-height:1;font-style:italic}
+.rating-cats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--sky-mid)}
+.rc{text-align:center}
+.rc-score{font-family:'DM Serif Display',serif;font-size:1.5rem;font-style:italic;color:var(--teal)}
+.rc-label{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.guest-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.gtag{padding:.3rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em}
+
+/* THINGS TO DO */
+.ttd{background:var(--sky);padding:6rem 5rem}
+.ttd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+.ttd-card{background:white;padding:2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.ttd-card:hover{border-color:var(--teal-light);box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.ttd-icon{font-size:1.8rem;margin-bottom:.8rem;display:block}
+.ttd-name{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.ttd-desc{font-size:.88rem;color:var(--text-light);line-height:1.6;font-weight:300;margin-bottom:.8rem}
+.ttd-link{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-pale);transition:border-color .2s}
+.ttd-link:hover{border-color:var(--teal)}
+
+/* HOST */
+.host{background:var(--sand);padding:5rem 5rem;display:flex;align-items:center;justify-content:center}
+.host-inner{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;max-width:800px}
+.host-avatar{width:100px;height:100px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0}
+.host-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.host-title{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.8rem}
+.host-bio{font-size:.95rem;color:var(--text-mid);line-height:1.75;font-weight:300}
+
+/* LOCATION */
+.location{display:grid;grid-template-columns:1fr 1fr}
+.loc-text{background:var(--sand);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.loc-items{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.loc-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem;background:white;border:1px solid var(--sky-mid);border-radius:2px;transition:border-color .2s}
+.loc-item:hover{border-color:var(--teal-light)}
+.loc-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
+.loc-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem;font-weight:700}
+.loc-desc{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+.loc-map{min-height:500px}
+.loc-map iframe{width:100%;height:100%;min-height:500px;border:none}
+
+/* SOCIAL PROOF BAR */
+.spbar{background:#fef9f0;border-top:1px solid #f0e0c0;border-bottom:1px solid #f0e0c0;padding:1rem 3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+.spbar-item{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#7a6050}
+
+/* BOOK */
+.book{background:var(--teal);padding:7rem 5rem;text-align:center;position:relative;overflow:hidden}
+.book-h{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);color:white;line-height:1.1;margin-bottom:.7rem}
+.book-h em{font-style:italic;color:rgba(255,255,255,.75)}
+.book-sub{font-size:1.1rem;color:rgba(255,255,255,.7);font-weight:300;margin-bottom:2rem}
+.book-rules{display:flex;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.book-rule{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:.4rem}
+.book-rule::before{content:'';width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%;flex-shrink:0}
+.book-btns{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-white{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.9rem 2.2rem;border:none;cursor:pointer;border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-white:hover{background:var(--off-white)}
+.btn-woutline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:white;padding:.9rem 2.2rem;border:1.5px solid rgba(255,255,255,.5);border-radius:2px;text-decoration:none;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-woutline:hover{background:rgba(255,255,255,.1);border-color:white}
+.book-note{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.book-note a{color:rgba(255,255,255,.7);text-decoration:none}
+
+/* FOOTER */
+footer{background:var(--text);padding:4rem 5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.ft-brand .logo{font-size:1.4rem;display:block;margin-bottom:1rem;color:var(--sky,#e8f4f4)}
+.ft-tagline{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+.ft-col h4{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.2rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{padding:.3rem 0;font-size:.88rem;color:rgba(255,255,255,.25)}
+.ft-col ul li a{color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.ft-col ul li a:hover{color:var(--teal-light)}
+.footer-bottom{background:#111c1c;padding:1rem 5rem;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;color:rgba(255,255,255,.2)}
+
+/* WAVE HOVER ANIMATIONS */
+@keyframes wave1{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes wave2{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes fadeWaveIn{from{opacity:0}to{opacity:1}}
+
+.ab-photo-main,.ab-photo-sm{position:relative;overflow:hidden}
+.ab-photo-main::after,.ab-photo-sm::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;
+  width:200%;height:40px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30 L1200 60 L0 60 Z' fill='rgba(42,128,128,0.35)'/%3E%3C/svg%3E") repeat-x;
+  background-size:600px 40px;
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;
+  z-index:3;
+}
+.ab-photo-main:hover::after,.ab-photo-sm:hover::after{
+  opacity:1;
+  animation:wave1 3s linear infinite;
+}
+
+/* Deck card gets teal shimmer */
+.ab-photo-main:hover,.ab-photo-sm:hover{
+  box-shadow:0 8px 32px rgba(42,128,128,.25);
+}
+
+/* Room stat badges bigger */
+.ab-room-stats{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.ab-stat{font-size:.88rem !important;color:var(--text-mid);display:flex;align-items:center;gap:.6rem;line-height:1.7}
+
+/* PHOTO TOUR */
+.ab-room{display:grid;grid-template-columns:1fr 1.8fr;gap:4rem;padding:3rem 5rem;border-bottom:1px solid var(--sky-mid);align-items:start}
+.ab-room:last-of-type{border-bottom:none}
+.ab-room-text{padding-top:.5rem;position:sticky;top:120px}
+.ab-room-name{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text);margin-bottom:.5rem;line-height:1.2}
+.ab-room-desc{font-size:.9rem;color:var(--text-light);line-height:1.6;margin-bottom:1rem;font-weight:300}
+.ab-room-amenities{font-size:.92rem;color:var(--text-mid);line-height:1.9;font-weight:300}
+.ab-dot{margin:0 .3rem;color:var(--text-light)}
+.ab-room-stats{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.ab-stat{font-family:'Lato',sans-serif;font-size:.82rem;color:var(--text-mid);display:flex;align-items:center;gap:.5rem;line-height:1.7}
+.ab-room-photos{display:flex;flex-direction:column;gap:4px}
+.ab-photo-main{height:380px;overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
+.ab-photo-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-main:hover img{transform:scale(1.03)}
+.ab-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ab-photo-sm{height:180px;overflow:hidden;border-radius:4px;cursor:pointer;position:relative}
+.ab-photo-sm img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-sm:hover img{transform:scale(1.04)}
+
+/* THUMBNAILS */
+.thumb-btn{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:pointer;flex-shrink:0}
+.thumb-btn > img,.thumb-btn > div:first-child{width:72px;height:72px;object-fit:cover;border-radius:8px;border:2px solid transparent;transition:border-color .2s}
+.thumb-btn.active-thumb > img,.thumb-btn.active-thumb > div:first-child{border-color:var(--text)!important}
+.thumb-btn > span{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);white-space:nowrap}
+
+/* SHARE MODAL */
+.share-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1rem;border:1.5px solid var(--sky-mid);border-radius:8px;background:white;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.08em;color:var(--text);text-decoration:none;transition:all .2s}
+.share-btn:hover{border-color:var(--text);background:var(--sky)}
+
+@media(max-width:900px){
+  .ab-room{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
+  .ab-room-text{position:static}
+  .ab-photo-main{height:260px}
+  .ab-photo-sm{height:130px}
+}
+
+/* ROOM TOUR (OLD - UNUSED) */
+.room-pill{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1rem;border:1.5px solid var(--sky-mid);background:white;color:var(--text-mid);cursor:pointer;border-radius:100px;transition:all .2s;white-space:nowrap}
+.room-pill:hover,.room-pill.active{background:var(--teal);color:white;border-color:var(--teal)}
+.room-tour-section{padding:2.5rem 5rem;border-bottom:1px solid var(--sky-mid)}
+.room-tour-section:last-child{border-bottom:none}
+.room-tour-header{display:flex;align-items:flex-start;gap:1.2rem;margin-bottom:1.5rem}
+.room-tour-icon{font-size:2rem;flex-shrink:0;margin-top:.1rem}
+.room-tour-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.room-tour-meta{font-family:'Lato',sans-serif;font-size:.8rem;color:var(--text-light);line-height:1.7}
+.room-scroll-track{position:relative;overflow:hidden;margin-bottom:1rem}
+.room-scroll-inner{display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.room-scroll-inner::-webkit-scrollbar{display:none}
+.room-photo-card{flex-shrink:0;width:340px;height:240px;position:relative;cursor:pointer;overflow:hidden;border-radius:2px}
+.room-photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.room-photo-card:hover img{transform:scale(1.04)}
+.room-photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,48,48,.75));color:white;padding:1.5rem .8rem .6rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.scroll-btn{position:absolute;top:50%;transform:translateY(-50%);background:white;border:1px solid var(--sky-mid);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);transition:all .2s;z-index:2;line-height:1}
+.scroll-btn:hover{background:var(--teal);color:white;border-color:var(--teal)}
+.scroll-left{left:8px}
+.scroll-right{right:8px}
+.room-tour-stats{display:flex;flex-wrap:wrap;gap:.5rem}
+.room-stat{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.06em;color:var(--text-mid);background:var(--off-white);border:1px solid var(--sky-mid);padding:.35rem .8rem;border-radius:100px}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:999;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:90vw;max-height:90vh;object-fit:contain}
+.lb-close{position:absolute;top:1.5rem;right:2rem;color:rgba(255,255,255,.5);font-size:1.8rem;cursor:pointer;font-weight:300;line-height:1;transition:color .2s}
+.lb-close:hover{color:white}
+
+/* WEATHER */
+.weather-widget{background:var(--teal);color:white;padding:1.5rem 3rem;display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
+.wx-item{text-align:center}
+.wx-val{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic}
+.wx-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.2rem}
+
+/* ANIMATIONS */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-phone,.nav-book-top{display:none}
+  .hero-split{padding:0;gap:0;border-radius:0}
+  .hero-panel{border-radius:0}
+  .hero-panel:last-child{display:none}
+  .util-bar{padding:.4rem 1rem;font-size:.55rem}
+  .about,.location,.arrival-grid,.dogs-grid,.cal-intro{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item:first-child{grid-row:auto;grid-column:auto}
+  .amen-grid{grid-template-columns:1fr 1fr}
+  .rooms-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .ttd-grid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;padding:3rem 2rem}
+  .beach-banner{flex-direction:column;gap:1.5rem;text-align:center;padding:3rem 2rem}
+  .host-inner{grid-template-columns:1fr;text-align:center}
+  .host-avatar{margin:0 auto}
+  .strip{flex-wrap:wrap}.strip-item{flex:0 0 33%}
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+  border-radius:2px;
+}
+
+/* Calendar half-day shading */
+.cal-day.checkin-day{
+  background:linear-gradient(to bottom right, white 50%, rgba(42,128,128,.18) 50%);
+  color:var(--text-mid);
+}
+.cal-day.checkout-day{
+  background:linear-gradient(to bottom right, rgba(42,128,128,.18) 50%, white 50%);
+  color:var(--text-mid);
+}
+.cal-day.booked{
+  background:rgba(201,149,107,.12);
+  color:var(--text-light);
+  font-weight:400;
+}
+.cal-day.booked::after{
+  content:'';
+  position:absolute;
+  inset:2px;
+  border-radius:2px;
+  background:repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 3px,
+    rgba(201,149,107,.15) 3px,
+    rgba(201,149,107,.15) 4px
+  );
+}
+.cal-day{position:relative;}
+
+@keyframes wA{0%,100%{height:3px}50%{height:12px}}
+</style>
+<style>
+.story-hero{background:linear-gradient(180deg,#0d2020 0%,#1a3535 100%);padding:5rem 5rem 4rem;border-bottom:1px solid var(--sky-mid)}
+.story-hero .eyebrow{color:rgba(61,168,160,.7)}
+.story-hero h1{font-family:"DM Serif Display",serif;font-size:clamp(2rem,4vw,3rem);color:white;font-style:italic;margin:.3rem 0 1rem}
+.story-hero p{max-width:600px;color:rgba(255,255,255,.55);font-size:1rem;line-height:1.85;font-weight:300}
+.story-nav{background:var(--ink);padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.story-nav a{font-family:"Lato",sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);padding:1rem 0;border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
+.story-nav a:hover,.story-nav a.active{color:var(--teal-light);border-bottom-color:var(--teal)}
+.story-back{margin-left:auto;background:var(--teal);color:white;padding:.5rem 1.2rem;border-radius:100px;font-family:"Lato",sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.story-back:hover{background:var(--teal);color:white}
+</style>
+<link rel="canonical" href="https://goodtidesonly.com/fishing.html">
+
+<style>
+@media(max-width:768px){
+  section[style*="padding:5rem 5rem"],section[style*="padding:6rem 5rem"],
+  section[style*="padding:4rem 5rem"]{padding:3rem 1.5rem !important}
+  div[style*="display:grid;grid-template-columns:repeat(3"],
+  div[style*="display:grid;grid-template-columns:repeat(4"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr 1fr"],
+  div[style*="display:grid;grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important}
+  nav[style*="padding:0 5rem"]{padding:0 1rem !important}
+  nav[style*="gap:2rem"]{gap:.5rem !important}
+  .story-hero{padding:3rem 1.5rem 2rem !important}
+  .story-back{padding:.4rem .8rem !important;font-size:.55rem !important}
+  footer[style*="padding:3rem 5rem"]{padding:2rem 1.5rem !important}
+  footer div[style*="grid-template-columns:1fr 1fr 1fr"]{
+    grid-template-columns:1fr !important;gap:1.5rem !important}
+}
+@media(max-width:480px){
+  div[style*="display:flex"][style*="gap:3rem"],
+  div[style*="display:flex"][style*="gap:2rem"]{
+    flex-direction:column !important;gap:1rem !important;align-items:flex-start !important}
+}
+</style>
+<!-- Google Analytics 4 — replace G-K3KTQ02PXQ with your actual ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3KTQ02PXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3KTQ02PXQ');
+</script>
+</head>
+<body><nav style="background:var(--ink);padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:100">
+  <a href="index.html" style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:white;text-decoration:none;padding:1rem 0;border-bottom:2px solid transparent;white-space:nowrap">Good Tides Only</a>
+  <a href="the-place.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">The Place</a>
+  <a href="history.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">History</a>
+  <a href="fishing.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);border-bottom:2px solid var(--teal);padding:1rem 0;text-decoration:none">Fishing</a>
+  <a href="explore.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Explore</a>
+  <a href="our-story.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Our Story</a>
+  <a href="index.html#calendar" style="margin-left:auto;background:var(--teal);color:white;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap">Book Now</a>
+</nav>
+
+<div class="story-hero">
+  <p class="eyebrow">Red Snapper Capital of the World</p>
+  <h1>Fishing</h1>
+  <p>More recreationally caught red snapper are landed in Orange Beach than anywhere else on Earth. The Gulf's blue marlin record was set here in 2023. Fort Morgan Pass is one of the most productive sight-fishing spots on the entire Gulf Coast. This is serious fishing country.</p>
+</div>
+
+<section id="fishing" style="background:var(--sand);padding:5rem 5rem;border-top:1px solid var(--sky-mid)">
+  <p class="eyebrow" style="text-align:center">Cast a Line</p>
+  <h2 class="h2" style="text-align:center">World-Class <em>Fishing</em> Right Here</h2>
+  <p style="text-align:center;max-width:680px;margin:.5rem auto 3rem;font-size:1rem;color:var(--text-light);line-height:1.85;font-weight:300">Fort Morgan Peninsula sits at the crossroads of Mobile Bay and the Gulf — one of the most productive fishing grounds on the entire Gulf Coast. Inshore, nearshore, offshore, pier, or surf — you're a short walk from the beach and minutes from all of it.</p>
+
+  <!-- CAPTAIN STEVE MARTIN — LOCAL CONNECTION -->
+  <div style="background:linear-gradient(135deg,#0d2a2a,#1a4040);border-radius:8px;padding:2rem 2.5rem;margin-bottom:3rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center">
+    <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#1a6060);display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0">⚓</div>
+    <div>
+      <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.3rem">Local Roots Run Deep</div>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:white;margin-bottom:.5rem">A Fort Morgan Family Connection</h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.75;font-weight:300">Kimberly's father has lived on Fort Morgan Peninsula his entire life. An avid fisherman and a familiar face in the community, he knows these waters the way only a lifelong local can — every productive spot, every seasonal pattern, when the Cobia are running through the pass, where the reds stack up at the Dixie Bar in fall. That local knowledge is woven into how Good Tides Only thinks about this place. If you want a genuine insider's perspective on where they're biting and what's running during your stay, ask Kimberly.</p>
+    </div>
+  </div>
+
+  <!-- FISH SPECIES — DETAILED -->
+  <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:.4rem">What's in the Water</h3>
+  <p style="font-size:.85rem;color:var(--text-light);margin-bottom:1.5rem">Fort Morgan's position at the bay-meets-gulf convergence creates one of the most diverse fisheries on the Gulf Coast. Here's what you can target by season and location.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem">
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#0d2a2a,#1a4040);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Red Snapper</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">June–Aug · Offshore Reefs</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">The crown jewel of Gulf fishing. Federal season is limited and fiercely anticipated — charters fill months in advance. Vivid red color, powerful fight, and absolutely outstanding on the plate. Caught on nearshore wrecks and artificial reefs using cut or live bait, bottom fishing in 40–100 ft.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Book your snapper trip before you book your vacation. The best dates go in January.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#c8a040,#a67f2e);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Redfish (Red Drum)</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Year-Round · Inshore</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">The heartbeat of Fort Morgan inshore fishing. Found in the bays, grass flats, marsh edges, and near the pass year-round. The <strong>Dixie Bar</strong> — a legendary sandbar at the mouth of the bay — is famous for stacked bull redfish, especially in fall. Fight hard, taste great.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Fish the outgoing tide at the Dixie Bar in September and October. Live shrimp or mullet. The reds pile up there like nowhere else on the coast.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#2a8080,#1a5a5a);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Speckled Sea Trout</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Spring & Fall · Back Bay</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">Most popular inshore species on the Alabama coast — locals call them "specks." Found in Mobile Bay's grass flats and around Little Lagoon. Spring and fall are prime. Early morning is best. Light tackle, live shrimp, or soft plastics.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Fish Little Lagoon Pass at first light in May. Mo's Landing on Fort Morgan Road (Gulf Shores, AL) has a public pier right there.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#1c2b4a,#0f1829);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Cobia</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">March–May · The Pass</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">The spring Cobia run through Mobile Bay Pass is legendary among Gulf Coast anglers. These powerful fish — often 30–60 lbs — cruise near the surface around buoys and structure. Sight-fishing for Cobia at the pass is a bucket-list Gulf experience. They're curious and aggressive.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Stand on the Fort Morgan Historic Site waterfront in late March. Watch the boats — where they're circling is where the cobia are running.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#0d2a2a,#1a4040);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Flounder</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Fall · Passes & Beach</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">Flat, camouflaged, and absolutely delicious. Flounder pile up near structure and at passes during fall migration. Can be caught surf fishing from the beach near the pass, or from the Fort Morgan Pier. One of the best eating fish in the Gulf.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Gigging flounder at night with a light is a Fort Morgan tradition. Ask Captain Steve about it.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#1a6060,#134e4a);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">King & Spanish Mackerel</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Spring–Fall · Nearshore</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">Fast, silver, and electric on light tackle. Spanish Mackerel are the most accessible — caught trolling near the pass and on nearshore reefs with small spoons. King Mackerel run larger (up to 40+ lbs) and are a serious target from spring through fall on wire leader rigs with live bait.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Kings and Specks are often running at the same time near the pass. A 3-hour nearshore trip in April is one of the best-value charters you can book.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#c8a040,#a67f2e);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Grouper & Amberjack</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Spring–Summer · Offshore</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">Trophy offshore species. Grouper live deep on structure and artificial reefs — bottom fishing with cut bait. Amberjack (locals call them "reef donkeys") are caught near the same structures and pull incredibly hard. Both are outstanding table fish.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Alabama has extensive artificial reef programs — hundreds of structures offshore. Your captain will know which ones are producing.</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#1c2b4a,#0f1829);padding:.8rem 1rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:white">Sheepshead & Black Drum</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem">Winter & Spring · Structure</div>
+      </div>
+      <div style="padding:1rem">
+        <p style="font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.6rem">Sheepshead ("convict fish" for their stripes) love pilings, jetties, and structure near the pass. Require finesse — they're notorious bait stealers. Black Drum are their bigger, stronger cousins. Both are exceptional winter targets when offshore fishing slows down.</p>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal);letter-spacing:.06em"><strong>Local tip:</strong> Fiddler crabs are the top bait for sheepshead. Fish the pilings at the Fort Morgan Pier in February — they stack up there.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SEASONAL CALENDAR -->
+  <div style="margin-bottom:3rem">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:.3rem">When to Target What — Monthly Calendar</h3>
+    <p style="font-size:.82rem;color:var(--text-light);margin-bottom:1.2rem">Fort Morgan fishes year-round. Here's what's hot each month.</p>
+    <div style="background:white;border:1px solid var(--sky-mid);border-radius:6px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase">
+        <div style="padding:.5rem .6rem;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Species</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Jan</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Feb</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Mar</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Apr</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">May</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Jun</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Jul</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Aug</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Sep</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Oct</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid)">Nov</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light)">Dec</div>
+      </div>
+      <!-- rows: 0=off, 1=fair, 2=good, 3=prime -->
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Red Snapper</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Redfish</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Speckled Trout</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Cobia</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Flounder</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">King/Spanish Mackerel</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Grouper/Amberjack</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px repeat(12,1fr);border-top:1px solid var(--sky-mid)">
+        <div style="padding:.5rem .6rem;background:white;color:var(--text-mid);border-right:1px solid var(--sky-mid);font-size:.7rem;font-weight:600">Sheepshead/Blk Drum</div>
+        <div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#16a34a;color:white;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:var(--sky);color:var(--text-light);border-right:1px solid var(--sky-mid);font-size:.7rem"></div><div style="padding:.5rem .3rem;text-align:center;background:#bbf7d0;color:#166534;border-right:1px solid var(--sky-mid);font-size:.7rem">●</div>
+      </div>
+    <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:1rem;font-size:.68rem;color:var(--text-light)">
+      <span><span style="display:inline-block;width:10px;height:10px;background:#16a34a;border-radius:2px;margin-right:.3rem"></span>Prime</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#bbf7d0;border-radius:2px;margin-right:.3rem"></span>Good</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#fef3c7;border-radius:2px;margin-right:.3rem"></span>Fair</span>
+    </div>
+    </div>
+  </div>
+
+</section>
+      
+<script>
+(function(){
+
+  // ── 1. CLIPBOARD WATERMARK ────────────────────────────────────────
+  document.addEventListener('copy', function(e){
+    var sel = window.getSelection();
+    if(!sel || sel.isCollapsed) return;
+    var text = sel.toString();
+    if(text.length > 80){
+      var watermark = text + '\n\n— © 2026 Good Tides LLC · <a href="https://www.instagram.com/onlygoodtides" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.25);text-decoration:none">📸 @onlygoodtides</a> · goodtidesonly.com · All rights reserved. Unauthorized reproduction prohibited.';
+      e.clipboardData.setData('text/plain', watermark);
+      e.preventDefault();
+    }
+  });
+
+  // ── 2. DISABLE KEYBOARD SHORTCUTS ────────────────────────────────
+  document.addEventListener('keydown', function(e){
+    var ctrl = e.ctrlKey || e.metaKey;
+    if(ctrl && (
+      e.key === 'u' ||   // view-source
+      e.key === 's' ||   // save page
+      e.key === 'p' ||   // print (captures content)
+      e.key === 'a'      // select all
+    )){
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // ── 3. DISABLE RIGHT-CLICK EVERYWHERE ─────────────────────────────
+  document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+    return false;
+  });
+
+  // ── 4. CSS USER-SELECT: NONE on original narrative sections ────────
+  // Applied only to creative/narrative content — not to practical info
+  // (phone numbers, addresses, pricing etc. remain selectable)
+  var protectedIds = [
+    'convergence',   // the musing
+    'sand',          // the sand origin story
+    'the-gulf',      // the gulf water story
+    'lagoon',        // the little lagoon section
+    'stargazing',    // constellation descriptions
+    'history-maps',  // historical map narratives
+    'fort',          // fort morgan story
+    'history',       // timeline narrative
+  ];
+
+  var style = document.createElement('style');
+  var rules = protectedIds.map(function(id){
+    return '#' + id + ' p, #' + id + ' .h2, #' + id + ' h2, #' + id + ' h3 { ' +
+      '-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+  }).join('\n');
+
+  // Also protect the convergence musing standalone divs
+  rules += '\n[data-protected="true"] { -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+
+  style.textContent = rules;
+  document.head.appendChild(style);
+
+  // ── 5. IMAGE PROTECTION ───────────────────────────────────────────
+  document.addEventListener('dragstart', function(e){
+    if(e.target.tagName === 'IMG') e.preventDefault();
+  });
+
+  // Disable print screen notification (can't prevent but can detect)
+  // Add CSS to hide content in print
+  var printStyle = document.createElement('style');
+  printStyle.textContent = '@media print { body { display:none !important; } }';
+  document.head.appendChild(printStyle);
+
+})();
+</script>
+</body>
+</html>

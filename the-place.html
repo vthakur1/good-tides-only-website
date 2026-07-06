@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Gulf Shores & Fort Morgan Peninsula — the quiet end of Gulf Shores, Alabama — Sand, Water & Gulf Views | Good Tides Only</title>
+<meta name="description" content="Fort Morgan Peninsula sits at the quiet end of Gulf Shores, Alabama — 32 miles of white sand, warm turquoise water, and the most uncrowded stretch of beach between Gulf Shores and Orange Beach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+:root{
+  --sky:#e8f4f4; --sky-mid:#d0eaea; --teal:#2a8080; --teal-light:#3da8a0;
+  --teal-pale:#e0f2f0; --sand:#f7f0e6; --sand-mid:#ede3d4; --gold:#c8a040;
+  --text:#1a3030; --text-mid:#3a5555; --text-light:#6a8585;
+  --white:#ffffff; --off-white:#fafcfc; --ink:#0d1a1a; --navy:#1c2b4a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+
+/* UTIL BAR */
+.util-bar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--teal);display:flex;justify-content:space-between;align-items:center;padding:.45rem 3rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.util-bar a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
+.util-bar a:hover{color:white}
+.view-counter{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);padding:.3rem .8rem;border-radius:100px}
+.view-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s ease infinite;flex-shrink:0}
+
+/* NAV */
+nav{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,128,128,.1)}
+.nav-top{display:flex;justify-content:center;align-items:center;padding:.5rem 3rem;border-bottom:1px solid rgba(42,128,128,.06);position:relative;min-height:120px}
+.logo{text-decoration:none;display:flex;align-items:center;justify-content:center}
+.logo em{font-style:italic;color:var(--teal-light)}
+.logo-tagline{display:none}
+.nav-phone{position:absolute;left:3rem;font-family:'Lato',sans-serif;font-size:.65rem;color:var(--text-light)}
+.nav-book-top{position:absolute;right:3rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:var(--teal);color:white;padding:.5rem 1.2rem;text-decoration:none;border-radius:2px;transition:background .2s}
+.nav-book-top:hover{background:var(--teal-light)}
+.nav-bottom{display:flex;justify-content:center;padding:.5rem 3rem;overflow-x:auto}
+.nav-links{display:flex;gap:0;list-style:none;flex-wrap:nowrap}
+.nav-links a{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);text-decoration:none;transition:color .2s;padding:.4rem 1rem;white-space:nowrap}
+.nav-links a:hover{color:var(--teal)}
+
+/* SHARED */
+.eyebrow{font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-light);margin-bottom:1rem}
+.h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.2;color:var(--text);margin-bottom:1.5rem}
+.h2 em{font-style:italic;color:var(--teal)}
+.body-text{font-size:1.1rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1.1rem}
+.pill{padding:.4rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:var(--teal);color:white;padding:.9rem 2.2rem;text-decoration:none;border-radius:2px;transition:background .2s;cursor:pointer;border:none;display:inline-block}
+.btn-primary:hover{background:var(--teal-light)}
+.btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:var(--teal);padding:.9rem 2.2rem;border:1.5px solid var(--teal);text-decoration:none;border-radius:2px;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-outline:hover{background:var(--teal-pale)}
+
+/* HERO — SPLIT PANEL */
+.hero{min-height:90vh;padding-top:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#e8f2f0}
+.hero-split{position:absolute;inset:0;display:flex;align-items:stretch;padding:16px 24px 16px 24px;gap:14px;box-sizing:border-box}
+.hero-panel{position:relative;overflow:hidden;border-radius:10px;flex:1}
+.hero-panel-img{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;transition:transform 8s ease}
+.hero-panel:hover .hero-panel-img{transform:scale(1.04)}
+.hero-panel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.15) 100%)}
+.hero-panel-label{position:absolute;bottom:1.2rem;left:0;right:0;text-align:center;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero-content-overlay{position:relative;z-index:2;text-align:center;padding:2rem;max-width:700px}
+.hero-pill{padding:.38rem .85rem;background:rgba(255,255,255,.18);color:white;border-radius:100px;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px)}
+.hero-btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.85rem 2rem;text-decoration:none;border-radius:2px;transition:all .2s;font-weight:600}
+.hero-btn-primary:hover{background:var(--sky)}
+.hero-btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:white;padding:.85rem 2rem;border:1.5px solid rgba(255,255,255,.65);text-decoration:none;border-radius:2px;transition:all .2s}
+.hero-btn-outline:hover{background:rgba(255,255,255,.12);border-color:white}
+.hero-inner{position:relative;z-index:2;padding:2rem;display:flex;flex-direction:column;align-items:center;gap:2rem;max-width:900px;width:100%}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-dot{width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;animation:bounce 1.5s ease infinite}
+
+/* STRIP */
+.strip{background:var(--teal);display:flex;justify-content:center;flex-wrap:wrap}
+.strip-item{flex:1;min-width:120px;max-width:180px;padding:1.6rem 1.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.15)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic;color:white}
+.strip-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.3rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-text{padding:5rem 4rem;background:var(--sand);display:flex;flex-direction:column;justify-content:center}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.5rem}
+.feat{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mid)}
+.feat-dot{width:7px;height:7px;background:var(--teal-light);border-radius:50%;flex-shrink:0}
+.about-media{position:relative;overflow:hidden;min-height:400px}
+.about-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.about-media:hover img{transform:scale(1.04)}
+.about-badge{position:absolute;top:2rem;right:2rem;background:white;padding:1.2rem 1.5rem;box-shadow:0 8px 30px rgba(0,0,0,.1);text-align:center}
+.badge-num{font-family:'DM Serif Display',serif;font-size:2.2rem;font-style:italic;color:var(--teal);line-height:1}
+.badge-sub{font-family:'Lato',sans-serif;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light);margin-top:.2rem}
+
+/* BEACH BANNER */
+.beach-banner{background:var(--sky);padding:3.5rem 5rem;display:flex;align-items:center;justify-content:center;gap:3rem;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid);flex-wrap:wrap}
+.beach-num{font-family:'DM Serif Display',serif;font-size:5rem;font-style:italic;color:var(--teal);line-height:1}
+.beach-text h3{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text)}
+.beach-text p{font-size:1rem;color:var(--text-light);margin-top:.4rem;font-weight:300;line-height:1.6}
+
+/* QUOTE */
+.quote-block{padding:4rem 5rem;text-align:center;position:relative;overflow:hidden}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:5rem;line-height:1;opacity:.2;margin-bottom:.5rem}
+.quote-text{font-family:'DM Serif Display',serif;font-style:italic;line-height:1.65}
+.quote-attr{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1.2rem;opacity:.6}
+
+/* GALLERY */
+.gallery-section{background:var(--off-white);padding:6rem 0}
+.gallery-header{padding:0 5rem;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:flex-end}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 280px;gap:4px}
+.gal-item{overflow:hidden;cursor:pointer;position:relative}
+.gal-item:first-child{grid-row:1/3}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal-item:hover img{transform:scale(1.04)}
+.gal-overlay{position:absolute;inset:0;background:rgba(42,128,128,0);transition:background .3s}
+.gal-item:hover .gal-overlay{background:rgba(42,128,128,.15)}
+.gal-caption{position:absolute;bottom:1rem;left:1.2rem;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:white;background:rgba(26,48,48,.7);padding:.3rem .7rem;border-radius:2px;opacity:0;transition:opacity .3s}
+.gal-item:hover .gal-caption{opacity:1}
+
+/* ARRIVAL */
+.arrival{background:var(--sand);padding:6rem 5rem}
+.arrival-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1200px;margin:0 auto;align-items:center}
+.info-card{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px;transition:border-color .2s}
+.info-card:hover{border-color:var(--teal-light)}
+.info-card-icon{font-size:1.4rem;margin-bottom:.6rem;display:block}
+.info-card-title{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.info-card-body{font-size:.92rem;color:var(--text-light);line-height:1.6;font-weight:300}
+
+/* ROOMS */
+.rooms{background:white;padding:6rem 5rem}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.room-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.room-card:hover{border-color:var(--teal-light);box-shadow:0 8px 30px rgba(42,128,128,.08);transform:translateY(-3px)}
+.room-icon{font-size:1.8rem;margin-bottom:1rem;display:block}
+.room-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:.4rem}
+.room-size{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.8rem}
+.room-details{font-size:.92rem;color:var(--text-light);line-height:1.7;font-weight:300}
+
+/* AMENITIES */
+.amenities{background:var(--sky);padding:6rem 5rem}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.amen-card{background:white;padding:1.8rem 1.5rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s;text-align:center}
+.amen-card:hover{border-color:var(--teal-light);box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.amen-icon{font-size:1.5rem;margin-bottom:.7rem;display:block}
+.amen-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:.35rem;font-weight:700}
+.amen-desc{font-size:.85rem;color:var(--text-light);line-height:1.5;font-weight:300}
+
+/* DOG SECTION */
+.dogs{background:white;padding:6rem 5rem}
+.dogs-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+.dog-tip{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--sky-mid)}
+.dog-tip:last-child{border-bottom:none}
+.dog-tip-icon{font-size:1.2rem;flex-shrink:0}
+.dog-tip-text strong{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem}
+.dog-tip-text span{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+
+/* CALENDAR */
+.calendar-section{background:var(--sand);padding:6rem 5rem}
+.cal-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:3rem}
+.cal-wrap{background:white;border:1px solid var(--sky-mid);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.cal-header{background:var(--teal);color:white;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem}
+.cal-month-title{font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic}
+.cal-nav{background:rgba(255,255,255,.2);border:none;color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.cal-nav:hover{background:rgba(255,255,255,.35)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-dow{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);border-bottom:1px solid var(--sky-mid)}
+.cal-day{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.8rem;cursor:pointer;min-height:36px;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s}
+.cal-day.other-month{color:var(--sky-mid)}
+.cal-day.booked{background:#fee2e2;color:#991b1b;text-decoration:line-through;cursor:not-allowed}
+.cal-day.available:hover{background:var(--teal-pale);color:var(--teal)}
+.cal-day.selected{background:var(--teal);color:white;border-radius:50%}
+.cal-day.today{font-weight:700;color:var(--teal)}
+.cal-legend{display:flex;gap:1.5rem;padding:1rem 1.5rem;border-top:1px solid var(--sky-mid);font-family:'Lato',sans-serif;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light)}
+.legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.platform-badges{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.platform-badge{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border:1.5px solid var(--sky-mid);border-radius:2px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:all .2s}
+.platform-badge:hover{border-color:var(--teal);color:var(--teal)}
+.platform-badge-icon{font-size:1.1rem}
+.cal-sync-note{background:var(--teal-pale);border:1px solid var(--teal-light);border-radius:2px;padding:1rem 1.5rem;margin-top:1rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em;color:var(--teal);display:flex;align-items:flex-start;gap:.6rem}
+
+/* FAQ */
+.faq-section{background:white;padding:6rem 5rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.faq-item{border:1px solid var(--sky-mid);padding:1.5rem;cursor:pointer;transition:border-color .2s}
+.faq-item:hover,.faq-item.open{border-color:var(--teal-light)}
+.faq-q{font-family:'Lato',sans-serif;font-size:.75rem;letter-spacing:.05em;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.faq-chevron{font-size:.8rem;color:var(--teal);transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{font-size:.88rem;color:var(--text-light);line-height:1.7;font-weight:300;margin-top:.8rem;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* HISTORY */
+.history-section{background:var(--ink);padding:6rem 5rem;color:white}
+.history-inner{max-width:900px;margin:0 auto}
+.timeline-line{position:absolute;left:80px;top:0;bottom:0;width:1px;background:rgba(61,168,160,.2)}
+.tl-row{display:grid;grid-template-columns:80px 1fr;gap:2rem;padding-bottom:2.5rem;position:relative}
+.tl-year{text-align:right;padding-top:.2rem;font-family:'DM Serif Display',serif;font-size:1rem;font-style:italic;color:var(--teal-light,var(--teal-light))}
+.tl-dot{position:absolute;left:73px;top:.5rem;width:13px;height:13px;border-radius:50%}
+.tl-label{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light,var(--teal-light));margin-bottom:.4rem}
+.tl-body{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.7;font-weight:300}
+.hurricane-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(201,149,107,.15);border:1px solid rgba(201,149,107,.3);padding:.2rem .6rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:#c9956b;margin-top:.5rem}
+
+/* GUESTBOOK */
+.guestbook{background:var(--teal-pale);padding:6rem 5rem;border-top:1px solid var(--sky-mid)}
+.gb-form{background:white;border:1px solid var(--sky-mid);padding:2rem;margin-top:2rem;border-radius:2px}
+.gb-input{width:100%;border:1px solid var(--sky-mid);padding:.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;border-radius:2px;margin-bottom:1rem;outline:none;transition:border-color .2s}
+.gb-input:focus{border-color:var(--teal-light)}
+.gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.gb-entries{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem}
+.gb-entry{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px}
+.gb-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.gb-entry-name{font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.gb-entry-date{font-family:'Lato',sans-serif;font-size:.6rem;color:var(--text-light)}
+.gb-entry-text{font-size:.92rem;color:var(--text-mid);line-height:1.7;font-style:italic;font-weight:300}
+
+/* REVIEWS */
+.reviews{background:white;padding:6rem 5rem}
+.review-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
+.rating-big{font-family:'DM Serif Display',serif;font-size:4.5rem;font-style:italic;color:var(--teal);line-height:1}
+.rating-sub{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;position:relative;transition:all .3s}
+.review-card:hover{border-color:var(--teal-light);box-shadow:0 8px 30px rgba(42,128,128,.08)}
+.rev-stars{color:#f59e0b;font-size:.8rem;letter-spacing:.05em;margin-bottom:.7rem}
+.rev-meta{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.06em;color:var(--text-light);margin-bottom:.8rem}
+.rev-text{font-size:1rem;line-height:1.8;color:var(--text-mid);font-weight:300;margin-bottom:1.2rem;font-style:italic}
+.rev-author{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.rev-quote{position:absolute;top:1rem;right:1.5rem;font-family:'DM Serif Display',serif;font-size:4rem;color:var(--teal-pale);line-height:1;font-style:italic}
+.rating-cats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--sky-mid)}
+.rc{text-align:center}
+.rc-score{font-family:'DM Serif Display',serif;font-size:1.5rem;font-style:italic;color:var(--teal)}
+.rc-label{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.guest-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.gtag{padding:.3rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em}
+
+/* THINGS TO DO */
+.ttd{background:var(--sky);padding:6rem 5rem}
+.ttd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+.ttd-card{background:white;padding:2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.ttd-card:hover{border-color:var(--teal-light);box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.ttd-icon{font-size:1.8rem;margin-bottom:.8rem;display:block}
+.ttd-name{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.ttd-desc{font-size:.88rem;color:var(--text-light);line-height:1.6;font-weight:300;margin-bottom:.8rem}
+.ttd-link{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-pale);transition:border-color .2s}
+.ttd-link:hover{border-color:var(--teal)}
+
+/* HOST */
+.host{background:var(--sand);padding:5rem 5rem;display:flex;align-items:center;justify-content:center}
+.host-inner{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;max-width:800px}
+.host-avatar{width:100px;height:100px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0}
+.host-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.host-title{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.8rem}
+.host-bio{font-size:.95rem;color:var(--text-mid);line-height:1.75;font-weight:300}
+
+/* LOCATION */
+.location{display:grid;grid-template-columns:1fr 1fr}
+.loc-text{background:var(--sand);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.loc-items{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.loc-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem;background:white;border:1px solid var(--sky-mid);border-radius:2px;transition:border-color .2s}
+.loc-item:hover{border-color:var(--teal-light)}
+.loc-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
+.loc-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem;font-weight:700}
+.loc-desc{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+.loc-map{min-height:500px}
+.loc-map iframe{width:100%;height:100%;min-height:500px;border:none}
+
+/* SOCIAL PROOF BAR */
+.spbar{background:#fef9f0;border-top:1px solid #f0e0c0;border-bottom:1px solid #f0e0c0;padding:1rem 3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+.spbar-item{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#7a6050}
+
+/* BOOK */
+.book{background:var(--teal);padding:7rem 5rem;text-align:center;position:relative;overflow:hidden}
+.book-h{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);color:white;line-height:1.1;margin-bottom:.7rem}
+.book-h em{font-style:italic;color:rgba(255,255,255,.75)}
+.book-sub{font-size:1.1rem;color:rgba(255,255,255,.7);font-weight:300;margin-bottom:2rem}
+.book-rules{display:flex;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.book-rule{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:.4rem}
+.book-rule::before{content:'';width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%;flex-shrink:0}
+.book-btns{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-white{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.9rem 2.2rem;border:none;cursor:pointer;border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-white:hover{background:var(--off-white)}
+.btn-woutline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:white;padding:.9rem 2.2rem;border:1.5px solid rgba(255,255,255,.5);border-radius:2px;text-decoration:none;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-woutline:hover{background:rgba(255,255,255,.1);border-color:white}
+.book-note{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.book-note a{color:rgba(255,255,255,.7);text-decoration:none}
+
+/* FOOTER */
+footer{background:var(--text);padding:4rem 5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.ft-brand .logo{font-size:1.4rem;display:block;margin-bottom:1rem;color:var(--sky,#e8f4f4)}
+.ft-tagline{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+.ft-col h4{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.2rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{padding:.3rem 0;font-size:.88rem;color:rgba(255,255,255,.25)}
+.ft-col ul li a{color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.ft-col ul li a:hover{color:var(--teal-light)}
+.footer-bottom{background:#111c1c;padding:1rem 5rem;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;color:rgba(255,255,255,.2)}
+
+/* WAVE HOVER ANIMATIONS */
+@keyframes wave1{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes wave2{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes fadeWaveIn{from{opacity:0}to{opacity:1}}
+
+.ab-photo-main,.ab-photo-sm{position:relative;overflow:hidden}
+.ab-photo-main::after,.ab-photo-sm::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;
+  width:200%;height:40px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30 L1200 60 L0 60 Z' fill='rgba(42,128,128,0.35)'/%3E%3C/svg%3E") repeat-x;
+  background-size:600px 40px;
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;
+  z-index:3;
+}
+.ab-photo-main:hover::after,.ab-photo-sm:hover::after{
+  opacity:1;
+  animation:wave1 3s linear infinite;
+}
+
+/* Deck card gets teal shimmer */
+.ab-photo-main:hover,.ab-photo-sm:hover{
+  box-shadow:0 8px 32px rgba(42,128,128,.25);
+}
+
+/* Room stat badges bigger */
+.ab-room-stats{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.ab-stat{font-size:.88rem !important;color:var(--text-mid);display:flex;align-items:center;gap:.6rem;line-height:1.7}
+
+/* PHOTO TOUR */
+.ab-room{display:grid;grid-template-columns:1fr 1.8fr;gap:4rem;padding:3rem 5rem;border-bottom:1px solid var(--sky-mid);align-items:start}
+.ab-room:last-of-type{border-bottom:none}
+.ab-room-text{padding-top:.5rem;position:sticky;top:120px}
+.ab-room-name{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text);margin-bottom:.5rem;line-height:1.2}
+.ab-room-desc{font-size:.9rem;color:var(--text-light);line-height:1.6;margin-bottom:1rem;font-weight:300}
+.ab-room-amenities{font-size:.92rem;color:var(--text-mid);line-height:1.9;font-weight:300}
+.ab-dot{margin:0 .3rem;color:var(--text-light)}
+.ab-room-stats{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.ab-stat{font-family:'Lato',sans-serif;font-size:.82rem;color:var(--text-mid);display:flex;align-items:center;gap:.5rem;line-height:1.7}
+.ab-room-photos{display:flex;flex-direction:column;gap:4px}
+.ab-photo-main{height:380px;overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
+.ab-photo-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-main:hover img{transform:scale(1.03)}
+.ab-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ab-photo-sm{height:180px;overflow:hidden;border-radius:4px;cursor:pointer;position:relative}
+.ab-photo-sm img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-sm:hover img{transform:scale(1.04)}
+
+/* THUMBNAILS */
+.thumb-btn{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:pointer;flex-shrink:0}
+.thumb-btn > img,.thumb-btn > div:first-child{width:72px;height:72px;object-fit:cover;border-radius:8px;border:2px solid transparent;transition:border-color .2s}
+.thumb-btn.active-thumb > img,.thumb-btn.active-thumb > div:first-child{border-color:var(--text)!important}
+.thumb-btn > span{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);white-space:nowrap}
+
+/* SHARE MODAL */
+.share-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1rem;border:1.5px solid var(--sky-mid);border-radius:8px;background:white;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.08em;color:var(--text);text-decoration:none;transition:all .2s}
+.share-btn:hover{border-color:var(--text);background:var(--sky)}
+
+@media(max-width:900px){
+  .ab-room{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
+  .ab-room-text{position:static}
+  .ab-photo-main{height:260px}
+  .ab-photo-sm{height:130px}
+}
+
+/* ROOM TOUR (OLD - UNUSED) */
+.room-pill{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1rem;border:1.5px solid var(--sky-mid);background:white;color:var(--text-mid);cursor:pointer;border-radius:100px;transition:all .2s;white-space:nowrap}
+.room-pill:hover,.room-pill.active{background:var(--teal);color:white;border-color:var(--teal)}
+.room-tour-section{padding:2.5rem 5rem;border-bottom:1px solid var(--sky-mid)}
+.room-tour-section:last-child{border-bottom:none}
+.room-tour-header{display:flex;align-items:flex-start;gap:1.2rem;margin-bottom:1.5rem}
+.room-tour-icon{font-size:2rem;flex-shrink:0;margin-top:.1rem}
+.room-tour-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.room-tour-meta{font-family:'Lato',sans-serif;font-size:.8rem;color:var(--text-light);line-height:1.7}
+.room-scroll-track{position:relative;overflow:hidden;margin-bottom:1rem}
+.room-scroll-inner{display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.room-scroll-inner::-webkit-scrollbar{display:none}
+.room-photo-card{flex-shrink:0;width:340px;height:240px;position:relative;cursor:pointer;overflow:hidden;border-radius:2px}
+.room-photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.room-photo-card:hover img{transform:scale(1.04)}
+.room-photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,48,48,.75));color:white;padding:1.5rem .8rem .6rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.scroll-btn{position:absolute;top:50%;transform:translateY(-50%);background:white;border:1px solid var(--sky-mid);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);transition:all .2s;z-index:2;line-height:1}
+.scroll-btn:hover{background:var(--teal);color:white;border-color:var(--teal)}
+.scroll-left{left:8px}
+.scroll-right{right:8px}
+.room-tour-stats{display:flex;flex-wrap:wrap;gap:.5rem}
+.room-stat{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.06em;color:var(--text-mid);background:var(--off-white);border:1px solid var(--sky-mid);padding:.35rem .8rem;border-radius:100px}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:999;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:90vw;max-height:90vh;object-fit:contain}
+.lb-close{position:absolute;top:1.5rem;right:2rem;color:rgba(255,255,255,.5);font-size:1.8rem;cursor:pointer;font-weight:300;line-height:1;transition:color .2s}
+.lb-close:hover{color:white}
+
+/* WEATHER */
+.weather-widget{background:var(--teal);color:white;padding:1.5rem 3rem;display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
+.wx-item{text-align:center}
+.wx-val{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic}
+.wx-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.2rem}
+
+/* ANIMATIONS */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-phone,.nav-book-top{display:none}
+  .hero-split{padding:0;gap:0;border-radius:0}
+  .hero-panel{border-radius:0}
+  .hero-panel:last-child{display:none}
+  .util-bar{padding:.4rem 1rem;font-size:.55rem}
+  .about,.location,.arrival-grid,.dogs-grid,.cal-intro{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item:first-child{grid-row:auto;grid-column:auto}
+  .amen-grid{grid-template-columns:1fr 1fr}
+  .rooms-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .ttd-grid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;padding:3rem 2rem}
+  .beach-banner{flex-direction:column;gap:1.5rem;text-align:center;padding:3rem 2rem}
+  .host-inner{grid-template-columns:1fr;text-align:center}
+  .host-avatar{margin:0 auto}
+  .strip{flex-wrap:wrap}.strip-item{flex:0 0 33%}
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+  border-radius:2px;
+}
+
+/* Calendar half-day shading */
+.cal-day.checkin-day{
+  background:linear-gradient(to bottom right, white 50%, rgba(42,128,128,.18) 50%);
+  color:var(--text-mid);
+}
+.cal-day.checkout-day{
+  background:linear-gradient(to bottom right, rgba(42,128,128,.18) 50%, white 50%);
+  color:var(--text-mid);
+}
+.cal-day.booked{
+  background:rgba(201,149,107,.12);
+  color:var(--text-light);
+  font-weight:400;
+}
+.cal-day.booked::after{
+  content:'';
+  position:absolute;
+  inset:2px;
+  border-radius:2px;
+  background:repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 3px,
+    rgba(201,149,107,.15) 3px,
+    rgba(201,149,107,.15) 4px
+  );
+}
+.cal-day{position:relative;}
+
+@keyframes wA{0%,100%{height:3px}50%{height:12px}}
+
+/* ==== MOVED FROM index.html: room tour + floor plan styling ==== */
+/* PHOTO TOUR */
+.ab-room{display:grid;grid-template-columns:1fr 1.8fr;gap:4rem;padding:3rem 5rem;border-bottom:1px solid var(--sky-mid);align-items:start}
+.ab-room:last-of-type{border-bottom:none}
+.ab-room-text{padding-top:.5rem;position:sticky;top:120px}
+.ab-room-name{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text);margin-bottom:.5rem;line-height:1.2}
+.ab-room-desc{font-size:.9rem;color:var(--text-light);line-height:1.6;margin-bottom:1rem;font-weight:300}
+.ab-room-amenities{font-size:.92rem;color:var(--text-mid);line-height:1.9;font-weight:300}
+.ab-dot{margin:0 .3rem;color:var(--text-light)}
+.ab-room-stats{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.ab-stat{font-family:'Lato',sans-serif;font-size:.82rem;color:var(--text-mid);display:flex;align-items:center;gap:.5rem;line-height:1.7}
+.ab-room-photos{display:flex;flex-direction:column;gap:4px}
+.ab-photo-main{height:380px;overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
+.ab-photo-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-main:hover img{transform:scale(1.03)}
+.ab-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ab-photo-sm{height:180px;overflow:hidden;border-radius:4px;cursor:pointer;position:relative}
+.ab-photo-sm img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-sm:hover img{transform:scale(1.04)}
+
+/* THUMBNAILS */
+.thumb-btn{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:pointer;flex-shrink:0}
+.thumb-btn > img,.thumb-btn > div:first-child{width:72px;height:72px;object-fit:cover;border-radius:8px;border:2px solid transparent;transition:border-color .2s}
+.thumb-btn.active-thumb > img,.thumb-btn.active-thumb > div:first-child{border-color:var(--text)!important}
+.thumb-btn > span{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);white-space:nowrap}
+
+/* SHARE MODAL */
+.share-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1rem;border:1.5px solid var(--sky-mid);border-radius:8px;background:white;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.08em;color:var(--text);text-decoration:none;transition:all .2s}
+.share-btn:hover{border-color:var(--text);background:var(--sky)}
+
+@media(max-width:900px){
+  .ab-room{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
+  .ab-room-text{position:static}
+  .ab-photo-main{height:260px}
+  .ab-photo-sm{height:130px}
+}
+</style>
+<style>
+.story-hero{background:linear-gradient(180deg,#0d2020 0%,#1a3535 100%);padding:5rem 5rem 4rem;border-bottom:1px solid var(--sky-mid)}
+.story-hero .eyebrow{color:rgba(61,168,160,.7)}
+.story-hero h1{font-family:"DM Serif Display",serif;font-size:clamp(2rem,4vw,3rem);color:white;font-style:italic;margin:.3rem 0 1rem}
+.story-hero p{max-width:600px;color:rgba(255,255,255,.55);font-size:1rem;line-height:1.85;font-weight:300}
+.story-nav{background:var(--ink);padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.story-nav a{font-family:"Lato",sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);padding:1rem 0;border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
+.story-nav a:hover,.story-nav a.active{color:var(--teal-light);border-bottom-color:var(--teal)}
+.story-back{margin-left:auto;background:var(--teal);color:white;padding:.5rem 1.2rem;border-radius:100px;font-family:"Lato",sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.story-back:hover{background:var(--teal);color:white}
+</style>
+<link rel="canonical" href="https://goodtidesonly.com/the-place.html">
+
+<style>
+@media(max-width:768px){
+  section[style*="padding:5rem 5rem"],section[style*="padding:6rem 5rem"],
+  section[style*="padding:4rem 5rem"]{padding:3rem 1.5rem !important}
+  div[style*="display:grid;grid-template-columns:repeat(3"],
+  div[style*="display:grid;grid-template-columns:repeat(4"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr 1fr"],
+  div[style*="display:grid;grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important}
+  nav[style*="padding:0 5rem"]{padding:0 1rem !important}
+  nav[style*="gap:2rem"]{gap:.5rem !important}
+  .story-hero{padding:3rem 1.5rem 2rem !important}
+  .story-back{padding:.4rem .8rem !important;font-size:.55rem !important}
+  footer[style*="padding:3rem 5rem"]{padding:2rem 1.5rem !important}
+  footer div[style*="grid-template-columns:1fr 1fr 1fr"]{
+    grid-template-columns:1fr !important;gap:1.5rem !important}
+}
+@media(max-width:480px){
+  div[style*="display:flex"][style*="gap:3rem"],
+  div[style*="display:flex"][style*="gap:2rem"]{
+    flex-direction:column !important;gap:1rem !important;align-items:flex-start !important}
+}
+</style>
+<!-- Google Analytics 4 — replace G-K3KTQ02PXQ with your actual ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3KTQ02PXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3KTQ02PXQ');
+</script>
+</head>
+<body><nav style="background:var(--ink);padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:100">
+  <a href="index.html" style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:white;text-decoration:none;padding:1rem 0;border-bottom:2px solid transparent;white-space:nowrap">Good Tides Only</a>
+  <a href="the-place.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);border-bottom:2px solid var(--teal);padding:1rem 0;text-decoration:none">The Place</a>
+  <a href="history.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">History</a>
+  <a href="fishing.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Fishing</a>
+  <a href="explore.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Explore</a>
+  <a href="our-story.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Our Story</a>
+  <a href="index.html#calendar" style="margin-left:auto;background:var(--teal);color:white;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap">Book Now</a>
+</nav>
+
+<div class="story-hero">
+  <p class="eyebrow">Fort Morgan Peninsula, Alabama</p>
+  <h1>The Place</h1>
+  <p>The sand, the water, the stars overhead. What you are standing in took 220 million years to arrive here. This is what makes Fort Morgan Peninsula unlike anywhere else on the Gulf Coast.</p>
+</div>
+
+<section id="sand" style="background:linear-gradient(180deg,#f8f4ec 0%,#f2ead8 100%);padding:5rem 5rem;border-top:1px solid #e8dcc8;overflow:hidden;position:relative">
+
+  <!-- Subtle sand texture dots -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.06" aria-hidden="true">
+    <pattern id="sand-dots" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r=".8" fill="#8b7830"/>
+      <circle cx="6" cy="6" r=".6" fill="#8b7830"/>
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#sand-dots)"/>
+  </svg>
+
+  <div style="position:relative;z-index:1">
+    <p class="eyebrow" style="text-align:center;color:rgba(139,120,48,.8)">A Billion-Year Journey</p>
+    <h2 class="h2" style="text-align:center">Why the Sand Is <em>This</em> White</h2>
+    <p style="text-align:center;max-width:660px;margin:.5rem auto 1rem;font-size:1rem;color:#5a4c2a;line-height:1.85;font-weight:300">The sand under your feet at Good Tides Only is one of the rarest substances on any beach in the world. Most people notice it — the blinding brightness, the way it stays cool even on hot August days, how fine it feels between your fingers. Very few know why.</p>
+    <p style="text-align:center;max-width:580px;margin:0 auto 3rem;font-size:.88rem;color:#7a6a3a;line-height:1.75;font-style:italic">It is 99% pure quartz crystal — and its journey here took millions of years.</p>
+
+    <!-- JOURNEY TIMELINE -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-bottom:3rem">
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.5rem;border-left:4px solid #c4a862">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#8b7830;margin-bottom:.4rem">Step 1 — Millions of Years Ago</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:.5rem">Born in the Appalachian Mountains</div>
+          <p style="font-size:.88rem;color:#5a4c2a;line-height:1.75">The story begins hundreds of miles north, deep in the Appalachian Mountains — among the oldest mountain ranges on Earth. Ancient granite and igneous rock contained quartz crystals, one of the hardest minerals in nature (rated 7 on the Mohs scale). As the mountains eroded over millions of years through rain, freeze-thaw cycles, and the slow weight of time, these rocks broke apart. The quartz crystals — resistant to weathering and nearly indestructible — were released as individual grains.</p>
+        </div>
+
+        <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.5rem;border-left:4px solid #c4a862">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#8b7830;margin-bottom:.4rem">Step 2 — The Long Journey South</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:.5rem">Rivers Carry Everything to the Gulf</div>
+          <p style="font-size:.88rem;color:#5a4c2a;line-height:1.75">For hundreds of thousands of years, rivers carried the eroded material south — quartz mixed with countless other minerals like feldspar, magnetite, mica, and clay. The journey was not quick. The Mississippi, Tombigbee, and Alabama river systems acted as long, slow conveyor belts, transporting particles across the Coastal Plain toward the Gulf. As rivers bend and slow, heavier minerals drop out first. Lighter, more soluble minerals dissolve. Quartz — harder, lighter than many minerals, and chemically inert — traveled farthest.</p>
+        </div>
+
+        <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.5rem;border-left:4px solid #c4a862">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#8b7830;margin-bottom:.4rem">Step 3 — The Ice Age Delivery</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:.5rem">20,000 Years Ago — Sea Levels Drop, Then Rise</div>
+          <p style="font-size:.88rem;color:#5a4c2a;line-height:1.75">During the last Ice Age approximately 20,000 years ago, sea levels dropped dramatically as water locked into glaciers far to the north. The Gulf coastline was miles farther south. Rivers extended further, depositing enormous quantities of quartz sand onto what is now the seafloor. As the Ice Age ended and sea levels rose over thousands of years, those sand deposits migrated landward — pushed by waves, tides, and longshore drift — until they formed the barrier islands and beaches we know today. The sand you're standing on was delivered by glacial-era rivers and has been here ever since.</p>
+        </div>
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.5rem;border-left:4px solid #c4a862">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#8b7830;margin-bottom:.4rem">Step 4 — Tens of Thousands of Years of Polishing</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:.5rem">The Waves Do the Final Work</div>
+          <p style="font-size:.88rem;color:#5a4c2a;line-height:1.75">Once the rivers stopped delivering new material — which happened tens of thousands of years ago — the existing quartz grains were left to be worked over by the surf, year after year, decade after decade, century after century. Wave action is extraordinarily precise. Grains of the same size and density sort together. Sharp edges are abraded smooth. Irregularly shaped particles wear to near-perfect ovals. The result, as documented by the Encyclopedia of Alabama, is "practically uniform sand grains" — which accounts for the high quality and extraordinary consistency of the sand here.</p>
+        </div>
+
+        <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.5rem;border-left:4px solid #c4a862">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#8b7830;margin-bottom:.4rem">Step 5 — The Lost Pink Coat</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:.5rem">Why It's White, Not Pink</div>
+          <p style="font-size:.88rem;color:#5a4c2a;line-height:1.75">Here's the detail that surprises most people: pure quartz naturally has a faint pink or rosy tint from a thin iron oxide coating on each grain. If you see quartz in the mountains, it often has this color. But during the long river journey south — through acidic swamp water and constant tumbling — that oxide coating was chemically stripped away from the grains. What arrived at the Gulf was naked quartz crystal in its purest form: nearly colorless, reflecting all wavelengths of visible light equally. That's why it appears brilliant white. In sunlight, it doesn't just reflect — it sparkles.</p>
+        </div>
+
+        <!-- THE SCIENCE SUMMARY -->
+        <div style="background:linear-gradient(135deg,#c8a040,#a67f2e);border-radius:6px;padding:1.8rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a862;margin-bottom:.8rem">What Makes It Different</div>
+          <div style="display:flex;flex-direction:column;gap:.5rem">
+            <div style="display:flex;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55"><span style="color:#c4a862;flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.85)">99% pure quartz</strong> — most beaches worldwide are 60–80% quartz mixed with feldspar, magnetite, shell fragments, and organic material</span></div>
+            <div style="display:flex;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55"><span style="color:#c4a862;flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.85)">Stays cool</strong> — quartz reflects solar radiation rather than absorbing it. You can walk barefoot on this sand at noon in August when other beaches would burn</span></div>
+            <div style="display:flex;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55"><span style="color:#c4a862;flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.85)">It squeaks</strong> — walk slowly on dry sand and listen. The near-perfect oval grains rubbing against each other produce a faint, distinctive squeak. It's a sign of exceptional purity</span></div>
+            <div style="display:flex;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55"><span style="color:#c4a862;flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.85)">The turquoise water</strong> — the brilliant white sand on the seafloor reflects light upward through the shallow water, creating the distinctive emerald-green and turquoise color. Atlantic and Pacific beach water looks dark partly because the sand is darker</span></div>
+            <div style="display:flex;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55"><span style="color:#c4a862;flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.85)">No new supply</strong> — the rivers stopped delivering new sand tens of thousands of years ago. What's here now is all there is. Every grain on this beach has been here since the last Ice Age</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COMPARISON CARD -->
+    <div style="background:white;border:1px solid #e8dcc8;border-radius:6px;padding:1.8rem;margin-bottom:1.5rem">
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3a2e0a;margin-bottom:1rem">How It Compares to Other Beaches</h3>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem">
+        <div style="text-align:center;padding:.8rem;background:#f8f4ec;border-radius:4px;border-top:3px solid #c4a862">
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:#3a2e0a;margin-bottom:.3rem">Alabama / Gulf Coast</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.85rem;font-weight:700;color:#8b7830;margin-bottom:.3rem">99% Quartz</div>
+          <div style="font-size:.75rem;color:#7a6a3a;line-height:1.5">Blinding white · Cool to touch · Squeaks · Turquoise water · Appalachian origin</div>
+        </div>
+        <div style="text-align:center;padding:.8rem;background:#f0f0ec;border-radius:4px;border-top:3px solid #8b8870">
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:#3a2e0a;margin-bottom:.3rem">Atlantic Coast</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.85rem;font-weight:700;color:#6b6850;margin-bottom:.3rem">60–70% Quartz</div>
+          <div style="font-size:.75rem;color:#7a7a6a;line-height:1.5">Tan or beige · Gets hot · Mixed minerals including titanium, magnetite · Darker water</div>
+        </div>
+        <div style="text-align:center;padding:.8rem;background:#ece8f0;border-radius:4px;border-top:3px solid #6a5888">
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:#3a2e0a;margin-bottom:.3rem">Hawaii</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.85rem;font-weight:700;color:#5a4870;margin-bottom:.3rem">Coral &amp; Shell</div>
+          <div style="font-size:.75rem;color:#6a5878;line-height:1.5">Cream or green · Calcium carbonate · Organic origin · No quartz · Different ecosystem</div>
+        </div>
+        <div style="text-align:center;padding:.8rem;background:#f0ece0;border-radius:4px;border-top:3px solid #888060">
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:#3a2e0a;margin-bottom:.3rem">Pacific Coast</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.85rem;font-weight:700;color:#686040;margin-bottom:.3rem">Mixed Minerals</div>
+          <div style="font-size:.75rem;color:#6a6040;line-height:1.5">Gray or tan · Volcanic rock fragments · Feldspar · Heavy minerals · Rocky seafloor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSING NOTE + TRANSITION TO WATER -->
+    <div style="text-align:center;max-width:680px;margin:0 auto 3rem">
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:#5a4c2a;line-height:1.9">The sand a short walk from your door started as mountain granite hundreds of miles away, carried south by rivers that no longer exist, worked for tens of thousands of years by waves that predate any human presence here. It has been sitting on this beach since before the last Ice Age ended.</p>
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:#5a4c2a;line-height:1.9;margin-top:1rem">You are walking on something ancient and unique — sand of this purity exists almost nowhere else on Earth. And when your feet settle into it and you look out at the water, you are standing exactly where countless others have stood before you. The Spanish explorers who first charted this bay. The Creek and Mobile people who fished these shores for centuries before them. The fishermen who read the tides by starlight. The soldiers who defended this pass. Every one of them felt this same sand, looked out at this same water, and paused — as you are pausing — to take it in.</p>
+      <p style="font-size:.95rem;color:#7a6a3a;margin-top:1.2rem;line-height:1.8">That water deserves its own story too. It is not ordinary water. And neither is the sand. Neither is the shore. Neither, perhaps, is the moment of arriving here — and feeling what you feel.</p>
+    </div>
+
+  </div>
+
+  <!-- SAND NOURISHMENT -->
+  <div style="background:linear-gradient(135deg,#c8a040,#a67f2e);border-radius:6px;padding:1.5rem 2rem;margin-top:2rem">
+    <div style="display:flex;align-items:flex-start;gap:1.2rem">
+      <span style="font-size:1.3rem;flex-shrink:0">🏗️</span>
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a862;margin-bottom:.4rem">The Beaches Are Actively Maintained</div>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:.5rem">The white sand beaches of Gulf Shores and Fort Morgan don't stay pristine by accident. The City of Gulf Shores, Orange Beach, and Alabama state authorities run an active beach renourishment program — periodically bringing sand dredged from offshore back onto the beaches via pipeline. The most recent major project, completed in early 2024, moved over two million cubic yards of sand along five segments of coastline from Laguna Key in Gulf Shores westward to the Florida state line — including the Fort Morgan Peninsula shoreline.</p>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.7">The sand is dredged from the Gulf floor by hopper dredge ships, pumped to shore through floating pipelines, and distributed along the beach. The process restores storm-damaged beaches and keeps them wide, safe, and accessible. It is one of the reasons these beaches remain among the best-maintained on the Gulf Coast — and why the commitment to this place runs deeper than the sand itself.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="the-gulf" style="background:linear-gradient(180deg,#020e1a 0%,#041826 40%,#020e1a 100%);padding:5rem 5rem;overflow:hidden;position:relative">
+
+  <!-- Deep water atmosphere -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" aria-hidden="true">
+    <defs>
+      <radialGradient id="wg-deep" cx="50%" cy="60%" r="70%">
+        <stop offset="0%" stop-color="rgba(0,60,100,.25)"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </radialGradient>
+      <radialGradient id="wg-shallow" cx="50%" cy="90%" r="40%">
+        <stop offset="0%" stop-color="rgba(42,128,128,.15)"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </radialGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#wg-deep)"/>
+    <rect width="100%" height="100%" fill="url(#wg-shallow)"/>
+    <!-- Subtle wave lines -->
+    <g opacity=".06">
+      <path d="M0 80 Q200 60 400 80 Q600 100 800 80 Q1000 60 1200 80 Q1400 100 1600 80" fill="none" stroke="var(--teal-light)" stroke-width="1"/>
+      <path d="M0 120 Q250 100 500 120 Q750 140 1000 120 Q1250 100 1500 120" fill="none" stroke="var(--teal-light)" stroke-width="1"/>
+      <path d="M0 160 Q200 180 400 160 Q600 140 800 160 Q1000 180 1200 160" fill="none" stroke="var(--teal-light)" stroke-width=".8"/>
+    </g>
+  </svg>
+
+  <div style="position:relative;z-index:1">
+    <p class="eyebrow" style="text-align:center;color:rgba(61,168,160,.7)">Not Ordinary Water</p>
+    <h2 class="h2" style="text-align:center;color:white">The Gulf — <em style="color:var(--teal-light)">What You're Looking At</em></h2>
+    <p style="text-align:center;max-width:660px;margin:.5rem auto 3rem;font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;font-weight:300">The water outside Good Tides Only is not a beach backdrop. It is one of the most geologically extraordinary, ecologically productive, and historically consequential bodies of water on Earth — and unlike any other water you can wade into in the United States.</p>
+
+    <!-- ORIGIN STORY -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem">
+
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">~220 Million Years Ago</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">Born from the Breakup of Pangea</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">The Gulf did not always exist. Before it, there was Pangea — the single supercontinent containing all land on Earth. Around 220 million years ago, Pangea began to tear apart. The rift that would become the Gulf opened slowly, filling with shallow seawater and drying out repeatedly in the Mesozoic heat, leaving behind thick beds of salt — the Louann Salt — that would later create the geological traps holding today's Gulf oil reserves.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">~150 Million Years Ago</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">Open Ocean — First Connection to the Atlantic</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">By the late Jurassic, the Gulf connected to the Atlantic through what is now Florida. Normal marine conditions took hold. Carbonate platforms — the foundations of ancient reef systems — began building along the margins. The Gulf filled with clear, warm, open ocean water for the first time. Dinosaurs roamed the land above the bay you're looking at.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem;border-left:3px solid rgba(196,168,98,.4)">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,168,98,.7);margin-bottom:.5rem">66 Million Years Ago</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">The Chicxulub Impact</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">An asteroid roughly 6 miles wide struck what is now the northern Yucatan Peninsula — the impact that ended the dinosaurs. The force was equivalent to a magnitude 11–12 earthquake. An estimated 198,000 cubic kilometers of sediment slid off the shelves into the deeper Gulf basin. The impact physically reshaped the southern Gulf. The crater — the Chicxulub crater — is still there, buried under the Yucatan, and the Gulf still bears the geological scars of that day.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">What It Is Now</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">A Semi-Enclosed Sea — 600,000 Square Miles</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">The Gulf covers over 600,000 square miles — larger than Iran — but is almost entirely surrounded by land. It connects to the Atlantic through the Florida Straits and to the Caribbean through the Yucatan Channel. This semi-enclosed geography is the key to everything distinctive about its water: the temperature, the color, the calm, and the extraordinary fishery. Water enters from the Caribbean, circulates through the Gulf's famous Loop Current, and exits through the Florida Straits as the Gulf Stream — the warm current that moderates the climate of the entire east coast of the US and of Western Europe.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Extremes Within One Body</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">Ankle-Deep to 14,383 Feet</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">The Gulf is a study in contrast. Here at Fort Morgan, the water is shallow — 10 to 30 feet for much of the nearshore area — warm, calm, and clear enough to see the bottom. But the same body of water contains the Sigsbee Deep: a 300-mile-long trough sometimes called the "Grand Canyon under the sea," plunging to 14,383 feet — deep enough to submerge the Rocky Mountains. Almost half the Gulf's entire basin is shallow intertidal water. The other half falls suddenly into cold, pressurized darkness.</p>
+        </div>
+        <div style="background:rgba(42,128,128,.08);border:1px solid rgba(42,128,128,.2);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">The Loop Current</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">Warm Caribbean Water Pumped Into Every Beach Day</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">Warm water from the tropics enters the Gulf through the Yucatan Channel, sweeps north in a great clockwise loop — the Loop Current — and exits through the Florida Straits. This continuous infusion of warm Caribbean water is why Gulf water temperatures at Fort Morgan reach 84–86°F in summer. It is why the water here is warmer than most Atlantic or Pacific beaches at the same latitude — and why the water rarely drops below 58°F even in winter. You are swimming in water that was in the Caribbean not long ago.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY THE COLOR IS WHAT IT IS -->
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:2rem;margin-bottom:3rem">
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.2rem;color:white;margin-bottom:1.2rem;text-align:center">Why the Water Is That Color</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem">
+        <div>
+          <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">The White Sand Floor</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">In the shallow nearshore water, the 99% quartz sand bottom acts as a mirror. Sunlight passes through the clear water, hits the brilliant white seabed, and reflects back upward — producing the luminous turquoise and emerald color. The shallower the water, the more white sand reflects, and the more vivid the green. This is the same effect that makes Caribbean waters look the way they do — a shallow, light-colored bottom.</p>
+        </div>
+        <div>
+          <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">What Water Does to Light</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">Water absorbs red and yellow wavelengths of light and scatters blue ones back to your eyes. The deeper the water, the more red is filtered out and the more purely blue the color. In shallow water with a white bottom, some green is added from the reflection. In darker water offshore — past the continental shelf — the turquoise fades to the deep sapphire blue of the open ocean. You can watch this color gradient change as you wade in from ankle-deep to chest-deep.</p>
+        </div>
+        <div>
+          <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">The Alabama Coast Variable</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">On most days, the water at Fort Morgan is remarkably clear. But this coast is closer to the Mississippi River's outflow than Florida's Destin or Panama City — when winds blow from the west, that dark, sediment-laden plume can reach Alabama's shores. It's temporary, typically clearing within a day or two when wind direction shifts. On the clear days — which are most of the year — the water here rivals any beach on the Gulf Coast for color and clarity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARISON CARDS -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.2rem;color:white;margin-bottom:1rem;text-align:center">How It Compares to Other Waters</h3>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem">
+
+      <div style="background:rgba(42,128,128,.12);border:2px solid rgba(42,128,128,.3);border-radius:6px;padding:1.3rem;text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--teal-light);margin-bottom:.3rem">The Gulf</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.6);margin-bottom:.6rem">Fort Morgan · This beach</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65">76–86°F summer · Calm, low swells · Semi-enclosed · Turquoise shallow water · Extraordinary fishery · Warm year-round · Caribbean-fed</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.3rem;text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.3rem">Atlantic (East Coast)</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.6rem">Open ocean exposure</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.65">55–72°F summer · Stronger surf and undertow · Open ocean · Darker sand · Cooler Arctic Labrador Current influence · Heavier minerals in sand</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.3rem;text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.3rem">Pacific Coast</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.6rem">Cold current dominant</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.65">50–65°F even in summer · California Current brings cold water from Alaska · Wetsuits often required · Dark sand · Powerful surf · Rocky in many areas</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.3rem;text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.3rem">Great Lakes</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.6rem">Freshwater inland</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.65">40–72°F in summer (varies widely) · Fresh water · No tidal movement · Limited marine life · No salt buoyancy · Landlocked · No Gulf Stream connection</div>
+      </div>
+
+    </div>
+
+    <!-- WHAT MAKES IT SPECIAL FOR SWIMMING / BEING IN -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem">
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.8rem">Why It Feels the Way It Does</h3>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">◈</span><span><strong style="color:rgba(255,255,255,.75)">Salinity</strong> — the Gulf's salt content keeps you slightly more buoyant than in freshwater. You float with less effort. Children who can barely swim in a pool discover they can float here.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">◈</span><span><strong style="color:rgba(255,255,255,.75)">Temperature gradient</strong> — in summer, the surface is bathtub-warm (84°F+) but cooler water lies just below. Push your feet down into the sand and feel the temperature change. The sun heats the top layer; the deep stays cooler.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">◈</span><span><strong style="color:rgba(255,255,255,.75)">Small tidal range</strong> — the Gulf's narrow connection to the open ocean produces tides of only 1–2 feet, far smaller than the Atlantic (4–6 feet) or Pacific. This is why the beach here is wide, flat, and predictable — and why the gentle surf makes it ideal for children and casual swimmers.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">◈</span><span><strong style="color:rgba(255,255,255,.75)">No cold currents</strong> — unlike the East and West Coasts, no Arctic water reaches the Gulf. The Loop Current keeps water warm. At Fort Morgan, even in January, water temperatures rarely drop below 55°F. In October it's often still 74°F.</span></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.8rem">Remarkable Gulf Facts</h3>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.75)">It heats Europe.</strong> Warm water exits the Gulf through the Florida Straits as the Gulf Stream — a river of heat flowing north. Without it, Western Europe would be 5–10°F colder. London would have a climate like Labrador.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.75)">It feeds a continent.</strong> Fish caught in the Gulf account for roughly 20% of all US commercial fish harvest. The shallow continental shelf and massive reef system create one of the most productive fisheries on Earth.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.75)">Ancient coral lives here.</strong> Black coral growing in the deep Gulf waters is estimated to be over 2,000 years old — among the oldest living organisms on Earth.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.75)">It powers storms.</strong> The Gulf's warm surface acts as a heat battery for Atlantic hurricanes. Storms that pass over the Loop Current can intensify dramatically and rapidly — sometimes doubling in strength in hours.</span></div>
+          <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6"><span style="color:var(--teal-light);flex-shrink:0">✦</span><span><strong style="color:rgba(255,255,255,.75)">More than 750 shipwrecks</strong> rest on the Gulf floor — from 16th-century Spanish galleons to WWII vessels. Some lie within reach of recreational divers offshore of Alabama.</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- THE CLOSING THREAD — sand + water + you -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(61,168,160,.2);border-radius:8px;padding:2.5rem;text-align:center;max-width:800px;margin:0 auto">
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.15rem;color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:1rem">This is what brings people to Fort Morgan Peninsula and keeps them coming back. Not a resort. Not a waterpark. This specific convergence — quartz sand that is 99% pure and millions of years old, water that is warmer, calmer, and clearer than almost anywhere else you can reach by car from the American interior, light that turns the whole scene into something almost unreal.</p>
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.15rem;color:rgba(61,168,160,.9);line-height:1.9">The sand and the water are inseparable. They made each other. The white quartz reflects light up through the shallow water to create that turquoise color. The water's gentle waves spent tens of thousands of years polishing the sand to perfect oval grains. They have been working together — on this beach, on this peninsula — since long before there was anyone here to notice. That you get to walk into the middle of it, a short walk from the door, is the whole point of Good Tides Only.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- LITTLE LAGOON & THE PENINSULA -->
+<section id="lagoon" style="background:linear-gradient(180deg,#041420 0%,#062030 100%);padding:5rem 5rem;border-top:1px solid rgba(255,255,255,.06);overflow:hidden;position:relative">
+
+  <!-- Subtle water ripple atmosphere -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.08" aria-hidden="true">
+    <ellipse cx="50%" cy="80%" rx="60%" ry="15%" fill="none" stroke="rgba(61,168,160,.5)" stroke-width="1"/>
+    <ellipse cx="50%" cy="80%" rx="45%" ry="10%" fill="none" stroke="rgba(61,168,160,.4)" stroke-width=".8"/>
+    <ellipse cx="50%" cy="80%" rx="30%" ry="6%" fill="none" stroke="rgba(61,168,160,.3)" stroke-width=".6"/>
+  </svg>
+
+  <div style="position:relative;z-index:1">
+    <p class="eyebrow" style="text-align:center;color:rgba(61,168,160,.7)">Between Two Waters</p>
+    <h2 class="h2" style="text-align:center;color:white">Little Lagoon & <em style="color:#3da8a0">The Peninsula</em></h2>
+    <p style="text-align:center;max-width:660px;margin:.5rem auto 3rem;font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;font-weight:300">Good Tides Only sits on a narrow barrier spit with the Gulf on one side and a 10-mile lagoon on the other. Most guests discover only one of them. The ones who find both understand why this peninsula is unlike anywhere else on the Alabama coast.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem">
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">How the Peninsula Formed</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">A Barrier Spit — Built by the Gulf Itself</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">Fort Morgan Peninsula is not an island — it is a barrier spit, attached to the mainland east of Gulf Shores and extending westward into Mobile Bay. It was built by the same longshore currents that deposited the white quartz sand on its beaches. Wave energy pushing westward along the coast gradually accumulated sand into a narrow finger of land, sheltering the water behind it from Gulf swells. That sheltered water became Little Lagoon.</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Little Lagoon — 10 Miles of Calm Water</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">The Peninsula's Hidden Water</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">Little Lagoon stretches 10 miles behind the peninsula — 2,480 acres of shallow brackish water lying between the Gulf beach and Bon Secour Bay. It is calm where the Gulf is active. It is warm where the Gulf runs cool in spring and fall. It holds completely different fish species — flounder, sheepshead, speckled trout, and redfish in the grass flats — from the species running offshore. Where four freshwater lakes drain into it, the salinity drops and the ecology shifts again. It is an entire second world running the full length of the peninsula, and most guests never cross the road to find it.</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">The Pass — October 1916</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">The Opening That Changed the Lagoon</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">For most of its existence, Little Lagoon had no direct connection to the Gulf — it was a closed system, isolated behind the peninsula. In October 1916, a hurricane cut through the sand and opened Little Lagoon Pass. Salt water flooded in. The tidal exchange transformed the ecosystem overnight, bringing in Gulf species, establishing the daily tidal rhythm the lagoon still follows, and creating the brackish mixing zone that makes it one of the most productive inshore fisheries on the Alabama coast. The pass has been there just over a century — a reminder that this peninsula is still being actively shaped.</p>
+        </div>
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Bon Secour — "Safe Harbour"</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">The Bay That Gave Shelter for Centuries</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">The bay behind the peninsula — Bon Secour Bay — takes its name from the French phrase meaning "safe harbour." French explorers charting these waters in the early 18th century recognized what the peninsula provided: a natural breakwater that calmed the bay behind it and made anchoring possible in conditions that would otherwise be dangerous. The same geography that created Little Lagoon created the shelter. For the French, the Spanish before them, and the Creek and Mobile people before that, this peninsula was where you came when the weather was bad.</p>
+        </div>
+
+        <div style="background:rgba(42,128,128,.08);border:1px solid rgba(42,128,128,.2);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">What Lives Here</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">The Lagoon Ecosystem</div>
+          <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.6">
+            <div>🐟 <strong style="color:rgba(255,255,255,.8)">Redfish &amp; speckled trout</strong> — in the grass flats year-round, trophy fish in fall</div>
+            <div>🦈 <strong style="color:rgba(255,255,255,.8)">Flounder &amp; sheepshead</strong> — around structure and in the shallows, especially winter</div>
+            <div>🦅 <strong style="color:rgba(255,255,255,.8)">Great blue herons, ospreys, roseate spoonbills</strong> — fishing the shallows daily</div>
+            <div>🐬 <strong style="color:rgba(255,255,255,.8)">Bottlenose dolphins</strong> — enter through the pass to feed, often visible from the bank</div>
+            <div>🐢 <strong style="color:rgba(255,255,255,.8)">Sea turtles</strong> — nest on the Gulf beach; forage in the lagoon during summer</div>
+            <div>🦀 <strong style="color:rgba(255,255,255,.8)">Blue crabs</strong> — throughout the lagoon, peak season March through December</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.5rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">The Dual-Water Property</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white;margin-bottom:.5rem">130 Feet to the Road, 300 Feet to the Gulf</div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75">Good Tides Only is a short walk from the Gulf beach. Cross Highway 180 and walk north 400 feet and you reach the lagoon shore. In the same morning you can watch the Gulf sunrise, swim in warm clear open water, then paddle a calm lagoon surrounded by herons and ospreys. Very few properties anywhere on the Gulf Coast offer both within walking distance. The peninsula gives you the full picture — and the people who find the lagoon side almost always say it was the part of the trip they didn't expect to love.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">10 miles</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">Length of Little Lagoon</div>
+      </div>
+      <div style="width:1px;height:30px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">2,480 acres</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">Surface area</div>
+      </div>
+      <div style="width:1px;height:30px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">1916</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">Year the pass opened</div>
+      </div>
+      <div style="width:1px;height:30px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">Bon Secour</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">"Safe harbour" — French, 18th century</div>
+      </div>
+      <div style="width:1px;height:30px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">400 ft</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">From property to lagoon shore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stargazing" style="background:linear-gradient(180deg,#060a12 0%,#080f1a 40%,#060a12 100%);padding:5rem 5rem;border-top:1px solid rgba(255,255,255,.06);overflow:hidden;position:relative">
+
+  <!-- Star field background (SVG procedural) -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.6" aria-hidden="true">
+    <defs>
+      <radialGradient id="sg-glow" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="rgba(61,168,160,.08)"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </radialGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#sg-glow)"/>
+    <!-- Stars rendered via JS below -->
+    <g id="sg-stars"></g>
+  </svg>
+
+  <div style="position:relative;z-index:1">
+    <p class="eyebrow" style="text-align:center;color:rgba(61,168,160,.7)">Under the Sky</p>
+    <h2 class="h2" style="text-align:center;color:white">Stargazing at <em style="color:var(--teal-light)">Fort Morgan</em></h2>
+    <p style="text-align:center;max-width:660px;margin:.5rem auto 1rem;font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;font-weight:300">Fort Morgan Peninsula reaches into the Gulf with water on three sides and almost no artificial light to the south or west. The sky here is what the sky used to look like everywhere. Fishermen, sailors, and explorers have navigated by these same stars for 500 years.</p>
+
+    <!-- Light pollution note -->
+    <div style="text-align:center;margin-bottom:3rem">
+      <div style="display:inline-flex;align-items:center;gap:2.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:.7rem 2rem;flex-wrap:wrap;justify-content:center">
+        <div style="text-align:center">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">Bortle 4–5</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)">Rural sky · Milky Way visible</div>
+        </div>
+        <div style="width:1px;height:30px;background:rgba(255,255,255,.12)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">3 sides water</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)">Zero light pollution S &amp; W horizons</div>
+        </div>
+        <div style="width:1px;height:30px;background:rgba(255,255,255,.12)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal-light)">Sea oats &amp; stars</div>
+          <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)">Fort Morgan is an officially noted stargazing site</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEASON TILES -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:0 auto 3.5rem">
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.8rem 1.4rem;text-align:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-light),#5bbccc)"></div>
+        <div style="font-size:1.6rem;margin-bottom:.5rem">🌸</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.2rem">Spring</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.8rem">Mar · Apr · May</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65">Leo the Lion rides high in the south. Virgo and its bright star Spica visible. Saturn often prominent in the east after dark. The Big Dipper swings directly overhead.</div>
+        <div style="margin-top:.8rem;padding:.4rem .6rem;background:rgba(61,168,160,.12);border-radius:4px;font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal-light);letter-spacing:.06em">★ Jupiter &amp; Saturn often visible</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.8rem 1.4rem;text-align:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c9956b,#e0b080)"></div>
+        <div style="font-size:1.6rem;margin-bottom:.5rem">☀️</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.2rem">Summer</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.8rem">Jun · Jul · Aug</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65">The Milky Way's densest band arcs directly overhead — the galactic core above Sagittarius. Scorpius the Scorpion sits on the southern horizon with its red heart Antares. The Summer Triangle (Vega, Deneb, Altair) blazes directly overhead.</div>
+        <div style="margin-top:.8rem;padding:.4rem .6rem;background:rgba(201,149,107,.12);border-radius:4px;font-family:'Lato',sans-serif;font-size:.58rem;color:#c9956b;letter-spacing:.06em">⭐ Milky Way peaks — best viewing</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.8rem 1.4rem;text-align:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-light),#5bbccc)"></div>
+        <div style="font-size:1.6rem;margin-bottom:.5rem">🍂</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.2rem">Fall</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.8rem">Sep · Oct · Nov</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65">The Great Square of Pegasus dominates the sky. Andromeda Galaxy — the farthest object visible to the naked eye (2.5 million light years) — appears as a faint smudge above Pegasus. Perseus rises with the spectacular Double Cluster inside it.</div>
+        <div style="margin-top:.8rem;padding:.4rem .6rem;background:rgba(61,168,160,.12);border-radius:4px;font-family:'Lato',sans-serif;font-size:.58rem;color:var(--teal-light);letter-spacing:.06em">★ Andromeda Galaxy visible naked eye</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:1.8rem 1.4rem;text-align:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8b9bc4,#a0b0d8)"></div>
+        <div style="font-size:1.6rem;margin-bottom:.5rem">❄️</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:white;margin-bottom:.2rem">Winter</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.8rem">Dec · Jan · Feb</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65">Orion the Hunter rises in the southeast — the most recognizable winter constellation. The Pleiades cluster sparkles overhead. Sirius, the brightest star in the night sky, burns low in the south. Winter skies are the clearest, driest, and least humid.</div>
+        <div style="margin-top:.8rem;padding:.4rem .6rem;background:rgba(139,155,196,.15);border-radius:4px;font-family:'Lato',sans-serif;font-size:.58rem;color:#a0b0d8;letter-spacing:.06em">◎ Clearest skies of the year</div>
+      </div>
+
+    </div>
+
+    <!-- CONSTELLATION CARDS -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:white;text-align:center;margin-bottom:.5rem">The Navigator's Sky</h3>
+    <p style="text-align:center;max-width:600px;margin:0 auto 2rem;font-size:.88rem;color:rgba(255,255,255,.45);line-height:1.75">For thousands of years, fishermen and sailors read these constellations to know the seasons, navigate the sea, and find their way home. The same stars that guided Spanish explorers through Mobile Bay in 1519 are overhead tonight.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem">
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Orion simplified star pattern -->
+            <circle cx="20" cy="10" r="2.5" fill="#e8d5a0" opacity=".9"/>
+            <circle cx="40" cy="8" r="2" fill="#b0c8e0" opacity=".8"/>
+            <circle cx="15" cy="28" r="2" fill="#e8d5a0" opacity=".7"/>
+            <circle cx="45" cy="26" r="1.8" fill="#e8d5a0" opacity=".7"/>
+            <circle cx="25" cy="34" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="30" cy="35" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="35" cy="34" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="18" cy="48" r="2.2" fill="#e8d5a0" opacity=".75"/>
+            <circle cx="42" cy="50" r="2" fill="#e8d5a0" opacity=".7"/>
+            <line x1="20" y1="10" x2="40" y2="8" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="20" y1="10" x2="15" y2="28" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="40" y1="8" x2="45" y2="26" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="15" y1="28" x2="25" y2="34" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="45" y1="26" x2="35" y2="34" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="25" y1="34" x2="18" y2="48" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="35" y1="34" x2="42" y2="50" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">Orion the Hunter</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Winter · Southeast sky</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">The most recognized constellation in the world. Three stars form his belt — Alnitak, Alnilam, Mintaka — perfectly aligned and unmistakable. His right shoulder is Betelgeuse, a red supergiant 700 times the size of our sun, nearing the end of its life.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          "When Orion rises, winter has come" — fishermen throughout the Gulf Coast used his appearance to know the fish were moving deeper and the water was cooling. His belt stars point directly to Sirius, the brightest star in the night sky.
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Polaris / Little Dipper simplified -->
+            <circle cx="30" cy="8" r="3" fill="#fffde0" opacity="1"/>
+            <circle cx="38" cy="18" r="1.5" fill="white" opacity=".7"/>
+            <circle cx="44" cy="28" r="1.5" fill="white" opacity=".65"/>
+            <circle cx="38" cy="38" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="28" cy="38" r="2" fill="white" opacity=".65"/>
+            <circle cx="18" cy="35" r="1.8" fill="white" opacity=".6"/>
+            <circle cx="12" cy="25" r="1.5" fill="white" opacity=".6"/>
+            <line x1="30" y1="8" x2="38" y2="18" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <line x1="38" y1="18" x2="44" y2="28" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <line x1="44" y1="28" x2="38" y2="38" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <line x1="38" y1="38" x2="28" y2="38" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <line x1="28" y1="38" x2="18" y2="35" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <line x1="18" y1="35" x2="12" y2="25" stroke="rgba(255,255,255,.2)" stroke-width=".8"/>
+            <!-- glow on Polaris -->
+            <circle cx="30" cy="8" r="6" fill="rgba(255,253,220,.08)"/>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">Polaris — The North Star</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Year-round · True north, always fixed</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">Polaris sits almost exactly at Earth's celestial north pole — it never rises or sets and never moves in the sky. Every ship that has ever passed through Mobile Bay — Spanish galleons, French explorers, Civil War ironclads, modern shrimpers — used this single star to find north.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          Find it: face north, locate the Big Dipper's "pointer stars" (the two stars forming the far edge of the cup) — they point directly to Polaris, roughly 5 times their separation. You're looking at the same star Farragut used to navigate this bay in 1864.
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Scorpius simplified -->
+            <circle cx="28" cy="8" r="2.5" fill="#ff8870" opacity=".95"/><!-- Antares red -->
+            <circle cx="38" cy="12" r="1.8" fill="white" opacity=".7"/>
+            <circle cx="42" cy="20" r="1.5" fill="white" opacity=".65"/>
+            <circle cx="38" cy="28" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="30" cy="35" r="1.5" fill="white" opacity=".65"/>
+            <circle cx="20" cy="40" r="1.5" fill="white" opacity=".6"/>
+            <circle cx="14" cy="48" r="1.8" fill="white" opacity=".65"/>
+            <circle cx="20" cy="52" r="1.5" fill="white" opacity=".55"/>
+            <line x1="28" y1="8" x2="38" y2="12" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="38" y1="12" x2="42" y2="20" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="42" y1="20" x2="38" y2="28" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="38" y1="28" x2="30" y2="35" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="30" y1="35" x2="20" y2="40" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="20" y1="40" x2="14" y2="48" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <line x1="14" y1="48" x2="20" y2="52" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
+            <circle cx="28" cy="8" r="5" fill="rgba(255,120,80,.1)"/>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">Scorpius the Scorpion</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Summer · Southern horizon</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">One of the few constellations that actually looks like its name — a curving scorpion with a stinger tail. Its heart is Antares, a massive red supergiant so large it would swallow everything from the Sun to Mars. Fort Morgan's southern horizon over the Gulf gives an unobstructed view often denied to inland observers.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          Ancient fishermen used Scorpius's rising in the east to mark the arrival of summer fishing season — when Antares cleared the horizon, warm water species were moving in.
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Summer Triangle -->
+            <circle cx="30" cy="8" r="3" fill="#e0e8ff" opacity=".95"/><!-- Vega -->
+            <circle cx="52" cy="35" r="2.2" fill="#d0e8d0" opacity=".85"/><!-- Altair -->
+            <circle cx="12" cy="40" r="2" fill="#e8e8ff" opacity=".8"/><!-- Deneb -->
+            <line x1="30" y1="8" x2="52" y2="35" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+            <line x1="52" y1="35" x2="12" y2="40" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+            <line x1="12" y1="40" x2="30" y2="8" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+            <text x="26" y="7" font-size="5" fill="rgba(255,255,255,.4)" font-family="sans-serif">Vega</text>
+            <text x="53" y="34" font-size="5" fill="rgba(255,255,255,.4)" font-family="sans-serif">Altair</text>
+            <text x="2" y="39" font-size="5" fill="rgba(255,255,255,.4)" font-family="sans-serif">Deneb</text>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">The Summer Triangle</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Summer · Directly overhead</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">Three bright stars — Vega (in Lyra), Deneb (in Cygnus), and Altair (in Aquila) — form a massive triangle directly overhead on summer nights. The Milky Way runs directly through the middle of the triangle, and on dark nights the galactic band is visible in full detail from Fort Morgan's beach.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          Lie flat on the beach and look straight up on a July night — you'll be looking directly into the center of our own galaxy through the Summer Triangle.
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Pleiades cluster -->
+            <circle cx="20" cy="22" r="2" fill="#c0d0ff" opacity=".9"/>
+            <circle cx="28" cy="18" r="1.8" fill="#c8d8ff" opacity=".85"/>
+            <circle cx="36" cy="20" r="2.2" fill="#d0e0ff" opacity=".9"/>
+            <circle cx="40" cy="28" r="1.5" fill="#c0d0ff" opacity=".75"/>
+            <circle cx="32" cy="30" r="1.5" fill="#c8d8ff" opacity=".8"/>
+            <circle cx="24" cy="32" r="1.8" fill="#d0e0ff" opacity=".75"/>
+            <circle cx="16" cy="30" r="1.5" fill="#c0d0ff" opacity=".7"/>
+            <!-- nebulous glow -->
+            <ellipse cx="28" cy="25" rx="16" ry="12" fill="rgba(180,200,255,.06)"/>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">The Pleiades — Seven Sisters</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Fall–Winter · Northwest sky</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">One of the most famous star clusters in human history — visible to the naked eye as a tight grouping of blue-white stars. Most people see 6, but on a dark night you can count 7 or more. The Pleiades appear in the mythology of virtually every ancient culture that lived near the sea.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          Gulf Coast fishermen used the Pleiades rising at dusk as a signal that winter fishing for sheepshead and black drum was at its peak. Homer wrote about them in the Odyssey as a guide for sailors.
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+          <svg viewBox="0 0 60 60" style="width:48px;height:48px;flex-shrink:0" aria-hidden="true">
+            <!-- Milky Way suggestion -->
+            <ellipse cx="30" cy="30" rx="8" ry="26" fill="none" stroke="rgba(200,220,255,.12)" stroke-width="12" transform="rotate(-20 30 30)"/>
+            <ellipse cx="30" cy="30" rx="8" ry="26" fill="none" stroke="rgba(200,220,255,.08)" stroke-width="8" transform="rotate(-20 30 30)"/>
+            <!-- scattered stars through MW -->
+            <circle cx="22" cy="12" r="1" fill="white" opacity=".7"/>
+            <circle cx="28" cy="20" r="1.2" fill="white" opacity=".8"/>
+            <circle cx="32" cy="28" r="1" fill="white" opacity=".75"/>
+            <circle cx="30" cy="38" r="1.5" fill="#ffd080" opacity=".8"/>
+            <circle cx="26" cy="46" r="1" fill="white" opacity=".65"/>
+            <circle cx="36" cy="15" r="1" fill="white" opacity=".6"/>
+            <circle cx="38" cy="35" r="1" fill="white" opacity=".65"/>
+          </svg>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:white">The Milky Way</div>
+            <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7)">Summer peak · Year-round band</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.7rem">Our own galaxy seen edge-on — a river of 200 billion stars across the sky. From Fort Morgan, on a moonless summer night, it's genuinely spectacular: a dense, luminous band arcing from horizon to horizon with the galactic core rising above the Gulf in the south. The sea oats and the Milky Way together are one of the great sights of the Alabama coast.</p>
+        <div style="background:rgba(61,168,160,.08);border-left:2px solid rgba(61,168,160,.3);padding:.6rem .8rem;font-size:.78rem;color:rgba(61,168,160,.8);line-height:1.6;font-style:italic">
+          Ancient sailors called it the "river of heaven" and used it to orient at sea when specific star positions were ambiguous. On Fort Morgan's beach, you're seeing what every sailor who ever navigated the Gulf looked up at.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BEST PRACTICES -->
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.8rem 2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem">
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Best Viewing Spot</div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.65">Walk to the Good Tides beach and face south. You have unobstructed dark horizon over the Gulf. The Fort Morgan Historic Site waterfront (5 min drive) is even darker — no structures to the west or south, and the pass creates a natural dark horizon in two directions.</p>
+      </div>
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Tips for Success</div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.65">Allow 20–30 minutes for your eyes to dark-adapt after going outside. Avoid phone screens — red-light mode helps. New moon weeks are best (check the lunar calendar before your trip). Fall and winter skies are the clearest and least humid.</p>
+      </div>
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem">Apps to Bring</div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.65">SkySafari, Stellarium, or Star Walk 2 — point your phone at any part of the sky and see exactly what you're looking at, including satellites passing overhead. The ISS transits over Fort Morgan regularly and is bright enough to track with the naked eye.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+  
+<!-- ============ MOVED FROM index.html ============ -->
+
+<section id="room-tour" style="padding-top:0">
+<!-- ROOM SECTIONS — VRBO layout: text left, large photo right -->
+
+  <!-- EXTERIOR -->
+  <div class="ab-room" id="r-exterior">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">Exterior</h3>
+      <p class="ab-room-desc">Raised beach cottage · 100 × 200 ft lot · Covered parking below · Outdoor shower at base of stairs</p>
+      
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🌊</span> Expansive Gulf views</span><span class="ab-stat"><span style="font-size:1rem">🚗</span> Parks 2 cars</span><span class="ab-stat"><span style="font-size:1rem">🚿</span> Outdoor shower</span><span class="ab-stat"><span style="font-size:1rem">🌴</span> Hammocks & BBQ</span><span class="ab-stat"><span style="font-size:1rem">📐</span> 100 × 200 ft lot</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)"><img src="https://uc.orez.io/f/54027104d7304da0a9458ce6ef9c7aa2" alt="Good Tides Only viewed from beach dunes — Fort Morgan Peninsula" style="width:100%;height:280px;object-fit:cover;border-radius:4px">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/House_Front_Street_View.webp" alt="Front street view"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="https://uc.orez.io/f/abf0c4f0461848ba932d0df290f742a2" alt="Deck and gazebo"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVING ROOM -->
+  <div class="ab-room" id="r-living">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">The Living Room</h3>
+      <p class="ab-room-desc">Open plan · Sofa bed · Smart TV · Ceiling fan · Gulf views from windows · Seats 6+</p>
+      <div class="ab-room-amenities">
+        <span>Smart TV</span><span class="ab-dot">·</span>
+        <span>Sofa bed</span><span class="ab-dot">·</span>
+        <span>Ceiling fan</span><span class="ab-dot">·</span>
+        <span>Gulf views</span><span class="ab-dot">·</span>
+        <button onclick="toggleAmenities('living-more')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:.8rem;text-decoration:underline;color:var(--text)">Show more</button>
+      </div>
+      <div id="living-more" style="display:none;margin-top:.5rem">
+        <div class="ab-room-amenities"><span>LVP hardwood floors</span><span class="ab-dot">·</span><span>Coastal décor</span><span class="ab-dot">·</span><span>Natural light</span><span class="ab-dot">·</span><span>Open to kitchen</span></div>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">📺</span> Smart TV</span><span class="ab-stat"><span style="font-size:1rem">🛋️</span> Seats 6+</span><span class="ab-stat"><span style="font-size:1rem">🌊</span> Gulf views</span><span class="ab-stat"><span style="font-size:1rem">💡</span> Ceiling fan</span><span class="ab-stat"><span style="font-size:1rem">🛏️</span> Sofa bed</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/Living_Room.jpeg" alt="Living room and dining area">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Living_Room_3.jpeg" alt="Sofa and accent chairs"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Living_Room_2.jpeg" alt="TV console and shelving"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL KITCHEN -->
+  <div class="ab-room" id="r-kitchen">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">Full Kitchen</h3>
+      <p class="ab-room-desc">Fully renovated · All new appliances · Stocked for real cooking · Seats 6 at dining area</p>
+      <div class="ab-room-amenities">
+        <span>Baking sheet</span><span class="ab-dot">·</span>
+        <span>Coffee maker</span><span class="ab-dot">·</span>
+        <span>Cooking basics</span><span class="ab-dot">·</span>
+        <span>Dishwasher</span><span class="ab-dot">·</span>
+        <button onclick="toggleAmenities('kitchen-more')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:.8rem;text-decoration:underline;color:var(--text)">Show more</button>
+      </div>
+      <div id="kitchen-more" style="display:none;margin-top:.5rem">
+        <div class="ab-room-amenities">
+          <span>Refrigerator</span><span class="ab-dot">·</span><span>Microwave</span><span class="ab-dot">·</span>
+          <span>Sharp knife set</span><span class="ab-dot">·</span><span>Wine glasses</span><span class="ab-dot">·</span>
+          <span>Full cookware set</span><span class="ab-dot">·</span><span>Toaster</span><span class="ab-dot">·</span>
+          <span>Kettle</span><span class="ab-dot">·</span><span>Disposal</span><span class="ab-dot">·</span>
+          <span>Salt, pepper & oil</span><span class="ab-dot">·</span><span>Doggie bowls on request</span>
+        </div>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🍳</span> All new appliances</span><span class="ab-stat"><span style="font-size:1rem">☕</span> Coffee maker</span><span class="ab-stat"><span style="font-size:1rem">🍽️</span> Seats 6 dining</span><span class="ab-stat"><span style="font-size:1rem">🫙</span> Dishwasher</span><span class="ab-stat"><span style="font-size:1rem">🔪</span> Fully stocked</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/Kitchen_Island_2.png" alt="Kitchen island with Gulf view">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Dining_Area_Inside.jpeg" alt="Dining area"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Kitchen.jpeg" alt="Stove and sink"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEDROOM 1 -->
+  <div class="ab-room" id="r-bed1">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">The King Suite</h3>
+      <p class="ab-room-desc">King bed · Sleeps 2 · Hall bath · Walk-in shower · Double vanity</p>
+      <div class="ab-room-amenities">
+        <span>King bed</span><span class="ab-dot">·</span>
+        <span>Sleeps 2</span><span class="ab-dot">·</span>
+        <span>Blackout shades</span><span class="ab-dot">·</span>
+        <span>Ceiling fan</span><span class="ab-dot">·</span>
+        <span>Closet</span>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🛏️</span> King bed</span><span class="ab-stat"><span style="font-size:1rem">👥</span> Sleeps 2</span><span class="ab-stat"><span style="font-size:1rem">🌑</span> Blackout shades</span><span class="ab-stat"><span style="font-size:1rem">💡</span> Ceiling fan</span><span class="ab-stat"><span style="font-size:1rem">👔</span> Closet</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/King_Bedroom_2.jpeg" alt="The King Suite — king bed">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/King_Bedroom_4.jpeg" alt="The King Suite — king bed"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/King_Bedroom.jpeg" alt="The King Suite — TV and closet"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEDROOM 2 -->
+  <div class="ab-room" id="r-bed2">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">The Queen Room</h3>
+      <p class="ab-room-desc">2 Queen beds · Sleeps 4 · Attached bath · Soaking tub · Double vanity · Perfect for couples</p>
+      <div class="ab-room-amenities">
+        <span>2 Queen beds</span><span class="ab-dot">·</span>
+        <span>Sleeps 4</span><span class="ab-dot">·</span>
+        <span>Natural light</span><span class="ab-dot">·</span>
+        <span>Ceiling fan</span><span class="ab-dot">·</span>
+        <span>Closet</span><span class="ab-dot">·</span>
+        <span>Washer/dryer closet</span>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🛏️</span> 2 Queen beds</span><span class="ab-stat"><span style="font-size:1rem">👥</span> Sleeps 4</span><span class="ab-stat"><span style="font-size:1rem">🛁</span> Attached bath · Soaking tub</span><span class="ab-stat"><span style="font-size:1rem">🪥</span> Double vanity</span><span class="ab-stat"><span style="font-size:1rem">💡</span> Ceiling fan</span><span class="ab-stat"><span style="font-size:1rem">👔</span> Closet</span><span class="ab-stat"><span style="font-size:1rem">🧺</span> Washer/dryer</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/Queen_bedroom_Queen___Queen_Beds.jpeg" alt="The Queen Room — 2 queen beds">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Queen_Bedroom___Laundry_Closet.jpeg" alt="Stacked washer and dryer in the Queen Bedroom closet"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Queen_Bedroom_Ensuite_bathroom.png" alt="The Queen Room ensuite bathroom"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAUNDRY -->
+  <div style="max-width:1180px;margin:0 auto;padding:1.5rem 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid var(--sky-mid)">
+    <div style="flex:0 0 200px;border-radius:8px;overflow:hidden;aspect-ratio:4/3">
+      <img src="photos/Queen_Bedroom___Laundry_Closet.jpeg" alt="Stacked washer and dryer" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div>
+      <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem">In-Unit Laundry</div>
+      <h3 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--text);margin-bottom:.4rem">Laundry</h3>
+      <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;font-weight:300;margin:0">Full-size stacked washer and dryer, tucked in a closet in the Queen Bedroom. Wash beach towels and swimsuits right here — no laundromat run needed.</p>
+    </div>
+  </div>
+
+  <!-- DECK & OUTDOOR -->
+  <div class="ab-room" id="r-deck">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">The Salt Tide &amp; Open-Air Dining & Outdoor Space</h3>
+      <p class="ab-room-desc">Covered deck · Gulf-facing · Dining table seats 6 · Outdoor sofas with cushions (seats 5–6) · Coffee table · String lights · Gulf views · Outdoor shower</p>
+      <div class="ab-room-amenities">
+        <span>Covered gazebo</span><span class="ab-dot">·</span>
+        <span>Gulf views</span><span class="ab-dot">·</span>
+        <span>Seats 6</span><span class="ab-dot">·</span>
+        <span>BBQ grill</span><span class="ab-dot">·</span>
+        <button onclick="toggleAmenities('deck-more')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:.8rem;text-decoration:underline;color:var(--text)">Show more</button>
+      </div>
+      <div id="deck-more" style="display:none;margin-top:.5rem">
+        <div class="ab-room-amenities">
+          <span>Hammocks (2)</span><span class="ab-dot">·</span><span>Outdoor shower</span><span class="ab-dot">·</span>
+          <span>String lights</span><span class="ab-dot">·</span><span>Outdoor dining table</span><span class="ab-dot">·</span>
+          <span>Beach chairs (4)</span><span class="ab-dot">·</span><span>Beach wagon</span><span class="ab-dot">·</span>
+          <span>Cooler</span><span class="ab-dot">·</span><span>Boogie boards</span>
+        </div>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🌊</span> Gulf views</span><span class="ab-stat"><span style="font-size:1rem">🪑</span> Seats 6</span><span class="ab-stat"><span style="font-size:1rem">🛎️</span> Hammocks (2)</span><span class="ab-stat"><span style="font-size:1rem">🍔</span> BBQ grill</span><span class="ab-stat"><span style="font-size:1rem">🚿</span> Outdoor shower</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/Gazebo___Sub_bathing_chair_Ocean_View_.png" alt="Deck and gazebo looking out to the Gulf">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Deck_Outdoor_Dining___house.png" alt="Outdoor dining table"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Gazebo___Deck.png" alt="Gazebo lounge seating"></div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- UNDER HOUSE / GARAGE -->
+  <div class="ab-room" id="r-garage">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">Under the House</h3>
+      <p class="ab-room-desc">Fully covered lower level · Hammock · Two-person swing · Lounge seating · Salt air breeze · 2-car covered carport · Outdoor shower</p>
+      <div class="ab-room-amenities">
+        <span>Parks 2 cars</span><span class="ab-dot">·</span>
+        <span>Fully shaded</span><span class="ab-dot">·</span>
+        <span>Gear storage</span><span class="ab-dot">·</span>
+        <span>Outdoor shower adjacent</span>
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🚗</span> Parks 2 cars</span><span class="ab-stat"><span style="font-size:1rem">☂️</span> Fully shaded</span><span class="ab-stat"><span style="font-size:1rem">🏄</span> Gear storage</span><span class="ab-stat"><span style="font-size:1rem">🚿</span> Shower adjacent</span><span class="ab-stat"><span style="font-size:1rem">🌧️</span> Rain-protected</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="photos/Under_Deck_Parking_Sitting_area.jpeg" alt="Under the House — covered parking and sitting area" style="object-position:bottom;max-width:100%;height:auto">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Under_Deck_Shower___Swing.png" alt="Two-person porch swing"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="photos/Under_Deck_Picnic_Table.png" alt="Picnic table"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE BEACH -->
+  <div class="ab-room" id="r-beach">
+    <div class="ab-room-text">
+      <h3 class="ab-room-name">The Beach</h3>
+      <p class="ab-room-desc">Short walk via deeded access path · the Gulf · Sugar-white sand · Dogs welcome · 6 chairs & wagon included</p>
+      <div class="ab-room-amenities">
+        <span>Gulf beach access</span><span class="ab-dot">·</span>
+        <span>Beach chairs (4)</span><span class="ab-dot">·</span>
+        <span>Beach wagon</span><span class="ab-dot">·</span>
+        <span>Dogs welcome</span><span class="ab-dot">·</span>
+        <button onclick="toggleAmenities('beach-more')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:.8rem;text-decoration:underline;color:var(--text)">Show more</button>
+      </div>
+      <div id="beach-more" style="display:none;margin-top:.5rem">
+        <div class="ab-room-amenities">
+          <span>Boogie boards (2)</span><span class="ab-dot">·</span><span>Sand toys</span><span class="ab-dot">·</span>
+          <span>Cooler</span><span class="ab-dot">·</span><span>Before 9am & after 5pm summer (dogs)</span><span class="ab-dot">·</span>
+          <span>Kayaks available to rent at nearby Little Lagoon</span><span class="ab-dot">·</span><span>Paddleboard arriving Summer 2026</span>
+        </div>
+      </div>
+      <div style="margin-top:1rem;padding:.8rem 1rem;background:var(--teal-pale);border-radius:2px;font-size:.8rem;color:var(--teal)">
+        💡 <strong>Local tip:</strong> <a href="https://beachbumservices.com" target="_blank" rel="noopener noreferrer" style="color:var(--teal)">Beach Bum Services</a> delivers canopies, extra chairs & kayaks right to your spot.
+      </div>
+    
+      <div class="ab-room-stats"><span class="ab-stat"><span style="font-size:1rem">🏖️</span>Gulf beach access</span><span class="ab-stat"><span style="font-size:1rem">🪑</span> 6 beach chairs</span><span class="ab-stat"><span style="font-size:1rem">☂️</span> Bring or rent an umbrella</span><span class="ab-stat"><span style="font-size:1rem">🌊</span> the Gulf</span><span class="ab-stat"><span style="font-size:1rem">🐾</span> Dogs welcome</span></div>
+    </div>
+    <div class="ab-room-photos">
+      <div class="ab-photo-main" onclick="showLB(this)">
+        <img src="https://uc.orez.io/f/e6461598d08443169b2a4411a335642c" alt="Aerial showing beach access from property">
+      </div>
+      <div class="ab-photo-grid">
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="https://uc.orez.io/f/52ecff58be3147d78513fe7430ae51dd" alt="Fort Morgan beach"></div>
+        <div class="ab-photo-sm" onclick="showLB(this)"><img src="https://uc.orez.io/f/e71c8c78ad6b48159e8c90e4876c8bd4" alt="Emerald Gulf waters"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+// ── FLOOR PLAN DATA ─────────────────────────────────────────────────
+var FP_ROOMS = {
+  deck: {
+    name: 'The Salt Tide',
+    sub: 'Covered Gazebo',
+    desc: 'What this coast is made of — salt air, salt water, the Gulf leaving its mark on everything it touches. This is where the salt life actually lives. The open-air dining section — Open-Air Dining — is where the sky opens up completely.',
+    items: ['Covered gazebo sofas — seats 5–6','Dining table — seats 6','Open-air dining table · String lights','String lights','Gulf views'],
+    photos: ['photos/Gazebo___Deck.png','photos/Deck_Outdoor_Dining___house.png','photos/Gazebo___Sub_bathing_chair_Ocean_View_.png']
+  },
+  living: {
+    name: 'The Living Room',
+    sub: 'Living Room',
+    desc: 'The sofa, the Smart TV, the book, the phone, the Gulf or your thoughts. Everyone together, everyone at their own pace, nobody needing to be anywhere else.',
+    items: ['Sofa bed (sleeps 2)','Accent chairs','Smart TV','AC/ceiling fan','Opens to deck and kitchen'],
+    photos: ['photos/Living_Room_4.jpeg','photos/Living_Room.jpeg','photos/Living_Room_3.jpeg']
+  },
+  kitchen: {
+    name: 'The Kitchen',
+    sub: 'Kitchen',
+    desc: 'The smell that finds you wherever you are in the house and brings you to the kitchen without being asked.',
+    items: ['Stainless steel appliances','Granite counters + island','Bar stools at island','Dining table adjacent','Lobster/crab pot · Coffee maker · Blender'],
+    photos: ['photos/Kitchen_Island.png','photos/Kitchen_Island_3.jpeg','photos/Kitchen_2.png']
+  },
+  bed1: {
+    name: 'The King Suite',
+    sub: 'Bedroom',
+    desc: 'A king bed, a hall bath with double vanity, and nothing on the agenda. The room for two people who earned some quiet.',
+    items: ['King bed · 225 sq ft','Ceiling fan','Closet','Smart TV'],
+    photos: ['photos/King_Bedroom.jpeg','photos/King_Bedroom_2.jpeg','photos/King_Bedroom_4.jpeg']
+  },
+  bed2: {
+    name: 'The Queen Room',
+    sub: 'Bedroom',
+    desc: 'Two queen beds for the kids, worn out by 8pm from a full day of Gulf water and sand. The most satisfying sound in the house.',
+    items: ['2 Queen beds · 225 sq ft','Attached ensuite — tub/shower combo + double vanity','Sleeps 4','Ceiling fan','Closet'],
+    photos: ['photos/Queen_bedroom_Queen___Queen_Beds.jpeg','photos/Queen_Bedroom_3.png','photos/Queen_Bedroom_Ensuite_bathroom_2.png']
+  },
+  laundry: {
+    name: 'Laundry',
+    sub: 'Utility Closet',
+    desc: 'A stacked washer and dryer tucked in a closet in the Queen Bedroom — wash beach towels and swimsuits without a laundromat run.',
+    items: ['Stacked washer & dryer','Full-size','In the Queen Bedroom closet'],
+    photos: ['photos/Queen_Bedroom___Laundry_Closet.jpeg']
+  },
+  'hall-bath': {
+    name: 'The Mist Tide',
+    sub: 'Bathroom',
+    desc: 'The hall bath — walk-in shower, double vanity, right across from the King Suite.',
+    items: ['Walk-in shower','Double vanity','Across the hall from the King Suite'],
+    photos: ['photos/Hall_Bathroom_1.png']
+  },
+  'lower-lounge': {
+    name: 'Under the House',
+    sub: 'Under the House',
+    desc: 'Hammock, swing, salt air through the shade. You came down for five minutes.',
+    items: ['Hammock','Two-person swing','Lounge seating','Full shade · Salt air','Adjacent to outdoor shower + parking'],
+    photos: ['photos/Under_Deck_Picnic_Table.png','photos/Under_Deck_Parking_Sitting_area.jpeg','photos/Stairs_Leading_to_Upper_Deck_and_Main_Door.png']
+  },
+  'lower-shower': {
+    name: 'The Soak Tide',
+    sub: 'Bathroom',
+    desc: 'Where the Gulf washes off and everything resets.',
+    items: ['Hot water outdoor shower','Adjacent to parking','At base of main stairs','Perfect for post-beach rinse'],
+    photos: ['https://uc.orez.io/f/3075376042a74510a5644300b63ee67d','https://uc.orez.io/f/b1f8241914d84ae78a28e814bd81baf2','https://uc.orez.io/f/fca7f97fc51149928054c0d8e778a011']
+  }
+};
+
+var fpCurrentRoom = null;
+
+function fpSelect(roomKey){
+  var room = FP_ROOMS[roomKey];
+  if(!room) return;
+  fpCurrentRoom = roomKey;
+
+  // Update all dots — deactivate all, activate selected
+  document.querySelectorAll('.fp-dot').forEach(function(d){ d.classList.remove('fp-active'); });
+  var dot = document.getElementById('fdot-'+roomKey);
+  if(dot) dot.classList.add('fp-active');
+
+  // Build panel content
+  var photos = room.photos.slice(0,3).map(function(url){
+    return '<div style="flex:1;min-width:0;border-radius:4px;overflow:hidden;aspect-ratio:4/3;background:#0d1a1a"><img src="'+url+'" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="'+room.name+'"></div>';
+  }).join('');
+
+  var items = room.items.map(function(i){
+    return '<div style="font-size:.78rem;color:rgba(255,255,255,.55);padding:.15rem 0">✓ '+i+'</div>';
+  }).join('');
+
+  document.getElementById('fp-panel-content').innerHTML =
+    '<div style="font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.65);margin-bottom:.3rem">'+room.sub+'</div>'+
+    '<div style="font-family:\'DM Serif Display\',serif;font-style:italic;font-size:1.05rem;color:white;margin-bottom:.6rem">'+room.name+'</div>'+
+    '<div style="display:flex;gap:.4rem;margin-bottom:.8rem">'+photos+'</div>'+
+    '<p style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:.7rem">'+room.desc+'</p>'+
+    '<div style="display:flex;flex-direction:column;gap:.1rem">'+items+'</div>';
+}
+
+function fpSetLevel(level){
+  document.getElementById('fp-main').style.display = level==='main' ? 'block' : 'none';
+  document.getElementById('fp-lower').style.display = level==='lower' ? 'block' : 'none';
+  document.getElementById('fp-tab-main').style.background = level==='main' ? 'var(--teal)' : 'rgba(255,255,255,.08)';
+  document.getElementById('fp-tab-main').style.color = level==='main' ? 'white' : 'rgba(255,255,255,.5)';
+  document.getElementById('fp-tab-lower').style.background = level==='lower' ? 'var(--teal)' : 'rgba(255,255,255,.08)';
+  document.getElementById('fp-tab-lower').style.color = level==='lower' ? 'white' : 'rgba(255,255,255,.5)';
+  // Reset panel
+  if(fpCurrentRoom){
+    var dot = document.getElementById('fdot-'+fpCurrentRoom);
+    if(dot) dot.classList.remove('fp-active');
+    fpCurrentRoom = null;
+  }
+  fpPanelReset();
+}
+
+function fpPanelReset(){
+  document.getElementById('fp-panel-content').innerHTML =
+    '<div style="text-align:center;padding:2.2rem 0">'+
+    '<div style="font-family:\'DM Serif Display\',serif;font-style:italic;font-size:1.05rem;color:white;margin-bottom:.5rem">Tap a space to explore</div>'+
+    '<div style="font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6">Photos and details for each room of your private Gulf Coast home.</div>'+
+    '</div>';
+}
+</script>
+
+<style>
+.fp-tab{font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.4rem;border-radius:20px;border:1px solid rgba(255,255,255,.12);cursor:pointer;transition:background .2s,color .2s}
+.fp-zone{cursor:pointer}
+.fp-zone:hover rect.fp-room{fill:rgba(61,168,160,.16)}
+.fp-dot{fill:var(--teal-light);stroke:#0a1010;stroke-width:2;animation:pulse 2.4s ease-in-out infinite}
+.fp-dot.fp-active{fill:white;stroke:var(--teal-light);stroke-width:3;animation:none}
+.fp-zone:hover .fp-dot{animation:none}
+</style>
+
+<section id="floor-plan" style="background:#0a1010;padding:3rem 5rem;border-top:1px solid rgba(255,255,255,.06)">
+  <p style="text-align:center;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(61,168,160,.6);margin-bottom:.4rem">Your private Gulf Coast home</p>
+  <h2 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.8rem;color:white;text-align:center;margin-bottom:.4rem">Walk the <em>floor plan</em></h2>
+  <p style="text-align:center;font-size:.82rem;color:rgba(255,255,255,.35);max-width:480px;margin:.2rem auto 2rem;line-height:1.7">Tap any space below to see photos and details — from the bedrooms to the deck overlooking The Gulf.</p>
+
+  <div style="display:flex;justify-content:center;gap:.6rem;margin-bottom:1.8rem">
+    <button id="fp-tab-main" onclick="fpSetLevel('main')" class="fp-tab" style="background:var(--teal);color:white">Main Floor</button>
+    <button id="fp-tab-lower" onclick="fpSetLevel('lower')" class="fp-tab" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.5)">Ground Level</button>
+  </div>
+
+  <div style="display:flex;gap:2rem;max-width:980px;margin:0 auto;align-items:flex-start;flex-wrap:wrap">
+
+    <div style="flex:1 1 480px;min-width:300px">
+      <div id="fp-main" style="display:block">
+        <svg viewBox="0 0 640 460" style="width:100%;height:auto;display:block">
+  <rect x="50" y="20" width="540" height="300" fill="#0d1a1a" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+  <g class="fp-zone" onclick="fpSelect('hall-bath')">
+    <rect class="fp-room" x="305" y="20" width="30" height="150" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+    <circle class="fp-dot" id="fdot-hall-bath" cx="320" cy="95" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('bed1')">
+    <rect class="fp-room" x="50" y="20" width="255" height="150" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="66" y="46" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">The King Suite</text>
+    <text x="66" y="63" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">KING BEDROOM</text>
+    <circle class="fp-dot" id="fdot-bed1" cx="282" cy="150" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('bed2')">
+    <rect class="fp-room" x="335" y="20" width="255" height="150" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="351" y="46" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">The Queen Room</text>
+    <text x="351" y="63" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">2 QUEEN BEDROOM</text>
+    <circle class="fp-dot" id="fdot-bed2" cx="565" cy="150" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('laundry')">
+    <rect class="fp-room" x="335" y="120" width="55" height="50" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.15)"/>
+    <circle class="fp-dot" id="fdot-laundry" cx="362" cy="145" r="6"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('living')">
+    <rect class="fp-room" x="50" y="170" width="280" height="150" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="66" y="196" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">The Living Room</text>
+    <text x="66" y="213" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">LIVING ROOM</text>
+    <circle class="fp-dot" id="fdot-living" cx="305" cy="300" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('kitchen')">
+    <rect class="fp-room" x="330" y="170" width="260" height="150" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="346" y="196" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">The Kitchen</text>
+    <text x="346" y="213" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">KITCHEN</text>
+    <circle class="fp-dot" id="fdot-kitchen" cx="565" cy="300" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('deck')">
+    <rect class="fp-room" x="50" y="320" width="540" height="70" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="320" y="346" text-anchor="middle" font-family="'DM Serif Display',serif" font-style="italic" font-size="14" fill="white">The Salt Tide &amp; Open-Air Dining</text>
+    <text x="320" y="362" text-anchor="middle" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">COVERED GAZEBO · OPEN-AIR DINING</text>
+    <circle class="fp-dot" id="fdot-deck" cx="320" cy="378" r="7"/>
+  </g>
+
+  <rect x="0" y="390" width="640" height="15" fill="rgba(230,210,170,.15)"/>
+  <rect x="0" y="405" width="640" height="55" fill="rgba(42,128,128,.22)"/>
+  <path d="M0,418 Q20,412 40,418 T80,418 T120,418 T160,418 T200,418 T240,418 T280,418 T320,418 T360,418 T400,418 T440,418 T480,418 T520,418 T560,418 T600,418 T640,418" fill="none" stroke="rgba(61,168,160,.3)" stroke-width="1.5"/>
+  <text x="320" y="442" text-anchor="middle" font-family="Lato,sans-serif" font-size="11" letter-spacing="3" fill="rgba(255,255,255,.4)">THE GULF</text>
+</svg>
+      </div>
+      <div id="fp-lower" style="display:none">
+        <svg viewBox="0 0 640 460" style="width:100%;height:auto;display:block">
+  <rect x="50" y="20" width="540" height="300" fill="none" stroke="rgba(255,255,255,.12)" stroke-dasharray="6,5" stroke-width="1.5"/>
+  <text x="320" y="14" text-anchor="middle" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.3)">OPEN &amp; COVERED AREA BENEATH THE MAIN FLOOR</text>
+
+  <g>
+    <rect x="50" y="20" width="350" height="160" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.08)"/>
+    <text x="66" y="46" font-family="Lato,sans-serif" font-size="13" letter-spacing="1" fill="rgba(255,255,255,.55)">COVERED PARKING</text>
+    <text x="66" y="63" font-family="Lato,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">2 vehicles</text>
+  </g>
+
+  <g>
+    <rect x="400" y="20" width="190" height="160" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.08)"/>
+    <text x="416" y="46" font-family="Lato,sans-serif" font-size="13" letter-spacing="1" fill="rgba(255,255,255,.55)">STAIRS UP</text>
+    <text x="416" y="63" font-family="Lato,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">To main floor</text>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('lower-lounge')">
+    <rect class="fp-room" x="50" y="180" width="320" height="140" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="66" y="206" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">Under the House</text>
+    <text x="66" y="223" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">HAMMOCK &amp; SWING</text>
+    <circle class="fp-dot" id="fdot-lower-lounge" cx="345" cy="300" r="7"/>
+  </g>
+
+  <g class="fp-zone" onclick="fpSelect('lower-shower')">
+    <rect class="fp-room" x="370" y="180" width="220" height="140" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.1)"/>
+    <text x="386" y="206" font-family="'DM Serif Display',serif" font-style="italic" font-size="15" fill="white">The Soak Tide</text>
+    <text x="386" y="223" font-family="Lato,sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.4)">OUTDOOR SHOWER</text>
+    <circle class="fp-dot" id="fdot-lower-shower" cx="565" cy="300" r="7"/>
+  </g>
+
+  <rect x="0" y="320" width="640" height="15" fill="rgba(230,210,170,.15)"/>
+  <rect x="0" y="335" width="640" height="125" fill="rgba(42,128,128,.22)"/>
+  <path d="M0,348 Q20,342 40,348 T80,348 T120,348 T160,348 T200,348 T240,348 T280,348 T320,348 T360,348 T400,348 T440,348 T480,348 T520,348 T560,348 T600,348 T640,348" fill="none" stroke="rgba(61,168,160,.3)" stroke-width="1.5"/>
+  <text x="320" y="408" text-anchor="middle" font-family="Lato,sans-serif" font-size="11" letter-spacing="3" fill="rgba(255,255,255,.4)">THE GULF</text>
+</svg>
+      </div>
+      <p style="text-align:center;font-size:.62rem;color:rgba(255,255,255,.25);margin-top:.6rem;letter-spacing:.04em">Schematic layout for orientation — not architectural scale</p>
+    </div>
+
+    <div style="flex:0 0 280px;min-width:260px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.4rem;min-height:280px">
+      <div id="fp-panel-content">
+        <div style="text-align:center;padding:2.2rem 0">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.05rem;color:white;margin-bottom:.5rem">Tap a space to explore</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6">Photos and details for each room of your private Gulf Coast home.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="rooms" style="background:#0a1010;padding:3rem 5rem;border-top:1px solid rgba(255,255,255,.06)">
+  <div style="text-align:center;margin-bottom:.6rem"><img src="photos/GTO_Mascot_Original.png" alt="Good Tides Only mascot" style="width:80px;height:80px;object-fit:contain;opacity:.9"></div>
+  <p style="text-align:center;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(61,168,160,.6);margin-bottom:.4rem">Your private Gulf Coast home · Boutique spaces</p>
+  <h2 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.8rem;color:white;text-align:center;margin-bottom:.4rem">The <em>Tides</em></h2>
+  <p style="text-align:center;font-size:.82rem;color:rgba(255,255,255,.35);max-width:520px;margin:.2rem auto 2rem;line-height:1.7">A few corners of this house have their own tide — a name, a feeling, a rhythm all their own. Every space, tide or not, is part of your private Gulf Coast home.</p>
+
+  <!-- DECK FIRST — primary selling point -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;max-width:960px;margin-left:auto;margin-right:auto">
+
+    <!-- The Salt Tide -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/Gazebo___Sub_bathing_chair_Ocean_View_.png" alt="The Salt Tide Gazebo" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Covered Gazebo · Gulf-facing</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">The Salt Tide</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">Outdoor sofas · Seats 5–6 · String lights · Gulf views</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">What this coast is made of. This is where the salt life actually lives.</div>
+      </div>
+    </div>
+
+    <!-- Open-Air Dining -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/Deck_Outdoor_Dining___house.png" alt="Open-Air Dining Dining" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Open-air Dining</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">Open-Air Dining</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">Dining table · Seats 6 · Open sky · Gulf views</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">Open sky, Gulf below, the sun doing its very best work directly above you.</div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- BEDROOMS — 2 column -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;max-width:960px;margin-left:auto;margin-right:auto">
+
+    <!-- The King Suite -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/King_Bedroom_2.jpeg" alt="The King Suite Bedroom" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Bedroom</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">The King Suite</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">King bed · Walk-in shower · Double vanity</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">A king bed and nothing on the agenda. The room for two people who earned this.</div>
+      </div>
+    </div>
+
+    <!-- The Queen Room -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/Queen_bedroom_Queen___Queen_Beds.jpeg" alt="The Queen Room Bedroom" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Bedroom · Sleeps 4</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">The Queen Room</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">2 Queen beds · Soaking tub · Double vanity</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">Two queen beds, worn out kids by 8pm. The most satisfying sound in the house.</div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- LIVING + KITCHEN — 2 column -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;max-width:960px;margin-left:auto;margin-right:auto">
+
+    <!-- The Living Room -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/Living_Room.jpeg" alt="The Living Room Living Room" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Living Room · Sofa bed</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">The Living Room</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">Sofa · Accent chairs · Smart TV · Opens to deck</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">The sofa, the Smart TV, the book, the phone, the Gulf or your thoughts. Everyone together, everyone at their own pace.</div>
+      </div>
+    </div>
+
+    <!-- The Kitchen -->
+    <div style="border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="photos/Kitchen_Island_2.png" alt="The Kitchen Kitchen — island" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="padding:1.2rem 1.3rem">
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Kitchen & Dining</div>
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:white;margin-bottom:.3rem">The Kitchen</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:.6rem">Full kitchen · Island · Dining table · Lobster pot</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">The smell that finds you wherever you are in the house and brings you to the kitchen without being asked.</div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- THE CHILL TIDE — full width -->
+  <div style="max-width:960px;margin:0 auto 2rem;border-radius:8px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1.2fr 1fr">
+    <div style="aspect-ratio:unset;overflow:hidden;min-height:220px">
+      <img src="photos/Under_Deck_Picnic_Table.png" alt="Under the House — picnic table and hammock" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="padding:1.8rem 2rem;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.25rem">Under the House</div>
+      <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:white;margin-bottom:.4rem">Under the House</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:.6rem;line-height:1.5">Hammock · Two-person swing · Both grills<br>Outdoor shower · 2-car carport · Full shade</div>
+      <div style="font-size:.72rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.55">Hammock, swing, salt air through the shade. You came down for five minutes.</div>
+    </div>
+  </div>
+
+  
+  <!-- ROOMS CTA -->
+  <div style="text-align:center;max-width:960px;margin:0 auto">
+    <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x"
+       target="_blank" rel="noopener noreferrer"
+       class="book-cta-btn"
+       style="display:inline-block;background:var(--teal);color:white;padding:.9rem 2.5rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700">
+      Write Your Story — Book Now!
+    </a>
+    <p style="font-family:'Lato',sans-serif;font-size:.7rem;color:rgba(255,255,255,.3);margin-top:.5rem">2 bedrooms · 2 baths · Sleeps 6 · From $199/night</p>
+  </div>
+
+</section>
+
+<!-- ============ END MOVED CONTENT ============ -->
+
+<!-- ============ NEW: comparison, amenities, map ============ -->
+
+<section id="not-a-tower" style="background:var(--sand);padding:3.5rem 5rem;border-top:1px solid var(--sky-mid)">
+  <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+
+    <div>
+      <p style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem">Not a hotel. Not a condo. Not shared.</p>
+      <h2 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:2rem;color:var(--text);line-height:1.2;margin-bottom:1.2rem">An entire standalone house.<br><em>All yours.</em></h2>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.85;margin-bottom:.9rem">No elevator you wait twelve minutes for. No hotel lobby with strangers. No shared pool. No other family on your deck. No tiny room where five people are trying to exist at the same time. No checkout line. No restrictions on your own living space.</p>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.4rem">Just the whole house — 1,000 square feet on nearly half an acre of Gulf Coast — from the moment you pull into the covered carport until the morning you leave. Your kitchen. Your deck. Your grills. Your living room. Your beach chairs. Nobody else has a key.</p>
+
+      <!-- The comparison -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+        <div style="background:rgba(212,120,90,.08);border-left:3px solid rgba(212,120,90,.4);padding:.7rem .9rem;border-radius:0 4px 4px 0">
+          <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(212,120,90,.7);margin-bottom:.3rem">Towers &amp; Hotels</div>
+          <div style="font-size:.75rem;color:var(--text-light);line-height:1.6">Shared elevator · Lobby strangers · One room · Resort fees · Restrictions</div>
+        </div>
+        <div style="background:rgba(61,168,160,.08);border-left:3px solid rgba(61,168,160,.4);padding:.7rem .9rem;border-radius:0 4px 4px 0">
+          <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.3rem">Good Tides Only</div>
+          <div style="font-size:.75rem;color:var(--text-light);line-height:1.6">Entire house · Zero shared spaces · Your key only · Private deck · Gulf views</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div style="position:relative">
+      <div style="border-radius:8px;overflow:hidden;aspect-ratio:4/5">
+        <img src="https://uc.orez.io/f/54027104d7304da0a9458ce6ef9c7aa2" alt="Good Tides Only — standalone private Gulf Coast home" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <!-- Floating stat -->
+      <div style="position:absolute;bottom:-1rem;left:-1rem;background:var(--teal);color:white;padding:1rem 1.2rem;border-radius:6px;box-shadow:0 4px 24px rgba(0,0,0,.2)">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.6rem;line-height:1">½ acre</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-top:.1rem">Of Gulf Coast privacy</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="amenities-full" style="background:white;padding:3.5rem 5rem;border-top:1px solid var(--sky-mid)">
+  <p class="eyebrow" style="text-align:center">Everything Included</p>
+  <h2 class="h2" style="text-align:center;margin-bottom:.5rem">The Full <em>Amenities</em> List</h2>
+  <p style="text-align:center;font-size:.85rem;color:var(--text-light);max-width:520px;margin:0 auto 2.5rem">Every real feature of the house, straight from the listing — nothing added, nothing assumed.</p>
+  <div style="max-width:900px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Property Type</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">House</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Accommodation</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Entire Home</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Check-In</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Self check-in · keypad, 24/7</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">House Rules</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Maximum occupancy: 8</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Children welcome</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Infants welcome</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Pets welcome</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Minimum age of primary renter: 25</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Smoking not allowed</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Wheelchair inaccessible</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Setting & View</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Beach</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Near Ocean</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Sea View</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Ocean View</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Shared Beach Access</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Beach View</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Water View</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Sleeping Arrangements</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">2 Bedrooms · Sleeps 1–6</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">King Bedroom — New mattress, June 2026 · 1 King Bed</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Queen/Queen Bedroom · 2 Queen Beds</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Living Room · 1 Sleeper Sofa</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Bathrooms</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">2 Bathrooms</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Hall Bath — Shower, Toilet</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Ensuite Bath — Combination Tub/Shower, Toilet</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">General</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Internet/Wifi</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Air Conditioning</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Central Heating</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Linens Provided</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Towels Provided</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Washing Machine</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Clothes Dryer</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Hot Water</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Private Living Room</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Hair Dryer</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Iron & Board</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Ceiling Fans</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Laptop Friendly Workspace</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Basic Soaps</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Paper Towels</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Shampoo</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Toilet Paper</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Hangers</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Private Entrance</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Lock On Bedroom Door</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Extra Pillows & Blankets</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Body Soap</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Hair Conditioner</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Clothing Storage (closet or wardrobe)</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Kitchen</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Kitchen</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Refrigerator</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Stove</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Oven</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Microwave</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Dishwasher</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Freezer</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Coffee Maker</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Toaster</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Ice Maker</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Kitchen Island</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Blender</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Lobster Pot</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Pots & Pans</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Wine Glasses</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Dining Table</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Baking Sheet</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Barbeque/Grill Utensils</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Dishes & Utensils</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Dining</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Seating for 8 people</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Child's Highchair</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Entertainment</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Television</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Smart TV</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Satellite/Cable</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Games/Board Games</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Books</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Family</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Children's Dinnerware</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Children's Books & Toys</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Outlet Covers</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Pack N Play/Travel Crib — bring your own sheets</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Room Darkening Shades</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Outdoor</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Outdoor Grill</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Deck/Patio (uncovered)</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Balcony/Terrace</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Lawn/Garden</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Walkable to Golf</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Beach Essentials</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Walkable to Park/Playground</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Play Area</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Outdoor Dining</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Outdoor Shower</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Outdoor Seating</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Sun Loungers</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Vehicles</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Garage</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Free Parking</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Other</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Staff</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Safety</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Deadbolt Lock</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Emergency Exit Route</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Fire Emergency Contact</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Fire Extinguisher</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Medical Emergency Contact</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Exterior Lighting</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Police Emergency Contact</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Smoke Detector</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Enhanced Cleaning Practices</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Common Surface Disinfectant Cleaned</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Cleaning Products</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--sky-mid);align-items:start">
+      <div style="font-family:'Lato',sans-serif;font-weight:700;color:var(--text);font-size:.8rem;letter-spacing:.02em;padding-top:.3rem">Accessibility</div>
+      <div><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Path To Entrance Lit At Night</span><span style="display:inline-block;background:var(--sky);color:var(--text-mid);font-size:.78rem;padding:.35rem .8rem;border-radius:100px;margin:0 .3rem .4rem 0">Home Wide Doorway</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="location-map" style="background:var(--sky);padding:3.5rem 5rem;border-top:1px solid var(--sky-mid)">
+  <p class="eyebrow" style="text-align:center">Where You'll Be</p>
+  <h2 class="h2" style="text-align:center;margin-bottom:.5rem">5917 Beach Blvd, Gulf Shores, AL</h2>
+  <p style="text-align:center;font-size:.85rem;color:var(--text-light);max-width:520px;margin:0 auto 2rem">Fort Morgan Peninsula — 25 minutes from Gulf Shores, 35 minutes from Orange Beach.</p>
+  <div style="max-width:900px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)">
+    <iframe
+      src="https://www.google.com/maps?q=30.2322,-88.0231&z=15&output=embed"
+      width="100%"
+      height="420"
+      style="border:0;display:block"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Good Tides Only location map">
+    </iframe>
+  </div>
+</section>
+
+<!-- Star field JS -->
+  
+<script>
+(function(){
+
+  // ── 1. CLIPBOARD WATERMARK ────────────────────────────────────────
+  document.addEventListener('copy', function(e){
+    var sel = window.getSelection();
+    if(!sel || sel.isCollapsed) return;
+    var text = sel.toString();
+    if(text.length > 80){
+      var watermark = text + '\n\n— © 2026 Good Tides LLC · <a href="https://www.instagram.com/onlygoodtides" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.25);text-decoration:none">📸 @onlygoodtides</a> · goodtidesonly.com · All rights reserved. Unauthorized reproduction prohibited.';
+      e.clipboardData.setData('text/plain', watermark);
+      e.preventDefault();
+    }
+  });
+
+  // ── 2. DISABLE KEYBOARD SHORTCUTS ────────────────────────────────
+  document.addEventListener('keydown', function(e){
+    var ctrl = e.ctrlKey || e.metaKey;
+    if(ctrl && (
+      e.key === 'u' ||   // view-source
+      e.key === 's' ||   // save page
+      e.key === 'p' ||   // print (captures content)
+      e.key === 'a'      // select all
+    )){
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // ── 3. DISABLE RIGHT-CLICK EVERYWHERE ─────────────────────────────
+  document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+    return false;
+  });
+
+  // ── 4. CSS USER-SELECT: NONE on original narrative sections ────────
+  // Applied only to creative/narrative content — not to practical info
+  // (phone numbers, addresses, pricing etc. remain selectable)
+  var protectedIds = [
+    'convergence',   // the musing
+    'sand',          // the sand origin story
+    'the-gulf',      // the gulf water story
+    'lagoon',        // the little lagoon section
+    'stargazing',    // constellation descriptions
+    'history-maps',  // historical map narratives
+    'fort',          // fort morgan story
+    'history',       // timeline narrative
+  ];
+
+  var style = document.createElement('style');
+  var rules = protectedIds.map(function(id){
+    return '#' + id + ' p, #' + id + ' .h2, #' + id + ' h2, #' + id + ' h3 { ' +
+      '-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+  }).join('\n');
+
+  // Also protect the convergence musing standalone divs
+  rules += '\n[data-protected="true"] { -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+
+  style.textContent = rules;
+  document.head.appendChild(style);
+
+  // ── 5. IMAGE PROTECTION ───────────────────────────────────────────
+  document.addEventListener('dragstart', function(e){
+    if(e.target.tagName === 'IMG') e.preventDefault();
+  });
+
+  // Disable print screen notification (can't prevent but can detect)
+  // Add CSS to hide content in print
+  var printStyle = document.createElement('style');
+  printStyle.textContent = '@media print { body { display:none !important; } }';
+  document.head.appendChild(printStyle);
+
+})();
+</script>
+</body>
+</html>

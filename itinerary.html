@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Plan Your Gulf Shores Trip — Free Itinerary Builder | Good Tides Only</title>
+<meta name="description" content="Plan your Gulf Shores and Fort Morgan vacation day by day. Add activities from Gulf Shores to Orange Beach, customize your trip, and email your itinerary — free.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;700&display=swap">
+
+<style>
+:root{
+  --teal:#2a8080;--teal-light:#3da8a0;--teal-pale:#e0f2f0;
+  --sand:#f7f0e6;--sky:#e8f4f4;--sky-mid:#d0eaea;
+  --ink:#0d1a1a;--text:#1a3030;--text-mid:#3a5555;--text-light:#6a8585;
+  --white:#fff;--gold:#c8a040;--navy:#1c2b4a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;background:var(--ink);color:var(--white);min-height:100vh}
+
+/* NAV */
+.itin-nav{background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.itin-nav a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem 0}
+.itin-nav .logo{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:white;padding:1rem 0}
+.book-btn{background:var(--teal);color:white;padding:.5rem 1.2rem;border-radius:100px;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* HERO */
+.itin-hero{background:linear-gradient(180deg,#041414 0%,#0d2020 100%);padding:3rem 2rem 2.5rem;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.itin-hero .eyebrow{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.5rem}
+.itin-hero h1{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);color:white;margin-bottom:.5rem}
+.itin-hero p{font-size:.95rem;color:rgba(255,255,255,.5);max-width:560px;margin:0 auto;line-height:1.8}
+
+/* LAYOUT */
+.itin-body{display:grid;grid-template-columns:340px 1fr;min-height:calc(100vh - 120px)}
+
+/* LEFT PANEL — activity picker */
+.act-panel{background:#0a1a1a;border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;height:calc(100vh - 120px);position:sticky;top:62px}
+.act-search{padding:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.act-search input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.6rem .9rem;color:white;font-size:.85rem;outline:none;font-family:'Lato',sans-serif}
+.act-search input::placeholder{color:rgba(255,255,255,.3)}
+.act-search input:focus{border-color:var(--teal-light)}
+.cat-tabs{display:flex;overflow-x:auto;padding:.4rem .8rem 0;gap:.3rem;border-bottom:1px solid rgba(255,255,255,.07);scrollbar-width:none}
+.cat-tabs::-webkit-scrollbar{display:none}
+.cat-tab{flex-shrink:0;padding:.35rem .7rem;border-radius:100px;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5);background:transparent;transition:all .15s;white-space:nowrap}
+.cat-tab.active{background:var(--teal);color:white;border-color:var(--teal)}
+.act-list{flex:1;overflow-y:auto;padding:.6rem;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+.act-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:.8rem .9rem;margin-bottom:.4rem;cursor:pointer;transition:all .15s;position:relative}
+.act-item:hover{background:rgba(61,168,160,.1);border-color:rgba(61,168,160,.3)}
+.act-item.added{background:rgba(61,168,160,.12);border-color:rgba(61,168,160,.4)}
+.act-item.added::after{content:'✓';position:absolute;right:.7rem;top:50%;transform:translateY(-50%);color:var(--teal-light);font-size:.9rem}
+.act-title{font-size:.85rem;color:white;margin-bottom:.2rem;font-weight:600;padding-right:1.2rem}
+.act-note{font-size:.72rem;color:rgba(255,255,255,.4);line-height:1.5}
+.act-seasonal{display:inline-block;margin-top:.3rem;font-size:.6rem;background:rgba(201,149,107,.15);color:#c9956b;padding:.1rem .4rem;border-radius:100px;letter-spacing:.04em}
+
+/* CUSTOM ACTIVITY FORM */
+.custom-add{padding:.8rem;border-top:1px solid rgba(255,255,255,.07)}
+.custom-add p{font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+.custom-row{display:flex;gap:.4rem}
+.custom-row input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.5rem .7rem;color:white;font-size:.82rem;outline:none;font-family:'Lato',sans-serif}
+.custom-row input:focus{border-color:var(--teal-light)}
+.custom-row button{background:var(--teal);border:none;color:white;padding:.5rem .8rem;border-radius:6px;cursor:pointer;font-size:.8rem;flex-shrink:0}
+.custom-row button:hover{background:var(--teal)}
+
+/* RIGHT PANEL — days planner */
+.planner{padding:1.5rem;overflow-y:auto}
+.planner-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:gap}
+.planner-header h2{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:white}
+.stay-selector{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.6)}
+.stay-selector input{width:60px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:white;padding:.3rem .5rem;border-radius:4px;text-align:center;font-size:.85rem;outline:none}
+.days-grid{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.day-col{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden}
+.day-header{background:rgba(42,128,128,.15);border-bottom:1px solid rgba(255,255,255,.07);padding:.7rem 1rem;display:flex;align-items:center;justify-content:space-between}
+.day-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(61,168,160,.8)}
+.day-date-input{background:transparent;border:none;color:rgba(255,255,255,.5);font-size:.72rem;font-family:'Lato',sans-serif;outline:none;cursor:pointer}
+.day-items{min-height:60px;padding:.5rem}
+.day-activity{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:.55rem .7rem;margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:flex-start;gap:.4rem}
+.day-activity .da-title{font-size:.82rem;color:rgba(255,255,255,.85);line-height:1.4;flex:1}
+.day-activity .da-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.15rem}
+.day-activity .da-remove{background:none;border:none;color:rgba(255,255,255,.3);cursor:pointer;font-size:1rem;padding:0;line-height:1;flex-shrink:0}
+.day-activity .da-remove:hover{color:#d4785a}
+.day-empty{padding:.5rem;text-align:center;font-size:.75rem;color:rgba(255,255,255,.2);font-style:italic}
+.day-notes{padding:.4rem .6rem;border-top:1px solid rgba(255,255,255,.05)}
+.day-notes textarea{width:100%;background:transparent;border:none;color:rgba(255,255,255,.45);font-size:.75rem;font-family:'Lato',sans-serif;resize:none;outline:none;line-height:1.6;height:36px}
+.day-notes textarea::placeholder{color:rgba(255,255,255,.2)}
+
+/* SEND PANEL */
+.send-panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.8rem}
+.send-panel h3{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:white;margin-bottom:1rem}
+.form-row{margin-bottom:.8rem}
+.form-row label{display:block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem}
+.form-row input[type=text],.form-row input[type=email]{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.7rem .9rem;color:white;font-size:.88rem;font-family:'Lato',sans-serif;outline:none}
+.form-row input:focus{border-color:var(--teal-light)}
+.optin-row{display:flex;align-items:flex-start;gap:.7rem;padding:.8rem;background:rgba(61,168,160,.06);border:1px solid rgba(61,168,160,.15);border-radius:6px;margin-bottom:1rem}
+.optin-row input[type=checkbox]{width:16px;height:16px;flex-shrink:0;margin-top:.1rem;accent-color:var(--teal)}
+.optin-row p{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
+.optin-row strong{color:rgba(255,255,255,.8)}
+.btn-row{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn-send{background:var(--teal);color:white;border:none;padding:.85rem 2rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;flex:1;transition:background .2s}
+.btn-send:hover{background:var(--teal)}
+.btn-send:disabled{background:rgba(255,255,255,.15);cursor:not-allowed}
+.btn-download{background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);padding:.85rem 1.5rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.btn-download:hover{border-color:var(--teal-light);color:white}
+.status-msg{margin-top:.8rem;padding:.7rem 1rem;border-radius:6px;font-size:.82rem;display:none}
+.status-msg.success{background:rgba(61,168,160,.15);border:1px solid rgba(61,168,160,.3);color:rgba(61,168,160,.9)}
+.status-msg.error{background:rgba(212,120,90,.15);border:1px solid rgba(212,120,90,.3);color:rgba(212,120,90,.9)}
+
+/* FOOTER */
+.itin-footer{background:#060d0d;border-top:1px solid rgba(255,255,255,.05);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.itin-footer a{color:rgba(255,255,255,.4);font-size:.72rem;text-decoration:none}
+.itin-footer span{font-size:.72rem;color:rgba(255,255,255,.25)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .itin-body{grid-template-columns:1fr}
+  .act-panel{height:auto;position:static}
+  .planner{padding:1rem}
+}
+@media print{body{display:none !important}}
+</style>
+<!-- Google Analytics 4 — replace G-K3KTQ02PXQ with your actual ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3KTQ02PXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3KTQ02PXQ');
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="itin-nav">
+  <a href="index.html" class="logo">Good Tides Only</a>
+  <div style="display:flex;align-items:center;gap:1.5rem">
+    <a href="explore.html">Explore</a>
+    <a href="fishing.html">Fishing</a>
+    <a href="the-place.html">The Place</a>
+    <a href="index.html#calendar" class="book-btn">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="itin-hero">
+  <p class="eyebrow">Fort Morgan Peninsula · Good Tides Only</p>
+  <h1>Build Your Trip Itinerary</h1>
+  <p>Pick activities for each day of your stay, add your own, then email the full plan to yourself before you leave home.</p>
+</div>
+
+<div class="itin-body">
+
+  <!-- LEFT: ACTIVITY PICKER -->
+  <aside class="act-panel">
+    <div class="act-search">
+      <input type="text" id="act-search-input" placeholder="Search activities..." oninput="filterActivities()">
+    </div>
+    <div class="cat-tabs" id="cat-tabs">
+      <button class="cat-tab active" onclick="setCategory('all')" data-cat="all">All</button>
+    </div>
+    <div class="act-list" id="act-list"></div>
+    <div class="custom-add">
+      <p>Add your own</p>
+      <div class="custom-row">
+        <input type="text" id="custom-input" placeholder="e.g. Rent jet skis, Anniversary dinner..." maxlength="80">
+        <button onclick="addCustomActivity()">+ Add</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- RIGHT: DAYS PLANNER + SEND -->
+  <main class="planner">
+    <div class="planner-header">
+      <h2>Your Itinerary</h2>
+      <div class="stay-selector">
+        <span>Nights:</span>
+        <input type="number" id="nights-input" min="1" max="14" value="4" onchange="rebuildDays()">
+      </div>
+    </div>
+
+    <div class="days-grid" id="days-grid"></div>
+
+    <!-- SEND PANEL -->
+    <div class="send-panel">
+      <h3>Email Your Itinerary</h3>
+      <div class="form-row">
+        <label>Your first name</label>
+        <input type="text" id="guest-name" placeholder="e.g. Sarah">
+      </div>
+      <div class="form-row">
+        <label>Your email address</label>
+        <input type="email" id="guest-email" placeholder="you@example.com">
+      </div>
+      <div class="optin-row">
+        <input type="checkbox" id="marketing-optin">
+        <p><strong>Yes, send me Good Tides Only updates</strong> — availability alerts, local tips, and occasional special offers. Unsubscribe any time.</p>
+      </div>
+      <div class="btn-row">
+        <button class="btn-send" id="send-btn" onclick="sendItinerary()">✉ Email My Itinerary</button>
+        <button class="btn-download" onclick="downloadItinerary()">↓ Download PDF</button>
+      </div>
+      <div class="status-msg" id="status-msg"></div>
+    </div>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="itin-footer">
+  <a href="index.html">← Back to Good Tides Only</a>
+  <span>© 2026 Good Tides LLC · goodtidesonly.com</span>
+  <a href="index.html#calendar">Check Availability</a>
+</footer>
+
+<!-- EMAILJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// EMAILJS CONFIGURATION — replace these three values after setting up your
+// free account at emailjs.com. See setup instructions below.
+// ─────────────────────────────────────────────────────────────────────────────
+var EJS_PUBLIC_KEY   = 'BXX9bd-Fj2tWTPoBD';    // Account > API Keys
+var EJS_SERVICE_ID   = 'service_5tkb8nh';    // Email Services > Service ID
+var EJS_TEMPLATE_ID  = 'template_96sfivt';   // Email Templates > Template ID
+// ─────────────────────────────────────────────────────────────────────────────
+
+(function(){ emailjs.init({ publicKey: EJS_PUBLIC_KEY }); })();
+
+// ── ACTIVITY DATA ─────────────────────────────────────────────────────────────
+var CATEGORIES = [
+  { id:'beach',   label:'🏖 Beach & Water',    color:'#3da8a0' },
+  { id:'fishing', label:'🎣 Fishing',           color:'#1e5a8a' },
+  { id:'wildlife',label:'🦎 Wildlife & Nature', color:'#2a6a20' },
+  { id:'outdoor', label:'🥾 Trails & Outdoors', color:'#3d5a20' },
+  { id:'history', label:'🏛 History & Culture', color:'#8a4a10' },
+  { id:'daytrips',label:'🗺 Day Trips',          color:'#1e3a5f' },
+  { id:'dining',  label:'🍽 Dining',             color:'#8a3a10' },
+  { id:'golf',    label:'⛳ Golf',               color:'#145214' },
+];
+
+var ACTIVITIES = {
+  beach:[
+    {id:'bch1',title:'Sunrise over Mobile Bay',note:'Drive to the bay side — not the Gulf. Locals only.',seasonal:null},
+    {id:'bch2',title:'The beach at 6 AM',note:'Empty sand, best light, dolphins feeding close in.',seasonal:null},
+    {id:'bch3',title:'Swim the Gulf',note:'Short walk to the beach. Warm, calm, turquoise.',seasonal:null},
+    {id:'bch4',title:'Watch dolphins from shore',note:'Best early morning and late afternoon.',seasonal:null},
+    {id:'bch5',title:'Little Lagoon Pass sandbar',note:'Low tide only — calm, warm, shin-deep. Great for kids.',seasonal:null},
+    {id:'bch6',title:'Sunset from the deck',note:'Gulf-facing. Bring a drink.',seasonal:null},
+    {id:'bch7',title:'Stargazing on the beach',note:'Best on new moon. Bortle 4–5 sky. Bring SkySafari.',seasonal:null},
+  ],
+  fishing:[
+    {id:'fish1',title:'Inshore fishing — Dixie Bar',note:'Outgoing tide, 2hr before low. Redfish, flounder.',seasonal:null},
+    {id:'fish2',title:'Inshore fishing — Little Lagoon',note:'Moving tide. Speckled trout, redfish, sheepshead.',seasonal:null},
+    {id:'fish3',title:'Cobia run — Fort Morgan Pass',note:'Sight-fishing from the bank. Spectacular.',seasonal:'April–May only'},
+    {id:'fish4',title:'Surf fishing at dawn',note:'Pompano and whiting on incoming tide.',seasonal:null},
+    {id:'fish5',title:'Blue crabbing — Little Lagoon',note:'Set traps at dusk, check at sunrise. License required.',seasonal:'March–December'},
+    {id:'fish6',title:'Offshore charter — full day',note:'Book 2–4 weeks ahead. Red snapper, grouper, tuna.',seasonal:null},
+    {id:'fish7',title:'Fort Morgan Pier fishing',note:'Flounder. Right at the fort tip.',seasonal:null},
+  ],
+  wildlife:[
+    {id:'wl1',title:'Hermit & ghost crab hunting',note:'After dark. Blue UV flashlight. Kids love it.',seasonal:'Red light only May–Oct (turtles)'},
+    {id:'wl2',title:'Sea turtle nest patrol walk',note:'Dawn walk along beach May–Oct. Look for tracks.',seasonal:'May–October'},
+    {id:'wl3',title:'Bioluminescence kayak',note:'New moon nights, July–Sept, Little Lagoon. Pure Aloha Adventures.',seasonal:'May–Oct, best July–Sept'},
+    {id:'wl4',title:'Birding — Bon Secour NWR',note:'Spring migration Apr–May is extraordinary.',seasonal:'Best April–May'},
+    {id:'wl5',title:'Watch dolphins at Fort Morgan Pass',note:'Dolphins ride the ferry wake and feed at the pass.',seasonal:null},
+    {id:'wl6',title:'Alligators — Gator Lake Trail',note:'Observation tower overlooks Gator Lake. Active year-round.',seasonal:null},
+  ],
+  outdoor:[
+    {id:'tr1',title:'Jeff Friend Trail (0.78 mi)',note:'Wheelchair accessible. Kayak launch. Little Lagoon boardwalk.',seasonal:null},
+    {id:'tr2',title:'Gator Lake Trail (0.78 mi)',note:'Observation tower. Connects to Pine Beach Trail.',seasonal:null},
+    {id:'tr3',title:'Pine Beach Trail (1.65 mi each way)',note:'Best hike in the refuge. Ends at deserted Gulf beach.',seasonal:null},
+    {id:'tr4',title:'Hugh S. Branyon Trail',note:'Gulf State Park. 28+ miles. #1 USA Today.',seasonal:null},
+    {id:'tr5',title:'Kayak Little Lagoon (morning)',note:'Pure Aloha or Go Go Kayaks. Serene at dawn.',seasonal:null},
+    {id:'tr6',title:'Paddleboard the Gulf',note:'Calm morning conditions best. Rentals: Go Go Kayaks.',seasonal:null},
+    {id:'tr7',title:'Golf cart peninsula tour',note:'Fort Morgan Gear Rentals 251-800-1167.',seasonal:null},
+    {id:'tr8',title:'Kayak Back Bay Blueway',note:'21 launch sites. Fort Morgan Trail is spectacular.',seasonal:null},
+  ],
+  history:[
+    {id:'hist1',title:'Fort Morgan Historic Site',note:'5 min. 46M bricks, Civil War, Farragut. Allow 1.5–2 hrs.',seasonal:null},
+    {id:'hist2',title:'Walk the Battle of Mobile Bay seawall',note:"Stand where Farragut's fleet passed in 1864.",seasonal:null},
+    {id:'hist3',title:'Dauphin Island ferry crossing',note:'35 min from the fort. Dolphins often visible.',seasonal:null},
+  ],
+  daytrips:[
+    {id:'dt1',title:'Dauphin Island — full day',note:'Ferry from fort. Bird sanctuary, aquarium, Fort Gaines.',seasonal:null},
+    {id:'dt2',title:'Orange Beach',note:'15 min east. The Wharf, marina, Robinson Island by kayak.',seasonal:null},
+    {id:'dt3',title:'Fairhope',note:'45 min north. Antiques, galleries, bay pier, Grand Hotel.',seasonal:null},
+    {id:'dt4',title:'USS Alabama Battleship — Mobile',note:'1 hr north. WWII battleship + submarine. Half or full day.',seasonal:null},
+    {id:'dt5',title:'Florida golf run — Lost Key + Perdido Bay',note:'45–50 min east, Perdido Key FL. Two championship rounds.',seasonal:null},
+    {id:'dt6',title:'Foley — outlets + antiques',note:'20 min north. Tanger Outlets + Foley Antique Mall.',seasonal:null},
+    {id:'dt7',title:'Blue Marlin weigh-ins at The Wharf',note:'Free public viewing. Spectacular boats and fish.',seasonal:'July 14–19 only'},
+    {id:'dt8',title:'National Shrimp Festival',note:'300,000 people, free, Gulf Shores beach.',seasonal:'Oct 8–11 only'},
+  ],
+  dining:[
+    {id:'din1',title:'Selah Coffee — Kiva Dunes',note:'Only coffee shop on the peninsula. 5 min.',seasonal:null},
+    {id:'din2',title:"Jesse's on the Bay — sunset dinner",note:'Bay-side. West-facing sunset over open water.',seasonal:null},
+    {id:'din3',title:"LuLu's (Jimmy Buffett's sister)",note:'Gulf Shores, 15 min. Intracoastal. Live music.',seasonal:null},
+    {id:'din4',title:'Flora-Bama',note:'On the AL/FL state line. Live music daily. An institution.',seasonal:null},
+    {id:'din5',title:"Tacky Jack's Fort Morgan",note:'Bay views. Quiet. Locals eat here.',seasonal:null},
+    {id:'din6',title:'Crab boil at the property',note:'Catch crabs at Little Lagoon, boil that evening.',seasonal:null},
+  ],
+  golf:[
+    {id:'golf1',title:'Kiva Dunes',note:'5 min. #1 Alabama — Golfweek. Jerry Pate design.',seasonal:null},
+    {id:'golf2',title:'Craft Farms',note:'20 min. Only Arnold Palmer courses in Alabama.',seasonal:null},
+    {id:'golf3',title:'Peninsula Golf & Racquet Club',note:'30 min, Orange Beach. 27 holes. Alligators on course.',seasonal:null},
+    {id:'golf4',title:'Lost Key Golf Club, Perdido Key FL',note:'45 min. Arnold Palmer. Audubon Silver Sanctuary.',seasonal:null},
+    {id:'golf5',title:'Perdido Bay Golf Club',note:'50 min. Former PGA Tour host. Best value.',seasonal:null},
+  ],
+};
+
+// ── STATE ────────────────────────────────────────────────────────────────────
+var state = {
+  activeCategory: 'all',
+  searchQuery: '',
+  nights: 4,
+  days: [],           // array of {date:'', items:[{id,title,note,custom}], notes:''}
+  addedIds: {},       // track which activity IDs have been added
+  customActivities: [],
+};
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+function init(){
+  buildCategoryTabs();
+  rebuildDays();
+  renderActivityList();
+}
+
+function buildCategoryTabs(){
+  var tabs = document.getElementById('cat-tabs');
+  CATEGORIES.forEach(function(cat){
+    var btn = document.createElement('button');
+    btn.className = 'cat-tab';
+    btn.setAttribute('data-cat', cat.id);
+    btn.textContent = cat.label;
+    btn.onclick = function(){ setCategory(cat.id); };
+    tabs.appendChild(btn);
+  });
+}
+
+function setCategory(catId){
+  state.activeCategory = catId;
+  document.querySelectorAll('.cat-tab').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-cat') === catId);
+  });
+  renderActivityList();
+}
+
+function filterActivities(){
+  state.searchQuery = document.getElementById('act-search-input').value.toLowerCase();
+  renderActivityList();
+}
+
+function renderActivityList(){
+  var list = document.getElementById('act-list');
+  list.innerHTML = '';
+  var allItems = [];
+  if(state.activeCategory === 'all'){
+    CATEGORIES.forEach(function(cat){
+      (ACTIVITIES[cat.id]||[]).forEach(function(item){ allItems.push(item); });
+    });
+  } else {
+    allItems = ACTIVITIES[state.activeCategory] || [];
+  }
+  // Add custom activities
+  state.customActivities.forEach(function(item){ allItems.push(item); });
+
+  // Filter by search
+  if(state.searchQuery){
+    allItems = allItems.filter(function(item){
+      return item.title.toLowerCase().includes(state.searchQuery) ||
+             (item.note && item.note.toLowerCase().includes(state.searchQuery));
+    });
+  }
+
+  if(allItems.length === 0){
+    list.innerHTML = '<div style="padding:1rem;text-align:center;color:rgba(255,255,255,.3);font-size:.82rem">No activities found</div>';
+    return;
+  }
+
+  allItems.forEach(function(item){
+    var isAdded = !!state.addedIds[item.id];
+    var div = document.createElement('div');
+    div.className = 'act-item' + (isAdded ? ' added' : '');
+    div.innerHTML = '<div class="act-title">' + esc(item.title) + '</div>' +
+      (item.note ? '<div class="act-note">' + esc(item.note) + '</div>' : '') +
+      (item.seasonal ? '<span class="act-seasonal">⚡ ' + esc(item.seasonal) + '</span>' : '');
+    div.onclick = function(){ showDayPicker(item); };
+    list.appendChild(div);
+  });
+}
+
+function addCustomActivity(){
+  var input = document.getElementById('custom-input');
+  var val = input.value.trim();
+  if(!val) return;
+  var item = {
+    id: 'custom_' + Date.now(),
+    title: val,
+    note: '(your activity)',
+    seasonal: null,
+    custom: true
+  };
+  state.customActivities.push(item);
+  input.value = '';
+  renderActivityList();
+  showDayPicker(item);
+}
+
+// ── DAY PICKER MODAL ──────────────────────────────────────────────────────────
+function showDayPicker(activity){
+  // Remove existing picker
+  var existing = document.getElementById('day-picker-modal');
+  if(existing) existing.remove();
+
+  var modal = document.createElement('div');
+  modal.id = 'day-picker-modal';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:flex;align-items:center;justify-content:center;padding:1rem';
+  
+  var inner = '<div style="background:#0a1a1a;border:1px solid rgba(61,168,160,.3);border-radius:10px;padding:1.5rem;max-width:360px;width:100%">';
+  inner += '<p style="font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(61,168,160,.7);margin-bottom:.4rem">Add to which day?</p>';
+  inner += '<p style="font-size:.95rem;color:white;font-weight:600;margin-bottom:1rem">' + esc(activity.title) + '</p>';
+  inner += '<div style="display:flex;flex-direction:column;gap:.4rem;max-height:240px;overflow-y:auto;margin-bottom:1rem">';
+  
+  state.days.forEach(function(day, idx){
+    inner += '<button onclick="addToDay(' + idx + ',' + JSON.stringify(JSON.stringify(activity)) + ');document.getElementById(\'day-picker-modal\').remove()" ' +
+      'style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:white;padding:.6rem 1rem;border-radius:6px;text-align:left;cursor:pointer;font-family:\'Lato\',sans-serif;font-size:.85rem">' +
+      'Day ' + (idx+1) + (day.date ? ' — ' + day.date : '') + '</button>';
+  });
+  
+  inner += '</div><button onclick="document.getElementById(\'day-picker-modal\').remove()" style="background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);padding:.5rem 1rem;border-radius:100px;cursor:pointer;font-family:\'Lato\',sans-serif;font-size:.75rem;width:100%">Cancel</button>';
+  inner += '</div>';
+  modal.innerHTML = inner;
+  modal.onclick = function(e){ if(e.target===modal) modal.remove(); };
+  document.body.appendChild(modal);
+}
+
+function addToDay(dayIdx, activityJson){
+  var activity = JSON.parse(activityJson);
+  state.days[dayIdx].items.push(activity);
+  state.addedIds[activity.id] = true;
+  renderDays();
+  renderActivityList();
+}
+
+function removeFromDay(dayIdx, itemIdx){
+  var item = state.days[dayIdx].items[itemIdx];
+  state.days[dayIdx].items.splice(itemIdx, 1);
+  // Remove from addedIds only if not in any other day
+  var stillAdded = state.days.some(function(d){
+    return d.items.some(function(i){ return i.id === item.id; });
+  });
+  if(!stillAdded) delete state.addedIds[item.id];
+  renderDays();
+  renderActivityList();
+}
+
+// ── DAYS ─────────────────────────────────────────────────────────────────────
+function rebuildDays(){
+  var n = parseInt(document.getElementById('nights-input').value) || 4;
+  n = Math.min(Math.max(n,1),14);
+  state.nights = n;
+  // Preserve existing day data
+  while(state.days.length < n) state.days.push({date:'',items:[],notes:''});
+  if(state.days.length > n) state.days = state.days.slice(0, n);
+  renderDays();
+}
+
+function renderDays(){
+  var grid = document.getElementById('days-grid');
+  grid.innerHTML = '';
+  state.days.forEach(function(day, idx){
+    var col = document.createElement('div');
+    col.className = 'day-col';
+    var header = '<div class="day-header">' +
+      '<span class="day-label">Day ' + (idx+1) + '</span>' +
+      '<input class="day-date-input" type="text" placeholder="Date (e.g. Sat June 14)" ' +
+      'value="' + esc(day.date) + '" onchange="state.days[' + idx + '].date=this.value">' +
+      '</div>';
+    var items = '';
+    if(day.items.length === 0){
+      items = '<div class="day-empty">Click any activity on the left to add it here</div>';
+    } else {
+      day.items.forEach(function(item, iidx){
+        items += '<div class="day-activity">' +
+          '<div><div class="da-title">' + esc(item.title) + '</div>' +
+          (item.note && item.note !== '(your activity)' ? '<div class="da-note">' + esc(item.note) + '</div>' : '') +
+          (item.seasonal ? '<div class="da-note" style="color:#c9956b">⚡ ' + esc(item.seasonal) + '</div>' : '') +
+          '</div>' +
+          '<button class="da-remove" onclick="removeFromDay(' + idx + ',' + iidx + ')" title="Remove">×</button>' +
+          '</div>';
+      });
+    }
+    var notes = '<div class="day-notes"><textarea placeholder="Notes for this day (reservations, reminders...)" ' +
+      'onchange="state.days[' + idx + '].notes=this.value">' + esc(day.notes) + '</textarea></div>';
+    col.innerHTML = header + '<div class="day-items">' + items + '</div>' + notes;
+    grid.appendChild(col);
+  });
+}
+
+// ── EMAIL / SEND ─────────────────────────────────────────────────────────────
+function buildItineraryText(){
+  var lines = ['GOOD TIDES ONLY — TRIP ITINERARY', '5917 Beach Blvd, Fort Morgan Peninsula, AL', ''];
+  state.days.forEach(function(day, idx){
+    lines.push('DAY ' + (idx+1) + (day.date ? ' — ' + day.date : ''));
+    if(day.items.length === 0){
+      lines.push('  (no activities planned)');
+    } else {
+      day.items.forEach(function(item){
+        lines.push('  • ' + item.title + (item.note && item.note !== '(your activity)' ? ' — ' + item.note : ''));
+        if(item.seasonal) lines.push('    ⚡ ' + item.seasonal);
+      });
+    }
+    if(day.notes) lines.push('  Notes: ' + day.notes);
+    lines.push('');
+  });
+  return lines.join('\n');
+}
+
+function buildItineraryHTML(){
+  var html = '<div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;color:#1a3030">';
+  html += '<div style="background:#0d2020;padding:2rem;text-align:center;margin-bottom:1.5rem">';
+  html += '<div style="font-family:Georgia,serif;font-style:italic;font-size:1.5rem;color:white;margin-bottom:.3rem">Good Tides Only</div>';
+  html += '<div style="font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase">Your Trip Itinerary · Fort Morgan Peninsula, AL</div>';
+  html += '</div>';
+  
+  state.days.forEach(function(day, idx){
+    html += '<div style="margin-bottom:1.5rem;border:1px solid #d0eaea;border-radius:6px;overflow:hidden">';
+    html += '<div style="background:#e0f2f0;padding:.7rem 1rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#2a8080"><strong>Day ' + (idx+1) + (day.date ? ' — ' + day.date : '') + '</strong></div>';
+    html += '<div style="padding:1rem">';
+    if(day.items.length === 0){
+      html += '<p style="color:#aaa;font-size:.85rem;font-style:italic">No activities planned for this day</p>';
+    } else {
+      day.items.forEach(function(item){
+        html += '<div style="padding:.4rem 0;border-bottom:1px solid #f0f0f0">';
+        html += '<strong style="font-size:.9rem">' + esc(item.title) + '</strong>';
+        if(item.note && item.note !== '(your activity)') html += '<br><span style="font-size:.78rem;color:#6a8585">' + esc(item.note) + '</span>';
+        if(item.seasonal) html += '<br><span style="font-size:.72rem;color:#c9956b">⚡ ' + esc(item.seasonal) + '</span>';
+        html += '</div>';
+      });
+    }
+    if(day.notes) html += '<p style="margin-top:.7rem;font-size:.82rem;color:#5a7575;font-style:italic">Notes: ' + esc(day.notes) + '</p>';
+    html += '</div></div>';
+  });
+
+  html += '<div style="text-align:center;padding:1.5rem;border-top:2px solid #d0eaea;font-size:.78rem;color:#6a8585">';
+  html += 'goodtidesonly.com · Fort Morgan Peninsula, Alabama<br>';
+  html += '<a href="https://goodtidesonly.com/index.html#calendar" style="color:#2a8080">Check availability →</a>';
+  html += '</div></div>';
+  return html;
+}
+
+function getCustomActivities(){
+  var customs = [];
+  state.days.forEach(function(day){
+    day.items.forEach(function(item){
+      if(item.custom) customs.push(item.title);
+    });
+  });
+  state.customActivities.forEach(function(item){
+    if(!customs.includes(item.title)) customs.push(item.title);
+  });
+  return customs;
+}
+
+function sendItinerary(){
+  var name = document.getElementById('guest-name').value.trim();
+  var email = document.getElementById('guest-email').value.trim();
+  var optin = document.getElementById('marketing-optin').checked;
+  var status = document.getElementById('status-msg');
+
+  if(!email || !email.includes('@')){
+    showStatus('error', 'Please enter a valid email address.');
+    return;
+  }
+
+  var hasContent = state.days.some(function(d){ return d.items.length > 0; });
+  if(!hasContent){
+    showStatus('error', 'Add at least one activity to your itinerary before sending.');
+    return;
+  }
+
+  var btn = document.getElementById('send-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  var customActivities = getCustomActivities();
+
+  var params = {
+    to_email:      email,
+    to_name:       name || 'Friend',
+    reply_to:      'onlygoodtides@gmail.com',
+    from_name:     'Good Tides Only',
+    itinerary_html: buildItineraryHTML(),
+    itinerary_text: buildItineraryText(),
+    nights:        state.nights,
+    optin:         optin ? 'YES — Add to list' : 'No',
+    custom_items:  customActivities.length > 0 ? customActivities.join(' | ') : '(none)',
+    // BCC copy goes to host — captured in EmailJS template
+    host_email:    'onlygoodtides@gmail.com',
+  };
+
+  emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, params)
+    .then(function(){
+      showStatus('success', '✓ Itinerary sent! Check your inbox (and spam folder just in case).');
+      btn.textContent = '✓ Sent';
+      btn.style.background = 'var(--teal)';
+    })
+    .catch(function(err){
+      console.error('EmailJS error:', err);
+      showStatus('error', 'Email failed to send. Please try the download option or email onlygoodtides@gmail.com.');
+      btn.disabled = false;
+      btn.textContent = '✉ Email My Itinerary';
+    });
+}
+
+function showStatus(type, msg){
+  var el = document.getElementById('status-msg');
+  el.className = 'status-msg ' + type;
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function downloadItinerary(){
+  var text = buildItineraryText();
+  // Use print-to-PDF approach via a clean popup
+  var win = window.open('','_blank');
+  win.document.write('<html><head><title>Plan Your Gulf Shores Trip — Free Itinerary Builder | Good Tides Only</title>');
+  win.document.write('<style>body{font-family:Georgia,serif;max-width:600px;margin:2rem auto;color:#1a3030;font-size:14px;line-height:1.7}');
+  win.document.write('h1{font-size:1.4rem;margin-bottom:.3rem} .day{margin-bottom:1.2rem;border:1px solid #d0eaea;border-radius:6px;overflow:hidden}');
+  win.document.write('.day-hdr{background:#e0f2f0;padding:.5rem 1rem;font-weight:bold;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#2a8080}');
+  win.document.write('.day-body{padding:.8rem 1rem} .item{border-bottom:1px solid #f0f0f0;padding:.3rem 0}');
+  win.document.write('.item-title{font-weight:bold} .item-note{font-size:.82rem;color:#6a8585} .seasonal{font-size:.72rem;color:#c9956b}');
+  win.document.write('.footer{text-align:center;margin-top:1.5rem;font-size:.78rem;color:#888;border-top:2px solid #d0eaea;padding-top:1rem}');
+  win.document.write('</style></head><body>');
+  win.document.write('<h1>Good Tides Only — Trip Itinerary</h1>');
+  win.document.write('<p style="font-size:.82rem;color:#888;margin-bottom:1.2rem">5917 Beach Blvd · Fort Morgan Peninsula, Alabama · goodtidesonly.com</p>');
+  state.days.forEach(function(day, idx){
+    win.document.write('<div class="day"><div class="day-hdr">Day ' + (idx+1) + (day.date?' — '+day.date:'') + '</div><div class="day-body">');
+    if(day.items.length===0){ win.document.write('<div style="color:#aaa;font-style:italic">No activities planned</div>'); }
+    else { day.items.forEach(function(item){
+      win.document.write('<div class="item"><div class="item-title">' + esc(item.title) + '</div>');
+      if(item.note && item.note!=='(your activity)') win.document.write('<div class="item-note">' + esc(item.note) + '</div>');
+      if(item.seasonal) win.document.write('<div class="seasonal">⚡ ' + esc(item.seasonal) + '</div>');
+      win.document.write('</div>');
+    }); }
+    if(day.notes) win.document.write('<p style="font-style:italic;font-size:.82rem;color:#5a7575;margin-top:.5rem">Notes: ' + esc(day.notes) + '</p>');
+    win.document.write('</div></div>');
+  });
+  win.document.write('<div class="footer">goodtidesonly.com · © 2026 Good Tides LLC</div></body></html>');
+  win.document.close();
+  win.focus();
+  setTimeout(function(){ win.print(); }, 500);
+}
+
+function esc(str){
+  if(!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── CONTENT PROTECTION ───────────────────────────────────────────────────────
+document.addEventListener('copy',function(e){
+  var sel=window.getSelection();if(!sel||sel.isCollapsed)return;
+  var text=sel.toString();
+  if(text.length>80){e.clipboardData.setData('text/plain',text+'\n\n— © 2026 Good Tides LLC · goodtidesonly.com');e.preventDefault();}
+});
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&(e.key==='u'||e.key==='s'||e.key==='p'))e.preventDefault();
+});
+
+init();
+</script>
+
+</body>
+</html>

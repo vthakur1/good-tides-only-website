@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Gulf Shores History — Fort Morgan, Mobile Bay & the Civil War | Good Tides Only</title>
+<meta name="description" content="Fort Morgan and Gulf Shores history — the Civil War Battle of Mobile Bay, Dauphin Island, and five centuries at the entrance to Alabama's most significant waterway.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+:root{
+  --sky:#e8f4f4; --sky-mid:#d0eaea; --teal:#2a8080; --teal-light:#3da8a0;
+  --teal-pale:#e0f2f0; --sand:#f7f0e6; --sand-mid:#ede3d4; --gold:#c8a040;
+  --text:#1a3030; --text-mid:#3a5555; --text-light:#6a8585;
+  --white:#ffffff; --off-white:#fafcfc; --ink:#0d1a1a; --navy:#2b4570;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+
+/* UTIL BAR */
+.util-bar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--teal);display:flex;justify-content:space-between;align-items:center;padding:.45rem 3rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.8)}
+.util-bar a{color:rgba(43,69,112,.8);text-decoration:none;transition:color .2s}
+.util-bar a:hover{color:#2b4570}
+.view-counter{display:flex;align-items:center;gap:.5rem;background:rgba(43,69,112,.12);padding:.3rem .8rem;border-radius:100px}
+.view-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s ease infinite;flex-shrink:0}
+
+/* NAV */
+nav{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(43,69,112,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,128,128,.1)}
+.nav-top{display:flex;justify-content:center;align-items:center;padding:.5rem 3rem;border-bottom:1px solid rgba(42,128,128,.06);position:relative;min-height:120px}
+.logo{text-decoration:none;display:flex;align-items:center;justify-content:center}
+.logo em{font-style:italic;color:#2b4570}
+.logo-tagline{display:none}
+.nav-phone{position:absolute;left:3rem;font-family:'Lato',sans-serif;font-size:.65rem;color:var(--text-light)}
+.nav-book-top{position:absolute;right:3rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:var(--teal);color:#2b4570;padding:.5rem 1.2rem;text-decoration:none;border-radius:2px;transition:background .2s}
+.nav-book-top:hover{background:#2b4570}
+.nav-bottom{display:flex;justify-content:center;padding:.5rem 3rem;overflow-x:auto}
+.nav-links{display:flex;gap:0;list-style:none;flex-wrap:nowrap}
+.nav-links a{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);text-decoration:none;transition:color .2s;padding:.4rem 1rem;white-space:nowrap}
+.nav-links a:hover{color:var(--teal)}
+
+/* SHARED */
+.eyebrow{font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#2b4570;margin-bottom:1rem}
+.h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.2;color:var(--text);margin-bottom:1.5rem}
+.h2 em{font-style:italic;color:var(--teal)}
+.body-text{font-size:1.1rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1.1rem}
+.pill{padding:.4rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:var(--teal);color:#2b4570;padding:.9rem 2.2rem;text-decoration:none;border-radius:2px;transition:background .2s;cursor:pointer;border:none;display:inline-block}
+.btn-primary:hover{background:#2b4570}
+.btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:var(--teal);padding:.9rem 2.2rem;border:1.5px solid var(--teal);text-decoration:none;border-radius:2px;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-outline:hover{background:var(--teal-pale)}
+
+/* HERO — SPLIT PANEL */
+.hero{min-height:90vh;padding-top:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#e8f2f0}
+.hero-split{position:absolute;inset:0;display:flex;align-items:stretch;padding:16px 24px 16px 24px;gap:14px;box-sizing:border-box}
+.hero-panel{position:relative;overflow:hidden;border-radius:10px;flex:1}
+.hero-panel-img{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;transition:transform 8s ease}
+.hero-panel:hover .hero-panel-img{transform:scale(1.04)}
+.hero-panel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.15) 100%)}
+.hero-panel-label{position:absolute;bottom:1.2rem;left:0;right:0;text-align:center;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(43,69,112,.9);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero-content-overlay{position:relative;z-index:2;text-align:center;padding:2rem;max-width:700px}
+.hero-pill{padding:.38rem .85rem;background:rgba(43,69,112,.18);color:#2b4570;border-radius:100px;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(43,69,112,.3);backdrop-filter:blur(6px)}
+.hero-btn-primary{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.85rem 2rem;text-decoration:none;border-radius:2px;transition:all .2s;font-weight:600}
+.hero-btn-primary:hover{background:var(--sky)}
+.hero-btn-outline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:#2b4570;padding:.85rem 2rem;border:1.5px solid rgba(43,69,112,.65);text-decoration:none;border-radius:2px;transition:all .2s}
+.hero-btn-outline:hover{background:rgba(43,69,112,.12);border-color:#2b4570}
+.hero-inner{position:relative;z-index:2;padding:2rem;display:flex;flex-direction:column;align-items:center;gap:2rem;max-width:900px;width:100%}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(43,69,112,.5);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-dot{width:6px;height:6px;background:rgba(43,69,112,.5);border-radius:50%;animation:bounce 1.5s ease infinite}
+
+/* STRIP */
+.strip{background:var(--teal);display:flex;justify-content:center;flex-wrap:wrap}
+.strip-item{flex:1;min-width:120px;max-width:180px;padding:1.6rem 1.5rem;text-align:center;border-right:1px solid rgba(43,69,112,.15)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic;color:#2b4570}
+.strip-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(43,69,112,.65);margin-top:.3rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-text{padding:5rem 4rem;background:var(--sand);display:flex;flex-direction:column;justify-content:center}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.5rem}
+.feat{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mid)}
+.feat-dot{width:7px;height:7px;background:#2b4570;border-radius:50%;flex-shrink:0}
+.about-media{position:relative;overflow:hidden;min-height:400px}
+.about-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.about-media:hover img{transform:scale(1.04)}
+.about-badge{position:absolute;top:2rem;right:2rem;background:white;padding:1.2rem 1.5rem;box-shadow:0 8px 30px rgba(0,0,0,.1);text-align:center}
+.badge-num{font-family:'DM Serif Display',serif;font-size:2.2rem;font-style:italic;color:var(--teal);line-height:1}
+.badge-sub{font-family:'Lato',sans-serif;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light);margin-top:.2rem}
+
+/* BEACH BANNER */
+.beach-banner{background:var(--sky);padding:3.5rem 5rem;display:flex;align-items:center;justify-content:center;gap:3rem;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid);flex-wrap:wrap}
+.beach-num{font-family:'DM Serif Display',serif;font-size:5rem;font-style:italic;color:var(--teal);line-height:1}
+.beach-text h3{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text)}
+.beach-text p{font-size:1rem;color:var(--text-light);margin-top:.4rem;font-weight:300;line-height:1.6}
+
+/* QUOTE */
+.quote-block{padding:4rem 5rem;text-align:center;position:relative;overflow:hidden}
+.quote-mark{font-family:'DM Serif Display',serif;font-size:5rem;line-height:1;opacity:.2;margin-bottom:.5rem}
+.quote-text{font-family:'DM Serif Display',serif;font-style:italic;line-height:1.65}
+.quote-attr{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1.2rem;opacity:.6}
+
+/* GALLERY */
+.gallery-section{background:var(--off-white);padding:6rem 0}
+.gallery-header{padding:0 5rem;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:flex-end}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 280px;gap:4px}
+.gal-item{overflow:hidden;cursor:pointer;position:relative}
+.gal-item:first-child{grid-row:1/3}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal-item:hover img{transform:scale(1.04)}
+.gal-overlay{position:absolute;inset:0;background:rgba(42,128,128,0);transition:background .3s}
+.gal-item:hover .gal-overlay{background:rgba(42,128,128,.15)}
+.gal-caption{position:absolute;bottom:1rem;left:1.2rem;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#2b4570;background:rgba(26,48,48,.7);padding:.3rem .7rem;border-radius:2px;opacity:0;transition:opacity .3s}
+.gal-item:hover .gal-caption{opacity:1}
+
+/* ARRIVAL */
+.arrival{background:var(--sand);padding:6rem 5rem}
+.arrival-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1200px;margin:0 auto;align-items:center}
+.info-card{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px;transition:border-color .2s}
+.info-card:hover{border-color:#2b4570}
+.info-card-icon{font-size:1.4rem;margin-bottom:.6rem;display:block}
+.info-card-title{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.info-card-body{font-size:.92rem;color:var(--text-light);line-height:1.6;font-weight:300}
+
+/* ROOMS */
+.rooms{background:white;padding:6rem 5rem}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.room-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.room-card:hover{border-color:#2b4570;box-shadow:0 8px 30px rgba(42,128,128,.08);transform:translateY(-3px)}
+.room-icon{font-size:1.8rem;margin-bottom:1rem;display:block}
+.room-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:.4rem}
+.room-size{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#2b4570;margin-bottom:.8rem}
+.room-details{font-size:.92rem;color:var(--text-light);line-height:1.7;font-weight:300}
+
+/* AMENITIES */
+.amenities{background:var(--sky);padding:6rem 5rem}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.amen-card{background:white;padding:1.8rem 1.5rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s;text-align:center}
+.amen-card:hover{border-color:#2b4570;box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.amen-icon{font-size:1.5rem;margin-bottom:.7rem;display:block}
+.amen-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:.35rem;font-weight:700}
+.amen-desc{font-size:.85rem;color:var(--text-light);line-height:1.5;font-weight:300}
+
+/* DOG SECTION */
+.dogs{background:white;padding:6rem 5rem}
+.dogs-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+.dog-tip{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--sky-mid)}
+.dog-tip:last-child{border-bottom:none}
+.dog-tip-icon{font-size:1.2rem;flex-shrink:0}
+.dog-tip-text strong{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem}
+.dog-tip-text span{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+
+/* CALENDAR */
+.calendar-section{background:var(--sand);padding:6rem 5rem}
+.cal-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:3rem}
+.cal-wrap{background:white;border:1px solid var(--sky-mid);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.cal-header{background:var(--teal);color:#2b4570;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem}
+.cal-month-title{font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic}
+.cal-nav{background:rgba(43,69,112,.2);border:none;color:#2b4570;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.cal-nav:hover{background:rgba(43,69,112,.35)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-dow{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);border-bottom:1px solid var(--sky-mid)}
+.cal-day{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.8rem;cursor:pointer;min-height:36px;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s}
+.cal-day.other-month{color:var(--sky-mid)}
+.cal-day.booked{background:#fee2e2;color:#991b1b;text-decoration:line-through;cursor:not-allowed}
+.cal-day.available:hover{background:var(--teal-pale);color:var(--teal)}
+.cal-day.selected{background:var(--teal);color:#2b4570;border-radius:50%}
+.cal-day.today{font-weight:700;color:var(--teal)}
+.cal-legend{display:flex;gap:1.5rem;padding:1rem 1.5rem;border-top:1px solid var(--sky-mid);font-family:'Lato',sans-serif;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light)}
+.legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.platform-badges{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.platform-badge{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border:1.5px solid var(--sky-mid);border-radius:2px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:all .2s}
+.platform-badge:hover{border-color:var(--teal);color:var(--teal)}
+.platform-badge-icon{font-size:1.1rem}
+.cal-sync-note{background:var(--teal-pale);border:1px solid #2b4570;border-radius:2px;padding:1rem 1.5rem;margin-top:1rem;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em;color:var(--teal);display:flex;align-items:flex-start;gap:.6rem}
+
+/* FAQ */
+.faq-section{background:white;padding:6rem 5rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.faq-item{border:1px solid var(--sky-mid);padding:1.5rem;cursor:pointer;transition:border-color .2s}
+.faq-item:hover,.faq-item.open{border-color:#2b4570}
+.faq-q{font-family:'Lato',sans-serif;font-size:.75rem;letter-spacing:.05em;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.faq-chevron{font-size:.8rem;color:var(--teal);transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{font-size:.88rem;color:var(--text-light);line-height:1.7;font-weight:300;margin-top:.8rem;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* HISTORY */
+.history-section{background:#f2e8d0;padding:6rem 5rem;color:#2b4570}
+.history-inner{max-width:900px;margin:0 auto}
+.timeline-line{position:absolute;left:80px;top:0;bottom:0;width:1px;background:rgba(61,168,160,.2)}
+.tl-row{display:grid;grid-template-columns:80px 1fr;gap:2rem;padding-bottom:2.5rem;position:relative}
+.tl-year{text-align:right;padding-top:.2rem;font-family:'DM Serif Display',serif;font-size:1rem;font-style:italic;color:var(--teal-light,#2b4570)}
+.tl-dot{position:absolute;left:73px;top:.5rem;width:13px;height:13px;border-radius:50%}
+.tl-label{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light,#2b4570);margin-bottom:.4rem}
+.tl-body{font-size:.95rem;color:rgba(43,69,112,.55);line-height:1.7;font-weight:300}
+.hurricane-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(201,149,107,.15);border:1px solid rgba(201,149,107,.3);padding:.2rem .6rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:#c9956b;margin-top:.5rem}
+
+/* GUESTBOOK */
+.guestbook{background:var(--teal-pale);padding:6rem 5rem;border-top:1px solid var(--sky-mid)}
+.gb-form{background:white;border:1px solid var(--sky-mid);padding:2rem;margin-top:2rem;border-radius:2px}
+.gb-input{width:100%;border:1px solid var(--sky-mid);padding:.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;border-radius:2px;margin-bottom:1rem;outline:none;transition:border-color .2s}
+.gb-input:focus{border-color:#2b4570}
+.gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.gb-entries{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem}
+.gb-entry{background:white;border:1px solid var(--sky-mid);padding:1.5rem;border-radius:2px}
+.gb-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.gb-entry-name{font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.gb-entry-date{font-family:'Lato',sans-serif;font-size:.6rem;color:var(--text-light)}
+.gb-entry-text{font-size:.92rem;color:var(--text-mid);line-height:1.7;font-style:italic;font-weight:300}
+
+/* REVIEWS */
+.reviews{background:white;padding:6rem 5rem}
+.review-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
+.rating-big{font-family:'DM Serif Display',serif;font-size:4.5rem;font-style:italic;color:var(--teal);line-height:1}
+.rating-sub{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:var(--off-white);padding:2.2rem;border:1px solid var(--sky-mid);border-radius:2px;position:relative;transition:all .3s}
+.review-card:hover{border-color:#2b4570;box-shadow:0 8px 30px rgba(42,128,128,.08)}
+.rev-stars{color:#f59e0b;font-size:.8rem;letter-spacing:.05em;margin-bottom:.7rem}
+.rev-meta{font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.06em;color:var(--text-light);margin-bottom:.8rem}
+.rev-text{font-size:1rem;line-height:1.8;color:var(--text-mid);font-weight:300;margin-bottom:1.2rem;font-style:italic}
+.rev-author{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.rev-quote{position:absolute;top:1rem;right:1.5rem;font-family:'DM Serif Display',serif;font-size:4rem;color:var(--teal-pale);line-height:1;font-style:italic}
+.rating-cats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--sky-mid)}
+.rc{text-align:center}
+.rc-score{font-family:'DM Serif Display',serif;font-size:1.5rem;font-style:italic;color:var(--teal)}
+.rc-label{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-light)}
+.guest-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.gtag{padding:.3rem .9rem;background:var(--teal-pale);color:var(--teal);border-radius:100px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.05em}
+
+/* THINGS TO DO */
+.ttd{background:var(--sky);padding:6rem 5rem}
+.ttd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+.ttd-card{background:white;padding:2rem;border:1px solid var(--sky-mid);border-radius:2px;transition:all .3s}
+.ttd-card:hover{border-color:#2b4570;box-shadow:0 6px 24px rgba(42,128,128,.08);transform:translateY(-3px)}
+.ttd-icon{font-size:1.8rem;margin-bottom:.8rem;display:block}
+.ttd-name{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem}
+.ttd-desc{font-size:.88rem;color:var(--text-light);line-height:1.6;font-weight:300;margin-bottom:.8rem}
+.ttd-link{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-pale);transition:border-color .2s}
+.ttd-link:hover{border-color:var(--teal)}
+
+/* HOST */
+.host{background:var(--sand);padding:5rem 5rem;display:flex;align-items:center;justify-content:center}
+.host-inner{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;max-width:800px}
+.host-avatar{width:100px;height:100px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0}
+.host-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.host-title{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#2b4570;margin-bottom:.8rem}
+.host-bio{font-size:.95rem;color:var(--text-mid);line-height:1.75;font-weight:300}
+
+/* LOCATION */
+.location{display:grid;grid-template-columns:1fr 1fr}
+.loc-text{background:var(--sand);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.loc-items{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.loc-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem;background:white;border:1px solid var(--sky-mid);border-radius:2px;transition:border-color .2s}
+.loc-item:hover{border-color:#2b4570}
+.loc-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
+.loc-name{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.2rem;font-weight:700}
+.loc-desc{font-size:.92rem;color:var(--text-light);font-weight:300;line-height:1.5}
+.loc-map{min-height:500px}
+.loc-map iframe{width:100%;height:100%;min-height:500px;border:none}
+
+/* SOCIAL PROOF BAR */
+.spbar{background:#fef9f0;border-top:1px solid #f0e0c0;border-bottom:1px solid #f0e0c0;padding:1rem 3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+.spbar-item{display:flex;align-items:center;gap:.6rem;font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#7a6050}
+
+/* BOOK */
+.book{background:var(--teal);padding:7rem 5rem;text-align:center;position:relative;overflow:hidden}
+.book-h{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);color:#2b4570;line-height:1.1;margin-bottom:.7rem}
+.book-h em{font-style:italic;color:rgba(43,69,112,.75)}
+.book-sub{font-size:1.1rem;color:rgba(43,69,112,.7);font-weight:300;margin-bottom:2rem}
+.book-rules{display:flex;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.book-rule{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.6);display:flex;align-items:center;gap:.4rem}
+.book-rule::before{content:'';width:4px;height:4px;background:rgba(43,69,112,.4);border-radius:50%;flex-shrink:0}
+.book-btns{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-white{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:white;color:var(--teal);padding:.9rem 2.2rem;border:none;cursor:pointer;border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-white:hover{background:var(--off-white)}
+.btn-woutline{font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;color:#2b4570;padding:.9rem 2.2rem;border:1.5px solid rgba(43,69,112,.5);border-radius:2px;text-decoration:none;transition:all .2s;cursor:pointer;display:inline-block}
+.btn-woutline:hover{background:rgba(43,69,112,.1);border-color:#2b4570}
+.book-note{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.45)}
+.book-note a{color:rgba(43,69,112,.7);text-decoration:none}
+
+/* FOOTER */
+footer{background:var(--text);padding:4rem 5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.ft-brand .logo{font-size:1.4rem;display:block;margin-bottom:1rem;color:var(--sky,#e8f4f4)}
+.ft-tagline{font-size:.9rem;color:rgba(43,69,112,.4);line-height:1.7;font-weight:300}
+.ft-col h4{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(43,69,112,.4);margin-bottom:1.2rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{padding:.3rem 0;font-size:.88rem;color:rgba(43,69,112,.25)}
+.ft-col ul li a{color:rgba(43,69,112,.25);text-decoration:none;transition:color .2s}
+.ft-col ul li a:hover{color:#2b4570}
+.footer-bottom{background:#111c1c;padding:1rem 5rem;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;color:rgba(43,69,112,.2)}
+
+/* WAVE HOVER ANIMATIONS */
+@keyframes wave1{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes wave2{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes fadeWaveIn{from{opacity:0}to{opacity:1}}
+
+.ab-photo-main,.ab-photo-sm{position:relative;overflow:hidden}
+.ab-photo-main::after,.ab-photo-sm::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;
+  width:200%;height:40px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30 L1200 60 L0 60 Z' fill='rgba(42,128,128,0.35)'/%3E%3C/svg%3E") repeat-x;
+  background-size:600px 40px;
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;
+  z-index:3;
+}
+.ab-photo-main:hover::after,.ab-photo-sm:hover::after{
+  opacity:1;
+  animation:wave1 3s linear infinite;
+}
+
+/* Deck card gets teal shimmer */
+.ab-photo-main:hover,.ab-photo-sm:hover{
+  box-shadow:0 8px 32px rgba(42,128,128,.25);
+}
+
+/* Room stat badges bigger */
+.ab-room-stats{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.ab-stat{font-size:.88rem !important;color:var(--text-mid);display:flex;align-items:center;gap:.6rem;line-height:1.7}
+
+/* PHOTO TOUR */
+.ab-room{display:grid;grid-template-columns:1fr 1.8fr;gap:4rem;padding:3rem 5rem;border-bottom:1px solid var(--sky-mid);align-items:start}
+.ab-room:last-of-type{border-bottom:none}
+.ab-room-text{padding-top:.5rem;position:sticky;top:120px}
+.ab-room-name{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--text);margin-bottom:.5rem;line-height:1.2}
+.ab-room-desc{font-size:.9rem;color:var(--text-light);line-height:1.6;margin-bottom:1rem;font-weight:300}
+.ab-room-amenities{font-size:.92rem;color:var(--text-mid);line-height:1.9;font-weight:300}
+.ab-dot{margin:0 .3rem;color:var(--text-light)}
+.ab-room-stats{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.ab-stat{font-family:'Lato',sans-serif;font-size:.82rem;color:var(--text-mid);display:flex;align-items:center;gap:.5rem;line-height:1.7}
+.ab-room-photos{display:flex;flex-direction:column;gap:4px}
+.ab-photo-main{height:380px;overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
+.ab-photo-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-main:hover img{transform:scale(1.03)}
+.ab-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ab-photo-sm{height:180px;overflow:hidden;border-radius:4px;cursor:pointer;position:relative}
+.ab-photo-sm img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.ab-photo-sm:hover img{transform:scale(1.04)}
+
+/* THUMBNAILS */
+.thumb-btn{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:pointer;flex-shrink:0}
+.thumb-btn > img,.thumb-btn > div:first-child{width:72px;height:72px;object-fit:cover;border-radius:8px;border:2px solid transparent;transition:border-color .2s}
+.thumb-btn.active-thumb > img,.thumb-btn.active-thumb > div:first-child{border-color:var(--text)!important}
+.thumb-btn > span{font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);white-space:nowrap}
+
+/* SHARE MODAL */
+.share-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1rem;border:1.5px solid var(--sky-mid);border-radius:8px;background:white;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.08em;color:var(--text);text-decoration:none;transition:all .2s}
+.share-btn:hover{border-color:var(--text);background:var(--sky)}
+
+@media(max-width:900px){
+  .ab-room{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
+  .ab-room-text{position:static}
+  .ab-photo-main{height:260px}
+  .ab-photo-sm{height:130px}
+}
+
+/* ROOM TOUR (OLD - UNUSED) */
+.room-pill{font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1rem;border:1.5px solid var(--sky-mid);background:white;color:var(--text-mid);cursor:pointer;border-radius:100px;transition:all .2s;white-space:nowrap}
+.room-pill:hover,.room-pill.active{background:var(--teal);color:#2b4570;border-color:var(--teal)}
+.room-tour-section{padding:2.5rem 5rem;border-bottom:1px solid var(--sky-mid)}
+.room-tour-section:last-child{border-bottom:none}
+.room-tour-header{display:flex;align-items:flex-start;gap:1.2rem;margin-bottom:1.5rem}
+.room-tour-icon{font-size:2rem;flex-shrink:0;margin-top:.1rem}
+.room-tour-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:.3rem}
+.room-tour-meta{font-family:'Lato',sans-serif;font-size:.8rem;color:var(--text-light);line-height:1.7}
+.room-scroll-track{position:relative;overflow:hidden;margin-bottom:1rem}
+.room-scroll-inner{display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.room-scroll-inner::-webkit-scrollbar{display:none}
+.room-photo-card{flex-shrink:0;width:340px;height:240px;position:relative;cursor:pointer;overflow:hidden;border-radius:2px}
+.room-photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.room-photo-card:hover img{transform:scale(1.04)}
+.room-photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,48,48,.75));color:#2b4570;padding:1.5rem .8rem .6rem;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.scroll-btn{position:absolute;top:50%;transform:translateY(-50%);background:white;border:1px solid var(--sky-mid);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);transition:all .2s;z-index:2;line-height:1}
+.scroll-btn:hover{background:var(--teal);color:#2b4570;border-color:var(--teal)}
+.scroll-left{left:8px}
+.scroll-right{right:8px}
+.room-tour-stats{display:flex;flex-wrap:wrap;gap:.5rem}
+.room-stat{font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.06em;color:var(--text-mid);background:var(--off-white);border:1px solid var(--sky-mid);padding:.35rem .8rem;border-radius:100px}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:999;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:90vw;max-height:90vh;object-fit:contain}
+.lb-close{position:absolute;top:1.5rem;right:2rem;color:rgba(43,69,112,.5);font-size:1.8rem;cursor:pointer;font-weight:300;line-height:1;transition:color .2s}
+.lb-close:hover{color:#2b4570}
+
+/* WEATHER */
+.weather-widget{background:var(--teal);color:#2b4570;padding:1.5rem 3rem;display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
+.wx-item{text-align:center}
+.wx-val{font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic}
+.wx-label{font-family:'Lato',sans-serif;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(43,69,112,.6);margin-top:.2rem}
+
+/* ANIMATIONS */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-phone,.nav-book-top{display:none}
+  .hero-split{padding:0;gap:0;border-radius:0}
+  .hero-panel{border-radius:0}
+  .hero-panel:last-child{display:none}
+  .util-bar{padding:.4rem 1rem;font-size:.55rem}
+  .about,.location,.arrival-grid,.dogs-grid,.cal-intro{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item:first-child{grid-row:auto;grid-column:auto}
+  .amen-grid{grid-template-columns:1fr 1fr}
+  .rooms-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .ttd-grid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;padding:3rem 2rem}
+  .beach-banner{flex-direction:column;gap:1.5rem;text-align:center;padding:3rem 2rem}
+  .host-inner{grid-template-columns:1fr;text-align:center}
+  .host-avatar{margin:0 auto}
+  .strip{flex-wrap:wrap}.strip-item{flex:0 0 33%}
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+  border-radius:2px;
+}
+
+/* Calendar half-day shading */
+.cal-day.checkin-day{
+  background:linear-gradient(to bottom right, white 50%, rgba(42,128,128,.18) 50%);
+  color:var(--text-mid);
+}
+.cal-day.checkout-day{
+  background:linear-gradient(to bottom right, rgba(42,128,128,.18) 50%, white 50%);
+  color:var(--text-mid);
+}
+.cal-day.booked{
+  background:rgba(201,149,107,.12);
+  color:var(--text-light);
+  font-weight:400;
+}
+.cal-day.booked::after{
+  content:'';
+  position:absolute;
+  inset:2px;
+  border-radius:2px;
+  background:repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 3px,
+    rgba(201,149,107,.15) 3px,
+    rgba(201,149,107,.15) 4px
+  );
+}
+.cal-day{position:relative;}
+
+@keyframes wA{0%,100%{height:3px}50%{height:12px}}
+</style>
+<style>
+.story-hero{background:#f2e8d0;padding:5rem 5rem 4rem;border-bottom:1px solid var(--sky-mid)}
+.story-hero .eyebrow{color:rgba(61,168,160,.7)}
+.story-hero h1{font-family:"DM Serif Display",serif;font-size:clamp(2rem,4vw,3rem);color:#2b4570;font-style:italic;margin:.3rem 0 1rem}
+.story-hero p{max-width:600px;color:rgba(43,69,112,.55);font-size:1rem;line-height:1.85;font-weight:300}
+.story-nav{background:#f2e8d0;padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(43,69,112,.12)}
+.story-nav a{font-family:"Lato",sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.45);padding:1rem 0;border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
+.story-nav a:hover,.story-nav a.active{color:#2b4570;border-bottom-color:var(--teal)}
+.story-back{margin-left:auto;background:var(--teal);color:#2b4570;padding:.5rem 1.2rem;border-radius:100px;font-family:"Lato",sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.story-back:hover{background:var(--teal);color:#2b4570}
+</style>
+<link rel="canonical" href="https://goodtidesonly.com/history.html">
+
+<style>
+@media(max-width:768px){
+  section[style*="padding:5rem 5rem"],section[style*="padding:6rem 5rem"],
+  section[style*="padding:4rem 5rem"]{padding:3rem 1.5rem !important}
+  div[style*="display:grid;grid-template-columns:repeat(3"],
+  div[style*="display:grid;grid-template-columns:repeat(4"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr 1fr"],
+  div[style*="display:grid;grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important}
+  nav[style*="padding:0 5rem"]{padding:0 1rem !important}
+  nav[style*="gap:2rem"]{gap:.5rem !important}
+  .story-hero{padding:3rem 1.5rem 2rem !important}
+  .story-back{padding:.4rem .8rem !important;font-size:.55rem !important}
+  footer[style*="padding:3rem 5rem"]{padding:2rem 1.5rem !important}
+  footer div[style*="grid-template-columns:1fr 1fr 1fr"]{
+    grid-template-columns:1fr !important;gap:1.5rem !important}
+}
+@media(max-width:480px){
+  div[style*="display:flex"][style*="gap:3rem"],
+  div[style*="display:flex"][style*="gap:2rem"]{
+    flex-direction:column !important;gap:1rem !important;align-items:flex-start !important}
+}
+</style>
+<!-- Google Analytics 4 — replace G-K3KTQ02PXQ with your actual ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3KTQ02PXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3KTQ02PXQ');
+</script>
+</head>
+<body><nav style="background:#f2e8d0;padding:0 5rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(43,69,112,.12);position:sticky;top:0;z-index:100">
+  <a href="index.html" style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:#2b4570;text-decoration:none;padding:1rem 0;border-bottom:2px solid transparent;white-space:nowrap">Good Tides Only</a>
+  <a href="the-place.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">The Place</a>
+  <a href="history.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#2b4570;border-bottom:2px solid var(--teal);padding:1rem 0;text-decoration:none">History</a>
+  <a href="fishing.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Fishing</a>
+  <a href="explore.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Explore</a>
+  <a href="our-story.html" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,69,112,.45);border-bottom:2px solid transparent;padding:1rem 0;text-decoration:none">Our Story</a>
+  <a href="index.html#calendar" style="margin-left:auto;background:var(--teal);color:#2b4570;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap">Book Now</a>
+</nav>
+
+<div class="story-hero">
+  <p class="eyebrow">Five Centuries at the Pass</p>
+  <h1>History & Heritage</h1>
+  <p>The pass between Fort Morgan and Dauphin Island is one of the most historically documented waterways in North America. Spanish charts, French naming, 46 million bricks, and a naval battle that changed the Civil War — all within five minutes of the property.</p>
+</div>
+
+<section id="fort" style="background:#f2e8d0;padding:5rem 5rem;border-top:1px solid rgba(43,69,112,.12);overflow:hidden;position:relative">
+
+  <!-- Subtle brick texture background -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.04" aria-hidden="true">
+    <pattern id="brick-pat" x="0" y="0" width="60" height="30" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="58" height="13" fill="none" stroke="#c8a040" stroke-width=".5"/>
+      <rect x="30" y="15" width="58" height="13" fill="none" stroke="#c8a040" stroke-width=".5"/>
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#brick-pat)"/>
+  </svg>
+
+  <div style="position:relative;z-index:1">
+    <p class="eyebrow" style="text-align:center;color:rgba(200,160,64,.7)">5 Minutes Down the Road</p>
+    <h2 class="h2" style="text-align:center;color:#2b4570">Historic Fort Morgan — <em style="color:#c8a040">Two Centuries of History</em></h2>
+    <p style="text-align:center;max-width:660px;margin:.5rem auto 3rem;font-size:1rem;color:rgba(43,69,112,.55);line-height:1.85;font-weight:300">At the very tip of the peninsula — a 5-minute drive from Good Tides Only — stands one of the most historically significant forts in the American South. Most guests walk past the entrance signs and never stop. That's a mistake.</p>
+
+    <!-- Key facts bar -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:3rem">
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.4rem;color:#c8a040">1819–1834</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.4)">Construction period</div>
+      </div>
+      <div style="width:1px;height:35px;background:rgba(43,69,112,.12)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.4rem;color:#c8a040">46 million+</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.4)">Bricks in the walls</div>
+      </div>
+      <div style="width:1px;height:35px;background:rgba(43,69,112,.12)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.4rem;color:#c8a040">4 Wars</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.4)">Civil War · Spanish-Am · WWI · WWII</div>
+      </div>
+      <div style="width:1px;height:35px;background:rgba(43,69,112,.12)"></div>
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.4rem;color:#c8a040">National Landmark</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.4)">Designated 1960</div>
+      </div>
+    </div>
+
+    <!-- THE STORY — timeline approach -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem">
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <div style="background:rgba(43,69,112,.05);border:1px solid rgba(200,160,64,.2);border-radius:6px;padding:1.4rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#c8a040;margin-bottom:.5rem">Before the Fort — 1813</div>
+          <p style="font-size:.85rem;color:rgba(43,69,112,.65);line-height:1.75">This point has been defended since the War of 1812. Fort Bowyer — a small earthen and log fortification — stood here first. British warships attacked twice: the first assault in September 1814 was a total American victory, sinking H.M.S. Hermes. The second, in February 1815, forced the Americans to surrender — only weeks before the war officially ended.</p>
+        </div>
+
+        <div style="background:rgba(43,69,112,.05);border:1px solid rgba(200,160,64,.2);border-radius:6px;padding:1.4rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#c8a040;margin-bottom:.5rem">Construction — 1819 to 1834</div>
+          <p style="font-size:.85rem;color:rgba(43,69,112,.65);line-height:1.75">After the War of 1812, Congress authorized a series of massive brick coastal defense forts. Fort Morgan was designed by General Simon Bernard — a former engineer under Napoleon — as a five-sided, five-bastion pentagon with walls strong enough to stop cannonballs. Construction took 15 years due to the peninsula's isolation. More than 46 million bricks were made at kilns on Fish River and shipped by boat. Much of the skilled masonry work was done by enslaved African Americans. The fort was named for Revolutionary War hero General Daniel Morgan in 1833.</p>
+        </div>
+
+        <div style="background:rgba(43,69,112,.05);border:1px solid rgba(200,160,64,.2);border-radius:6px;padding:1.4rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#c8a040;margin-bottom:.5rem">Civil War — The Confederate Years · 1861–1864</div>
+          <p style="font-size:.85rem;color:rgba(43,69,112,.65);line-height:1.75">Alabama state militia seized Fort Morgan on January 5, 1861, before Alabama officially seceded from the Union. Confederate forces held and garrisoned it for over three years, using it to guard Mobile Bay — one of the Confederacy's most vital remaining ports — alongside Fort Gaines on Dauphin Island across the pass.</p>
+        </div>
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+
+        <!-- BATTLE OF MOBILE BAY highlight -->
+        <div style="background:rgba(200,160,64,.08);border:2px solid rgba(200,160,64,.35);border-radius:6px;padding:1.6rem;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c8a040,#a67f2e)"></div>
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#c8a040;margin-bottom:.6rem">August 5, 1864 — The Battle of Mobile Bay</div>
+          <p style="font-size:.88rem;color:rgba(43,69,112,.75);line-height:1.8;margin-bottom:.8rem">Union Admiral David Farragut led a fleet of 18 ships directly into the heavily defended bay entrance — past Fort Morgan's guns and through a minefield of tethered naval mines (then called "torpedoes"). When the USS Tecumseh struck a mine and sank almost instantly, taking most of her crew with her, Farragut pressed on. His legendary order:</p>
+          <div style="background:rgba(43,69,112,.05);border-left:3px solid #c8a040;padding:1rem 1.2rem;margin-bottom:.8rem">
+            <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:#c8a040;line-height:1.6">"Damn the torpedoes — four bells. Captain Drayton, go ahead! Jouett, full speed!"</p>
+            <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(200,160,64,.6);margin-top:.4rem">— Rear Admiral David G. Farragut, August 5, 1864</div>
+          </div>
+          <p style="font-size:.85rem;color:rgba(43,69,112,.65);line-height:1.75">Farragut's fleet passed the guns of Fort Morgan and captured the Confederate ironclad CSS Tennessee. The fort itself held on for two more weeks under Union siege from both land and sea before surrendering on August 23, 1864. The battle effectively closed Mobile Bay to Confederate blockade runners — one of the most decisive naval engagements of the Civil War.</p>
+        </div>
+
+        <div style="background:rgba(43,69,112,.05);border:1px solid rgba(200,160,64,.2);border-radius:6px;padding:1.4rem">
+          <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#c8a040;margin-bottom:.5rem">After the Civil War — WWI Through WWII</div>
+          <p style="font-size:.85rem;color:rgba(43,69,112,.65);line-height:1.75">Rifled artillery and steam-powered warships made masonry forts like Morgan obsolete within months of the Civil War's end. But the strategic location remained vital. In the 1890s, modern concrete gun batteries were added. Fort Morgan was activated for the Spanish-American War in 1898, trained troops in WWI, and served as a coastal defense installation through WWII. It was finally deactivated in 1946 and transferred to the State of Alabama. Named a National Historic Landmark in 1960.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- VISIT INFO -->
+    <div style="background:rgba(43,69,112,.05);border:1px solid rgba(200,160,64,.2);border-radius:6px;padding:1.5rem 2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem">
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#c8a040;margin-bottom:.4rem">What to See</div>
+        <p style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.65">The pentagonal brick fort with five bastions. Original casemates, cannon emplacements, and connecting tunnels. A brick furnace designed to heat cannonballs. The James B. Carter Museum with Civil War artifacts. The new fishing pier and boat launch on the bay side.</p>
+      </div>
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#c8a040;margin-bottom:.4rem">Practical Details</div>
+        <p style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.65">Open daily. Admission fee. Self-guided and guided tours available. Located at the western end of Hwy 180 — 5 minutes from Good Tides Only. Plan 1.5–2 hours minimum to see the fort and grounds. The ferry to Dauphin Island departs from here. Official site: ahc.alabama.gov</p>
+      </div>
+      <div>
+        <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#c8a040;margin-bottom:.4rem">The View from Here</div>
+        <p style="font-size:.82rem;color:rgba(43,69,112,.65);line-height:1.65;font-style:italic">"Stand at the fort's seaward wall and look out at the pass. The view has not changed since 1864. The same water, the same opening between Fort Morgan and Dauphin Island, the same horizon. It is one of the most unchanged military landscapes in the American South."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dauphin-island" style="background:#f2e8d0;padding:5rem 5rem;border-top:1px solid rgba(43,69,112,.12)">
+  <p class="eyebrow" style="text-align:center">35 Minutes by Ferry</p>
+  <h2 class="h2" style="text-align:center">Dauphin Island — <em>Alabama's Hidden Gem</em></h2>
+  <p style="text-align:center;max-width:660px;margin:.5rem auto 3rem;font-size:1rem;color:rgba(43,69,112,.5);line-height:1.85;font-weight:300">The Mobile Bay Ferry crosses from Fort Morgan to Dauphin Island in 35 minutes — one of the most scenic short crossings on the Gulf Coast. What's on the other side is genuinely surprising: a 14-mile barrier island with world-class birding, a WWII-era Civil War fort, an exceptional aquarium, ancient Native American archaeology, and beaches that feel completely removed from Gulf Shores.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem">
+
+    <div style="background:#f7f0e0;border:1px solid rgba(43,69,112,.12);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#2a8080,#1a5a5a);padding:1.2rem 1.5rem .8rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#2b4570">Audubon Bird Sanctuary</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.65);margin-top:.15rem">164 acres · Top 4 in North America for migration</div>
+      </div>
+      <div style="padding:1.2rem">
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.7rem">
+          <span style="background:rgba(42,128,128,.1);color:var(--teal);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.06em;padding:.2rem .55rem;border-radius:100px">🌍 "Globally Important" — National Audubon Society</span>
+          <span style="background:rgba(42,128,128,.1);color:var(--teal);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.06em;padding:.2rem .55rem;border-radius:100px">🦅 420+ bird species recorded</span>
+        </div>
+        <p style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.7">One of the four most important migratory bird stopover sites in North America. In spring, thousands of exhausted neotropical migrants — warblers, painted buntings, orioles, and raptors — land here after crossing the Gulf. The 164-acre sanctuary includes maritime forest, marshes, dunes, and a freshwater lake, with 3 miles of walking trails. Birders travel from across the country for the spring migration weeks in April and May.</p>
+      </div>
+    </div>
+
+    <div style="background:#f7f0e0;border:1px solid rgba(43,69,112,.12);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#2b4570,#0f1829);padding:1.2rem 1.5rem .8rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#2b4570">Alabama Aquarium</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.65);margin-top:.15rem">Formerly the Dauphin Island Estuarium · Sea Lab</div>
+      </div>
+      <div style="padding:1.2rem">
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.7rem">
+          <span style="background:rgba(42,128,128,.1);color:var(--teal);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.06em;padding:.2rem .55rem;border-radius:100px">🐟 100+ species in 31 aquariums</span>
+          <span style="background:rgba(42,128,128,.1);color:var(--teal);font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.06em;padding:.2rem .55rem;border-radius:100px">🦈 Stingray touch pool · Nurse shark</span>
+        </div>
+        <p style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.7">The Dauphin Island Sea Lab was founded in 1971 as a marine research institution — the public aquarium (now called the Alabama Aquarium) walks visitors through the habitats of coastal Alabama and Mobile Bay, the fourth largest estuary system in the United States. Touch tanks with stingrays and horseshoe crabs, a nurse shark, an octopus, and a Living Marsh Boardwalk over a functioning salt marsh. Genuinely excellent for families and anyone interested in the Gulf's ecosystem.</p>
+      </div>
+    </div>
+
+    <div style="background:#f7f0e0;border:1px solid rgba(43,69,112,.12);border-radius:6px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#c8a040,#a67f2e);padding:1.2rem 1.5rem .8rem">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#2b4570">Fort Gaines</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,69,112,.65);margin-top:.15rem">Civil War · Paired with Fort Morgan in 1864</div>
+      </div>
+      <div style="padding:1.2rem">
+        <p style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.7">Fort Morgan's counterpart across the pass — the two forts were designed as twin sentinels controlling the entrance to Mobile Bay. Fort Gaines fell to Union forces on August 8, 1864, just days after the Battle of Mobile Bay. Self-guided tours through the fort include connecting tunnels, historic cannons, a blacksmith shop, and views directly across the pass to Fort Morgan. Standing here and looking across at Good Tides Only's stretch of beach is one of the most vivid historical perspectives in the South.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+
+    <div style="background:#f7f0e0;border:1px solid rgba(43,69,112,.12);border-radius:6px;padding:1.5rem">
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#2b4570;margin-bottom:1rem">Hidden & Overlooked</h3>
+      <div style="display:flex;flex-direction:column;gap:.6rem">
+        <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(43,69,112,.55);line-height:1.6"><span style="color:var(--teal);flex-shrink:0">🏺</span><span><strong>Shell Mound Park</strong> — Remarkable archaeological site on the island's north shore. Ancient oyster shell mounds built by Native American tribes between 1100–1500 AD, now preserved as a park. The layered mounds also contain plant species transported for medicinal and culinary use. Free to visit and almost entirely unknown to tourists.</span></div>
+        <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(43,69,112,.55);line-height:1.6"><span style="color:var(--teal);flex-shrink:0">🌅</span><span><strong>The Sunset Capital of Alabama</strong> — Dauphin Island is known locally as the sunset capital of Alabama. The western end of the island, where the bay meets the Gulf, offers completely unobstructed 180-degree horizon sunsets. Time the ferry to arrive an hour before sunset and walk west.</span></div>
+        <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(43,69,112,.55);line-height:1.6"><span style="color:var(--teal);flex-shrink:0">🐬</span><span><strong>Dolphins on the ferry crossing</strong> — The 35-minute Mobile Bay Ferry crossing is reliably one of the best free dolphin-watching opportunities on the Gulf Coast. Dolphins frequently ride the bow wave of the ferry. The crossing itself — watching Fort Morgan shrink and Dauphin Island grow — is one of the more memorable short passages in Alabama.</span></div>
+        <div style="display:flex;gap:.6rem;font-size:.85rem;color:rgba(43,69,112,.55);line-height:1.6"><span style="color:var(--teal);flex-shrink:0">🎣</span><span><strong>Dauphin Island Fishing Pier</strong> — One of the longest public fishing piers on the Gulf Coast. Free to visit, excellent for pier fishing, and a spectacular viewing platform for dolphins, pelicans, and the vessel traffic through the pass.</span></div>
+      </div>
+    </div>
+
+    <div style="background:#f7f0e0;border:1px solid rgba(43,69,112,.12);border-radius:6px;padding:1.5rem">
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#2b4570;margin-bottom:1rem">Planning the Day Trip</h3>
+      <div style="display:flex;flex-direction:column;gap:.5rem">
+        <div style="display:flex;gap:.8rem;align-items:flex-start;padding:.4rem 0;border-bottom:1px solid rgba(43,69,112,.12)">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.95rem;color:var(--teal);flex-shrink:0;width:60px">Morning</div>
+          <div style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.6">Drive to Fort Morgan Historic Site, board the ferry. 35-minute crossing. Arrive Dauphin Island. Walk the Audubon Bird Sanctuary trails while energy is fresh.</div>
+        </div>
+        <div style="display:flex;gap:.8rem;align-items:flex-start;padding:.4rem 0;border-bottom:1px solid rgba(43,69,112,.12)">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.95rem;color:var(--teal);flex-shrink:0;width:60px">Midday</div>
+          <div style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.6">Alabama Aquarium and the Living Marsh Boardwalk. Lunch at Islanders Restaurant for Gulf seafood.</div>
+        </div>
+        <div style="display:flex;gap:.8rem;align-items:flex-start;padding:.4rem 0;border-bottom:1px solid rgba(43,69,112,.12)">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.95rem;color:var(--teal);flex-shrink:0;width:60px">Afternoon</div>
+          <div style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.6">Fort Gaines self-guided tour. Shell Mound Park. Walk the public beach on the island's south side.</div>
+        </div>
+        <div style="display:flex;gap:.8rem;align-items:flex-start;padding:.4rem 0">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.95rem;color:var(--teal);flex-shrink:0;width:60px">Sunset</div>
+          <div style="font-size:.82rem;color:rgba(43,69,112,.55);line-height:1.6">Walk to the island's western tip for the best sunset view in Alabama. Ferry back to Fort Morgan. Back at Good Tides for dinner.</div>
+        </div>
+      </div>
+      <div style="margin-top:.8rem;padding:.6rem .8rem;background:rgba(42,128,128,.15);border-radius:4px;font-size:.78rem;color:#2b4570">Ferry schedule: alabamaferryservice.com · Runs multiple crossings daily · $5–15 per person</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="history" style="background:#f2e8d0;padding:6rem 5rem;color:#2b4570;overflow:hidden">
+  <div style="max-width:1000px;margin:0 auto">
+    <p style="font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#2b4570;margin-bottom:1rem;text-align:center">A Place With a Story</p>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);color:#2b4570;margin-bottom:1rem;text-align:center">The History of <em style="color:#2b4570">Fort Morgan</em></h2>
+    <p style="font-size:1.05rem;color:rgba(43,69,112,.5);font-weight:300;line-height:1.9;margin-bottom:1.5rem;text-align:center;max-width:700px;margin-left:auto;margin-right:auto">Where the Gulf meets the land in 32 miles of sugar-white sand. When you stay at Good Tides Only, you're part of a story that stretches back five centuries.</p>
+
+    <!-- KHALIL GIBRAN QUOTE -->
+    <div style="border-left:3px solid #2b4570;padding:1.2rem 2rem;margin-bottom:4rem;background:rgba(43,69,112,.03);max-width:600px;margin-left:auto;margin-right:auto;text-align:center;border:1px solid rgba(61,168,160,.2);border-radius:4px">
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:rgba(43,69,112,.75);line-height:1.6">In one drop of water are found all the secrets of all the oceans.</p>
+      <p style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(43,69,112,.35);margin-top:.8rem">— Khalil Gibran</p>
+    </div>
+
+    <!-- WAVE TIMELINE SVG CONNECTOR -->
+    <style>
+    .tl-wave-entry{display:grid;align-items:start;margin-bottom:2.5rem;position:relative;gap:2rem}
+    .tl-wave-left{grid-template-columns:1fr 40px 1fr}
+    .tl-wave-right{grid-template-columns:1fr 40px 1fr}
+    .tl-text{padding:1.5rem;background:rgba(43,69,112,.04);border:1px solid rgba(43,69,112,.07);border-radius:8px;transition:all .3s}
+    .tl-text:hover{background:rgba(61,168,160,.08);border-color:rgba(61,168,160,.25)}
+    .tl-photo{border-radius:8px;overflow:hidden;position:relative;min-height:180px;background:rgba(43,69,112,.05)}
+    .tl-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(60%) brightness(.85);transition:filter .4s}
+    .tl-photo:hover img{filter:grayscale(20%) brightness(1)}
+    .tl-photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(242,232,208,.92));padding:1.5rem .8rem .6rem;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#2b4570;font-weight:600}
+    .tl-center{display:flex;flex-direction:column;align-items:center;gap:0;padding-top:.5rem}
+    .tl-dot-outer{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2}
+    .tl-dot-inner{width:14px;height:14px;border-radius:50%;background:#2b4570}
+    .tl-connector{width:2px;flex:1;min-height:60px;background:linear-gradient(to bottom,rgba(61,168,160,.4),rgba(61,168,160,.1))}
+    .tl-year-badge{font-family:'DM Serif Display',serif;font-size:.95rem;font-style:italic;color:#2b4570;white-space:nowrap;text-align:center;margin-bottom:.3rem}
+    .tl-label{font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#2b4570;margin-bottom:.4rem}
+    .tl-body{font-size:.95rem;color:rgba(43,69,112,.55);line-height:1.75;font-weight:300}
+    .hurricane-pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(201,149,107,.15);border:1px solid rgba(201,149,107,.3);padding:.25rem .7rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#c9956b;margin-top:.6rem}
+    .tl-empty{} /* placeholder for alternating layout */
+
+    /* Wave SVG dividers between entries */
+    .wave-divider{width:100%;overflow:hidden;height:30px;margin:-2px 0;opacity:.15}
+    </style>
+
+    <!-- WAVE SVG that weaves between entries -->
+    <div style="position:relative">
+
+      <!-- 1519 — text right, photo left (placeholder) -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding-right:1rem">
+          <div class="tl-year-badge" style="text-align:right">1519</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to left,rgba(61,168,160,.6),transparent);margin:.3rem 0"></div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">Spanish Explorers Chart the Coast</div>
+          <p class="tl-body">Alonso Álvarez de Pineda charts the Gulf Coast for Spain. The barrier island that will become Fort Morgan Peninsula is already ancient — sea oats, sugar sand, the Gulf endless to the south. The indigenous peoples who have lived here for thousands of years know it as a place of abundance.</p>
+        </div>
+      </div>
+
+      <!-- WAVE CURVE right to left -->
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1817 -- the original plan, photo left, text right -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-photo" style="height:220px">
+          <img src="photos/Fort_Morgan_Plan%20Fort%20Morgan%2C%20Gulf%20Shores%20vicinity%2C%20Baldwin%20County%2C%20AL.%20PLAN%20OF%20FORT%20MORGAN%2C%20dated%201817.%20%28Photographic%20copy%20of%20map%29.png" alt="1817 plan of Fort Morgan by Capt. William Tell Paupin" onerror="this.parentElement.style.minHeight='100px'">
+          <div class="tl-photo-caption">Fort Morgan Plan · 1817 · Drawn by Capt. William Tell Paupin · LOC / HABS · Public Domain</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge">1817</div>
+          <div style="width:60px;height:2px;background:rgba(61,168,160,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">The Original Plan</div>
+          <p class="tl-body">Captain William Tell Paupin's design for a star-shaped bastion fort at Mobile Point, submitted to the U.S. Engineer Department in 1817 — cistern and quarters at the center, walls angled to cover every line of approach. Construction wouldn't begin for two more years, and wouldn't finish for sixteen.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1833 — text left, photo right -->
+      <div class="tl-wave-entry tl-wave-right">
+        <div class="tl-text">
+          <div class="tl-label">Fort Morgan Built</div>
+          <p class="tl-body">A massive masonry fort rises at the western tip of the peninsula to guard the entrance to Mobile Bay. Built over nearly a decade, Fort Morgan would witness two of American history's most decisive military engagements — and stand watch over this shoreline for centuries.</p>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:1rem">
+          <div class="tl-year-badge" style="text-align:left">1833</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to right,rgba(61,168,160,.6),transparent);margin:.3rem 0"></div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 40 500 20 Q750 0 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1864 — text right, FORT MORGAN PHOTO left -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-photo" style="height:220px">
+          <img src="photos/Fort_Morgan1.jpg" alt="Fort Morgan 1864 after Battle of Mobile Bay" onerror="this.parentElement.style.minHeight='100px'">
+          <div class="tl-photo-caption">Fort Morgan · 1864 · Showing damage after the Battle of Mobile Bay · NARA · Public Domain</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge">1864</div>
+          <div style="width:60px;height:2px;background:rgba(61,168,160,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(201,149,107,.15);border:2px solid rgba(201,149,107,.4)">
+            <div class="tl-dot-inner" style="background:#c9956b"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">Battle of Mobile Bay</div>
+          <p class="tl-body">Union Admiral Farragut leads his fleet past the Confederate guns at Fort Morgan into Mobile Bay. When warned of underwater mines, he orders: <em style="color:rgba(43,69,112,.7)">"Damn the torpedoes — full speed ahead."</em> This stretch of water has witnessed history. Now it watches sunsets and families building sandcastles.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 23 August 1864 -- photo left, text right -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-photo" style="height:220px">
+          <img src="photos/Fort_morgan_alabama%2023%20August%201864%20-%20damage%20to%20the%20citadel.jpg" alt="Fort Morgan citadel ruins, 23 August 1864" onerror="this.parentElement.style.minHeight='100px'">
+          <div class="tl-photo-caption">Fort Morgan · Aug 23, 1864 · Citadel ruins after the siege · NARA · Public Domain</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge">Aug 23</div>
+          <div style="width:60px;height:2px;background:rgba(61,168,160,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(201,149,107,.15);border:2px solid rgba(201,149,107,.4)">
+            <div class="tl-dot-inner" style="background:#c9956b"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">The Citadel Falls</div>
+          <p class="tl-body">Eighteen days after Farragut passed the fort, the citadel's wooden-roofed barracks catches fire under the bombardment and burns to brick. Commander Richard Page surrenders on August 23rd, guns spiked, the fort in ruins. What's left in this photo was later broken up and used to rebuild the walls still standing today.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1930s — text left, no photo -->
+      <div class="tl-wave-entry tl-wave-right">
+        <div class="tl-text">
+          <div class="tl-label">The Fishing Era & WWII</div>
+          <p class="tl-body">Commercial fishing transforms the peninsula — the area becomes a major supplier of Gulf seafood during WWII. Fort Morgan is reactivated for coastal defense. Soldiers stationed here fall in love with the beaches. After the war, they come back — as tourists, then as residents.</p>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:1rem">
+          <div class="tl-year-badge" style="text-align:left">1930s</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to right,rgba(61,168,160,.6),transparent);margin:.3rem 0"></div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 40 500 20 Q750 0 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1960s — text right, PENINSULA AERIAL left -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-photo" style="height:220px">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/LCCN2010637967.tif/lossy-page1-1200px-LCCN2010637967.tif.jpg" alt="Fort Morgan Peninsula aerial view" onerror="this.parentElement.style.minHeight='100px'">
+          <div class="tl-photo-caption">Fort Morgan Peninsula · Gulf Coast · Library of Congress · Public Domain</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge">1960s</div>
+          <div style="width:60px;height:2px;background:rgba(61,168,160,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">Fort Morgan Peninsula Grows</div>
+          <p class="tl-body">The area is renamed from "Little Lagoon" — the original settlers' name for the sheltered water behind the barrier island — and Beach Boulevard is paved. The first beach cottages begin to appear along the shore. A quiet peninsula finds its identity as a coastal destination.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1971 — text left, no photo -->
+      <div class="tl-wave-entry tl-wave-right">
+        <div class="tl-text">
+          <div class="tl-label">First National Shrimp Festival</div>
+          <p class="tl-body">Gulf Shores holds its first National Shrimp Festival, celebrating the fishing heritage that built this community. It becomes one of the Gulf Coast's most beloved annual traditions, drawing hundreds of thousands of visitors each October.</p>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:1rem">
+          <div class="tl-year-badge" style="text-align:left">1971</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to right,rgba(61,168,160,.6),transparent);margin:.3rem 0"></div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 40 500 20 Q750 0 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 1979 FREDERIC — hurricane pill, text right -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-text" style="border-color:rgba(201,149,107,.2);background:rgba(201,149,107,.05)">
+          <div class="tl-label" style="color:#c9956b">Hurricane Frederic — Category 4</div>
+          <p class="tl-body">One of the most destructive hurricanes ever to strike Alabama tears across the peninsula in September 1979. Most homes along Beach Boulevard are destroyed. The highway washes out. The storm surge sweeps completely across the peninsula from Gulf to bay. The community rebuilds from nothing.</p>
+          <span class="hurricane-pill">🌀 Category 4 · September 1979 · 130 mph winds</span>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge" style="color:#c9956b">1979</div>
+          <div style="width:60px;height:2px;background:rgba(201,149,107,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(201,149,107,.15);border:2px solid rgba(201,149,107,.4)">
+            <div class="tl-dot-inner" style="background:#c9956b"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:flex-start;padding-top:.5rem">
+          <div style="font-size:3rem;opacity:.3">🌀</div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#c9956b" stroke-width="2"/></svg>
+
+      <!-- 1980 COTTAGE BUILT — highlight entry -->
+      <div class="tl-wave-entry tl-wave-right">
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding-right:1rem">
+          <div class="tl-year-badge" style="color:#2b4570;font-size:1.1rem;text-align:right">1980</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to left,white,.5,transparent);margin:.3rem 0"></div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(43,69,112,.1);border:2px solid rgba(43,69,112,.6)">
+            <div class="tl-dot-inner" style="background:white"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text" style="border-color:rgba(43,69,112,.15);background:rgba(43,69,112,.12)">
+          <div class="tl-label" style="color:rgba(43,69,112,.8)">The Cottage is Built</div>
+          <p class="tl-body">In the year after Frederic leveled most of Beach Boulevard, someone chose to build here anyway. An act of faith in this place. A raised white beach cottage goes up at 5917 Beach Boulevard — with expansive Gulf views and deeded beach access. In the same year, Congress establishes Bon Secour National Wildlife Refuge on this same peninsula. Four decades of Gulf mornings begin.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 40 500 20 Q750 0 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- April 2002 -- photo left, text right -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div class="tl-photo" style="height:220px">
+          <img src="photos/FortMorgan02%20Fort%20Morgan%2C%20April%202002.jpg" alt="Aerial view of Fort Morgan, April 2002" onerror="this.parentElement.style.minHeight='100px'">
+          <div class="tl-photo-caption">Fort Morgan · April 2002 · Photo by Edibobb · CC BY 3.0</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge">2002</div>
+          <div style="width:60px;height:2px;background:rgba(61,168,160,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text">
+          <div class="tl-label">Still Standing</div>
+          <p class="tl-body">More than a century after its guns went silent, Fort Morgan's star-shaped walls still hold their original form — preserved now as a National Historic Landmark instead of a defense. The peninsula around it keeps changing; the fort mostly just watches.</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 2004 IVAN -->
+      <div class="tl-wave-entry tl-wave-left">
+        <div style="display:flex;flex-direction:column;justify-content:flex-start;padding-top:.5rem">
+          <div style="font-size:3rem;opacity:.3">🌀</div>
+        </div>
+        <div class="tl-center">
+          <div class="tl-year-badge" style="color:#c9956b">2004</div>
+          <div style="width:60px;height:2px;background:rgba(201,149,107,.4);margin:.3rem auto"></div>
+          <div class="tl-dot-outer" style="background:rgba(201,149,107,.15);border:2px solid rgba(201,149,107,.4)">
+            <div class="tl-dot-inner" style="background:#c9956b"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div class="tl-text" style="border-color:rgba(201,149,107,.2);background:rgba(201,149,107,.05)">
+          <div class="tl-label" style="color:#c9956b">Hurricane Ivan — Category 3</div>
+          <p class="tl-body">The strongest hurricane to strike this coast in over a century makes landfall at 1am along Fort Morgan Peninsula with winds between 120–130 mph. Homes are flattened. The landscape is changed forever. But the cottage at 5917 stands. Some things are built to last.</p>
+          <span class="hurricane-pill">🌀 Category 3 · September 2004 · 120–130 mph</span>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.2;margin:-10px 0"><path d="M0 20 Q250 0 500 20 Q750 40 1000 20" fill="none" stroke="#2b4570" stroke-width="2"/></svg>
+
+      <!-- 2021 RENOVATION -->
+      <div class="tl-wave-entry tl-wave-right">
+        <div class="tl-text">
+          <div class="tl-label">Full Renovation</div>
+          <p class="tl-body">New LVP floors, kitchen, bathrooms, HVAC, siding, and deck. The bones stay. The cottage gets the refresh it deserved. Guests start arriving in numbers — the reviews pour in, and a 4.81 guest rating across 117 verified VRBO reviews tells the story.</p>
+        </div>
+        <div class="tl-center">
+          <div class="tl-dot-outer" style="background:rgba(61,168,160,.15);border:2px solid rgba(61,168,160,.4)">
+            <div class="tl-dot-inner"></div>
+          </div>
+          <div class="tl-connector"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:1rem">
+          <div class="tl-year-badge" style="text-align:left">2021</div>
+          <div style="width:60px;height:2px;background:linear-gradient(to right,rgba(61,168,160,.6),transparent);margin:.3rem 0"></div>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:40px;opacity:.3;margin:-10px 0"><path d="M0 20 Q250 40 500 20 Q750 0 1000 20" fill="none" stroke="white" stroke-width="1.5"/></svg>
+
+      <!-- 2026 GOOD TIDES ONLY — finale -->
+      <div class="tl-wave-entry" style="display:grid;grid-template-columns:1fr 40px 1fr;gap:2rem;align-items:center">
+        <div style="display:flex;justify-content:flex-end">
+          <div style="text-align:right">
+            <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;font-style:italic;color:#2b4570">2026</div>
+            <div style="width:60px;height:2px;background:linear-gradient(to left,white,transparent);margin:.3rem 0 0 auto"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(42,128,128,.2)">
+            <div style="width:14px;height:14px;border-radius:50%;background:white"></div>
+          </div>
+        </div>
+        <div class="tl-text" style="border-color:rgba(42,128,128,.3);background:rgba(42,128,128,.08)">
+          <div class="tl-label" style="color:#2b4570">Good Tides Only Opens</div>
+          <p class="tl-body">A new chapter. New owners, same soul. The cottage that survived two hurricanes, four decades of Gulf mornings, and one full renovation is ready for its next era. Good Tides Only — where every stay feels like the tide turned in your favor.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer style="background:#f2e8d0;padding:3rem 5rem;border-top:1px solid rgba(43,69,112,.12)">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2rem">
+    <div>
+      <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:#2b4570;margin-bottom:.8rem">Good Tides Only</div>
+      <div style="font-size:.82rem;color:rgba(43,69,112,.4);line-height:1.7">5917 Beach Blvd<br>Gulf Shores, AL 36542<br>Fort Morgan Peninsula, Alabama</div>
+    </div>
+    <div>
+      <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(61,168,160,.6);margin-bottom:.8rem">Explore</div>
+      <div style="display:flex;flex-direction:column;gap:.3rem">
+        <a href="the-place.html" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">The Place</a>
+        <a href="history.html" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">History &amp; Heritage</a>
+        <a href="fishing.html" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">Fishing</a>
+        <a href="explore.html" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">Explore the Peninsula</a>
+        <a href="our-story.html" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">Our Story</a>
+        <a href="https://www.instagram.com/onlygoodtides" target="_blank" rel="noopener noreferrer" style="font-size:.82rem;color:rgba(43,69,112,.45);text-decoration:none">📸 @onlygoodtides</a>
+        <a href="itinerary.html" style="font-size:.82rem;color:rgba(61,168,160,.6);text-decoration:none">✦ Build Your Itinerary</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(61,168,160,.6);margin-bottom:.8rem">Book</div>
+      <a href="index.html#calendar" style="display:inline-block;background:var(--teal);color:#2b4570;padding:.7rem 1.5rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;margin-bottom:1rem">Check Availability</a>
+      <div style="font-size:.78rem;color:rgba(43,69,112,.3);line-height:1.6">Managed by Pam Martin Beach Vacations<br>© 2026 Good Tides LLC</div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+
+  // ── 1. CLIPBOARD WATERMARK ────────────────────────────────────────
+  document.addEventListener('copy', function(e){
+    var sel = window.getSelection();
+    if(!sel || sel.isCollapsed) return;
+    var text = sel.toString();
+    if(text.length > 80){
+      var watermark = text + '\n\n— © 2026 Good Tides LLC · goodtidesonly.com · All rights reserved. Unauthorized reproduction prohibited.';
+      e.clipboardData.setData('text/plain', watermark);
+      e.preventDefault();
+    }
+  });
+
+  // ── 2. DISABLE KEYBOARD SHORTCUTS ────────────────────────────────
+  document.addEventListener('keydown', function(e){
+    var ctrl = e.ctrlKey || e.metaKey;
+    if(ctrl && (
+      e.key === 'u' ||   // view-source
+      e.key === 's' ||   // save page
+      e.key === 'p' ||   // print (captures content)
+      e.key === 'a'      // select all
+    )){
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // ── 3. DISABLE RIGHT-CLICK EVERYWHERE ─────────────────────────────
+  document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+    return false;
+  });
+
+  // ── 4. CSS USER-SELECT: NONE on original narrative sections ────────
+  // Applied only to creative/narrative content — not to practical info
+  // (phone numbers, addresses, pricing etc. remain selectable)
+  var protectedIds = [
+    'convergence',   // the musing
+    'sand',          // the sand origin story
+    'the-gulf',      // the gulf water story
+    'lagoon',        // the little lagoon section
+    'stargazing',    // constellation descriptions
+    'history-maps',  // historical map narratives
+    'fort',          // fort morgan story
+    'history',       // timeline narrative
+  ];
+
+  var style = document.createElement('style');
+  var rules = protectedIds.map(function(id){
+    return '#' + id + ' p, #' + id + ' .h2, #' + id + ' h2, #' + id + ' h3 { ' +
+      '-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+  }).join('\n');
+
+  // Also protect the convergence musing standalone divs
+  rules += '\n[data-protected="true"] { -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }';
+
+  style.textContent = rules;
+  document.head.appendChild(style);
+
+  // ── 5. IMAGE PROTECTION ───────────────────────────────────────────
+  document.addEventListener('dragstart', function(e){
+    if(e.target.tagName === 'IMG') e.preventDefault();
+  });
+
+  // Disable print screen notification (can't prevent but can detect)
+  // Add CSS to hide content in print
+  var printStyle = document.createElement('style');
+  printStyle.textContent = '@media print { body { display:none !important; } }';
+  document.head.appendChild(printStyle);
+
+})();
+</script>
+</body>
+</html>
