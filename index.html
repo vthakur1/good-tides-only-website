@@ -787,11 +787,11 @@ a:visited { color: inherit; }
   </button>
 
   <div id="nav-links" style="display:flex;align-items:center;gap:2rem">
-    <a href="#gallery" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Photos</a>
-    <a href="#amenities" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Amenities</a>
-    <a href="#pricing" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Rates</a>
-    <a href="#reviews" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Reviews</a>
-    <a href="the-place.html" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Explore</a>
+    <a href="#gallery" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Photos</a>
+    <a href="#amenities" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Amenities</a>
+    <a href="#pricing" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Rates</a>
+    <a href="#reviews" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Reviews</a>
+    <a href="the-place.html" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Explore</a>
     <a href="#calendar" onclick="closeNavMenu()" style="background:var(--teal);color:white;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none">Book Now</a>
   </div>
 </nav>
@@ -876,22 +876,6 @@ function closeNavMenu(){
       <div style="font-family:'Lato',sans-serif;font-size:.65rem;color:rgba(255,255,255,.3);margin-top:.15rem">2 bedrooms · 2 baths · Sleeps 6</div>
     </div>
 
-    <!-- Date pickers -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.8rem">
-      <div>
-        <label style="font-family:'Lato',sans-serif;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:.2rem">Arrive</label>
-        <input type="date" id="h-checkin" inputmode="none" aria-label="Check-in date"
-          style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:white;padding:.5rem .6rem;border-radius:5px;font-family:'Lato',sans-serif;font-size:.75rem;outline:none;cursor:pointer;box-sizing:border-box"
-          oninput="heroUpdateDates()">
-      </div>
-      <div>
-        <label style="font-family:'Lato',sans-serif;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:.2rem">Depart</label>
-        <input type="date" id="h-checkout" inputmode="none" aria-label="Check-out date"
-          style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:white;padding:.5rem .6rem;border-radius:5px;font-family:'Lato',sans-serif;font-size:.75rem;outline:none;cursor:pointer;box-sizing:border-box"
-          oninput="heroUpdateDates()">
-      </div>
-    </div>
-
     <!-- Book Now CTA -->
     <a id="h-book-btn"
        href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x"
@@ -903,9 +887,9 @@ function closeNavMenu(){
 
     <!-- Direct / VRBO toggle -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:1.2rem">
-      <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer"
+      <a href="https://www.vrbo.com/5311116" target="_blank" rel="noopener noreferrer"
          style="text-align:center;padding:.5rem;border:1px solid rgba(255,255,255,.1);border-radius:5px;font-family:'Lato',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase">Book on VRBO</a>
-      <a href="https://www.pammartinbeachvacations.com" target="_blank" rel="noopener noreferrer"
+      <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer"
          style="text-align:center;padding:.5rem;border:1px solid rgba(255,255,255,.1);border-radius:5px;font-family:'Lato',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase">Book Direct &amp; Save</a>
     </div>
 
@@ -929,31 +913,6 @@ function closeNavMenu(){
 })();
 </script>
 
-<script>
-(function(){
-  var today = new Date().toISOString().split('T')[0];
-  var ci = document.getElementById('h-checkin');
-  var co = document.getElementById('h-checkout');
-  if(ci) ci.min = today;
-  if(co) co.min = today;
-})();
-function heroUpdateDates(){
-  var cin  = document.getElementById('h-checkin').value;
-  var cout = document.getElementById('h-checkout').value;
-  var btn  = document.getElementById('h-book-btn');
-  var base = 'https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x';
-  if(cin){
-    var minOut = new Date(cin);
-    minOut.setDate(minOut.getDate()+2);
-    document.getElementById('h-checkout').min = minOut.toISOString().split('T')[0];
-    if(cout && cout < minOut.toISOString().split('T')[0]){
-      document.getElementById('h-checkout').value='';
-      cout='';
-    }
-  }
-  btn.href = (cin && cout) ? base+'?startDate='+cin+'&endDate='+cout : base;
-}
-</script>
 <style>
 @keyframes heroScroll {
   0%,100%{opacity:.3;transform:translateY(0)}
@@ -981,62 +940,12 @@ function heroUpdateDates(){
 }
 </style>
 
-<script>
-(function(){
-  var today = new Date().toISOString().split('T')[0];
-  var ci = document.getElementById('h-checkin');
-  var co = document.getElementById('h-checkout');
-  if(ci) ci.min = today;
-  if(co) co.min = today;
-})();
-function heroUpdateDates(){
-  var cin  = document.getElementById('h-checkin').value;
-  var cout = document.getElementById('h-checkout').value;
-  var btn  = document.getElementById('h-book-btn');
-  var base = 'https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x';
-  if(cin){
-    var minOut = new Date(cin);
-    minOut.setDate(minOut.getDate()+2);
-    document.getElementById('h-checkout').min = minOut.toISOString().split('T')[0];
-    if(cout && cout < minOut.toISOString().split('T')[0]){
-      document.getElementById('h-checkout').value='';
-      cout='';
-    }
-  }
-  btn.href = (cin && cout) ? base+'?startDate='+cin+'&endDate='+cout : base;
-}
-</script>
 <style>
 @keyframes heroScroll {
   0%,100%{opacity:.3;transform:translateX(-50%) translateY(0)}
   50%{opacity:.7;transform:translateX(-50%) translateY(6px)}
 }
 </style>
-
-<script>
-(function(){
-  var today = new Date().toISOString().split('T')[0];
-  document.getElementById('h-checkin').min = today;
-  document.getElementById('h-checkout').min = today;
-})();
-
-function heroUpdateDates(){
-  var cin   = document.getElementById('h-checkin').value;
-  var cout  = document.getElementById('h-checkout').value;
-  var btn   = document.getElementById('h-book-btn');
-  var base  = 'https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x';
-  if(cin){
-    var minOut = new Date(cin);
-    minOut.setDate(minOut.getDate()+2);
-    document.getElementById('h-checkout').min = minOut.toISOString().split('T')[0];
-    if(cout && cout < minOut.toISOString().split('T')[0]){
-      document.getElementById('h-checkout').value='';
-      cout='';
-    }
-  }
-  btn.href = (cin && cout) ? base+'?startDate='+cin+'&endDate='+cout : base;
-}
-</script>
 
 <div id="trust-bar-icons" style="background:white;padding:2rem 5rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid)">
     <div style="text-align:center">
