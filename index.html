@@ -613,7 +613,7 @@ a:visited { color: inherit; }
 
   /* NAV LOGO — never let the flex row shrink it to 0 width, keep it small */
   nav a:first-child { flex-shrink: 0; }
-  nav img { height: 40px !important; width: auto !important; max-width: none !important; }
+  nav img { height: 50px !important; width: auto !important; max-width: none !important; }
 
   /* NAV — hamburger menu */
   #nav-hamburger { display: flex !important; }
@@ -777,7 +777,7 @@ a:visited { color: inherit; }
 
 <nav role="navigation" aria-label="Main navigation" style="position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:0 5rem;display:flex;align-items:center;justify-content:space-between">
   <a href="#top" style="display:flex;align-items:center;text-decoration:none;padding:.6rem 0">
-    <img src="photos/gto-welcome-sign-transparent.png" alt="Good Tides Only — Fort Morgan, Alabama" style="height:60px;width:auto;display:block">
+    <img src="photos/gto-welcome-sign-transparent.png" alt="Good Tides Only — Fort Morgan, Alabama" style="height:75px;width:auto;display:block">
   </a>
 
   <button id="nav-hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" onclick="toggleNavMenu()" style="display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px">
@@ -965,7 +965,7 @@ function heroUpdateDates(){
 
 /* Hero — fit within one screen (account for sticky nav height) + top/bottom/left margin around the photo */
 @media (min-width:769px){
-  #top{min-height:0 !important;height:calc(100vh - 81px) !important;padding:32px 0 32px 5rem !important;box-sizing:border-box !important;}
+  #top{min-height:0 !important;height:calc(100vh - 96px) !important;padding:32px 0 32px 5rem !important;box-sizing:border-box !important;}
   #top-photo-panel{border-radius:12px !important;}
 }
 
@@ -1119,6 +1119,8 @@ function heroUpdateDates(){
       <h2 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:2rem;color:var(--text);line-height:1.2">Only 80 Steps to the Beach<br><em>Quiet. Uncrowded. Yours whenever you want it.</em></h2>
     </div>
 
+    <h3 style="text-align:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem;color:var(--teal);margin-bottom:1.2rem">Why Good Tides Only?</h3>
+
     <!-- Three-column comparison -->
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem">
       <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:1.3rem">
@@ -1142,6 +1144,7 @@ function heroUpdateDates(){
       </div>
     </div>
 
+    <h3 style="text-align:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--text);margin-bottom:.8rem">Beach Days Made Easy</h3>
     <div style="background:rgba(61,168,160,.06);border:1px solid rgba(61,168,160,.2);border-radius:8px;padding:1.2rem 1.5rem;margin-bottom:1.5rem;max-width:700px;margin-left:auto;margin-right:auto">
       <p style="font-size:.85rem;color:var(--text-mid);line-height:1.75;margin:0">One of the best parts of staying at Good Tides Only is how effortless beach days become. With the beach only 80 steps away, you can head down whenever the mood strikes. Grab the wagon already stocked with six beach chairs, spend the morning by the water, come back for lunch or a break from the sun, then head back for sunset. No packing the car. No searching for parking. Just easy beach days, exactly the way they should be.</p>
     </div>
