@@ -765,10 +765,10 @@ a:visited { color: inherit; }
 <section id="top" style="position:relative;background:#041414;min-height:100vh;display:flex;overflow:hidden">
 
   <!-- LEFT 2/3 — Photo -->
-  <div style="flex:0 0 66.666%;position:relative;overflow:hidden">
+  <div id="top-photo-panel" style="flex:0 0 66.666%;position:relative;overflow:hidden">
 
-    <!-- Hero photo — gazebo facing The Gulf -->
-    <img src="photos/deck-full.jpg" alt="Good Tides Only — deck and gazebo looking out to The Gulf" class="hero-kenburns" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <!-- Hero photo — gazebo and deck -->
+    <img src="photos/Gazebo___Deck.png" alt="Good Tides Only — gazebo and deck overlooking The Gulf" class="hero-kenburns" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
 
     <!-- Subtle gradient at bottom for text legibility -->
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,20,20,0) 60%,rgba(4,20,20,.18) 100%)"></div>
@@ -892,6 +892,13 @@ function heroUpdateDates(){
   100%{transform:scale(1.08)}
 }
 .hero-kenburns{animation:kenBurnsZoom 20s ease-in-out infinite alternate}
+
+/* Hero — fit within one screen (account for sticky nav height) + left gutter for the photo */
+@media (min-width:769px){
+  #top{min-height:0 !important;height:calc(100vh - 58px) !important;padding-left:5rem !important;}
+  #top-photo-panel{border-radius:12px !important;}
+}
+
 /* Hero panel mobile — stack vertically */
 @media (max-width:768px){
   #top { flex-direction:column !important; min-height:auto !important; }
