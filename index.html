@@ -604,12 +604,16 @@ a:visited { color: inherit; }
 @media (max-width: 768px) {
 
   /* SECTIONS — reduce padding */
-  section, div[style*="padding:4rem 5rem"], div[style*="padding:3rem 5rem"],
+  section, nav, div[style*="padding:4rem 5rem"], div[style*="padding:3rem 5rem"],
   div[style*="padding:2.5rem 5rem"], div[style*="padding:3.5rem 5rem"],
   div[style*="padding:5rem"] {
     padding-left: 1.2rem !important;
     padding-right: 1.2rem !important;
   }
+
+  /* NAV LOGO — never let the flex row shrink it to 0 width, keep it small */
+  nav a:first-child { flex-shrink: 0; }
+  nav img { height: 32px !important; width: auto !important; max-width: none !important; }
 
   /* HERO */
   #top { min-height: 100svh; }
@@ -752,7 +756,9 @@ a:visited { color: inherit; }
 <a href="#top" style="position:absolute;top:-40px;left:0;background:var(--teal);color:white;padding:.5rem 1rem;z-index:999;text-decoration:none;font-family:Lato,sans-serif;font-size:.8rem" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to content</a>
 
 <nav role="navigation" aria-label="Main navigation" style="position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:0 5rem;display:flex;align-items:center;justify-content:space-between">
-  <a href="#top" style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.15rem;color:white;text-decoration:none;padding:1rem 0">Good Tides Only</a>
+  <a href="#top" style="display:flex;align-items:center;text-decoration:none;padding:.6rem 0">
+    <img src="photos/GTO_Mascot_Alt.png" alt="Good Tides Only" style="height:42px;width:auto;display:block">
+  </a>
   <div style="display:flex;align-items:center;gap:2rem">
     <a href="#gallery" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Photos</a>
     <a href="#amenities" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Amenities</a>
@@ -775,14 +781,14 @@ a:visited { color: inherit; }
 
     <!-- Subtle gradient at bottom for text legibility -->
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,20,20,0) 60%,rgba(4,20,20,.18) 100%)"></div>
-    <div style="position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to top,rgba(4,20,20,.35) 0%,transparent 100%)"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:45%;background:linear-gradient(to top,rgba(4,20,20,.75) 0%,rgba(4,20,20,.15) 70%,transparent 100%)"></div>
 
     <!-- Property name overlaid bottom-left -->
     <div style="position:absolute;bottom:2.5rem;left:2.5rem">
-      <p style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem">Gulf Shores, Alabama · Fort Morgan Peninsula</p>
-      <h1 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(2.2rem,4vw,3.6rem);color:white;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.4)">Your Private Beach Escape<br>in Fort Morgan</h1>
-      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(.85rem,1.5vw,1.05rem);color:rgba(255,255,255,.65);margin-top:.4rem">Good Tides Only</p>
-      <p style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.35rem">Relax. Recharge. Make Memories.</p>
+      <p style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);text-shadow:0 1px 8px rgba(0,0,0,.7);margin-bottom:.3rem">Gulf Shores, Alabama · Fort Morgan Peninsula</p>
+      <h1 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(2.2rem,4vw,3.6rem);color:white;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.6)">Your Private Beach Escape<br>in Fort Morgan</h1>
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(.85rem,1.5vw,1.05rem);color:rgba(255,255,255,.95);text-shadow:0 1px 8px rgba(0,0,0,.7);margin-top:.4rem">Good Tides Only</p>
+      <p style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.8);text-shadow:0 1px 8px rgba(0,0,0,.7);margin-top:.35rem">Relax. Recharge. Make Memories.</p>
     </div>
 
     <!-- Scroll indicator -->
@@ -800,7 +806,7 @@ a:visited { color: inherit; }
     <div style="margin-bottom:1.4rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.07)">
       <div style="color:#f59e0b;font-size:.8rem;margin-bottom:.5rem">★★★★★</div>
       <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5;margin-bottom:.5rem">"Good Tides Only was the perfect place for our family of 5. The beach was just steps away&hellip; I would definitely stay here again!"</p>
-      <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">— Andrea H., Verified Guest</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">— Andrea H.</div>
     </div>
 
     <!-- Property name in panel -->
@@ -899,7 +905,7 @@ function heroUpdateDates(){
 
 /* Hero — fit within one screen (account for sticky nav height) + top/bottom/left margin around the photo */
 @media (min-width:769px){
-  #top{min-height:0 !important;height:calc(100vh - 58px) !important;padding:32px 0 32px 5rem !important;box-sizing:border-box !important;}
+  #top{min-height:0 !important;height:calc(100vh - 63px) !important;padding:32px 0 32px 5rem !important;box-sizing:border-box !important;}
   #top-photo-panel{border-radius:12px !important;}
 }
 
