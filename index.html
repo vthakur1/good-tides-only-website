@@ -166,22 +166,6 @@ nav{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,2
 
 /* CALENDAR */
 .calendar-section{background:var(--sand);padding:6rem 5rem}
-.cal-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:3rem}
-.cal-wrap{background:white;border:1px solid var(--sky-mid);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
-.cal-header{background:var(--teal);color:white;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem}
-.cal-month-title{font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic}
-.cal-nav{background:rgba(255,255,255,.2);border:none;color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.cal-nav:hover{background:rgba(255,255,255,.35)}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
-.cal-dow{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);border-bottom:1px solid var(--sky-mid)}
-.cal-day{text-align:center;padding:.5rem;font-family:'Lato',sans-serif;font-size:.8rem;cursor:pointer;min-height:36px;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s}
-.cal-day.other-month{color:var(--sky-mid)}
-.cal-day.booked{background:#fee2e2;color:#991b1b;text-decoration:line-through;cursor:not-allowed}
-.cal-day.available:hover{background:var(--teal-pale);color:var(--teal)}
-.cal-day.selected{background:var(--teal);color:white;border-radius:50%}
-.cal-day.today{font-weight:700;color:var(--teal)}
-.cal-legend{display:flex;gap:1.5rem;padding:1rem 1.5rem;border-top:1px solid var(--sky-mid);font-family:'Lato',sans-serif;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light)}
-.legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
 .platform-badges{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
 .platform-badge{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border:1.5px solid var(--sky-mid);border-radius:2px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:all .2s}
 .platform-badge:hover{border-color:var(--teal);color:var(--teal)}
@@ -422,7 +406,7 @@ footer{background:var(--text);padding:4rem 5rem;display:grid;grid-template-colum
   .hero-panel{border-radius:0}
   .hero-panel:last-child{display:none}
   .util-bar{padding:.4rem 1rem;font-size:.55rem}
-  .about,.location,.arrival-grid,.dogs-grid,.cal-intro{grid-template-columns:1fr}
+  .about,.location,.arrival-grid,.dogs-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .gal-item:first-child{grid-row:auto;grid-column:auto}
   .amen-grid{grid-template-columns:1fr 1fr}
@@ -444,35 +428,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
   outline-offset:2px;
   border-radius:2px;
 }
-
-/* Calendar half-day shading */
-.cal-day.checkin-day{
-  background:linear-gradient(to bottom right, white 50%, rgba(42,128,128,.18) 50%);
-  color:var(--text-mid);
-}
-.cal-day.checkout-day{
-  background:linear-gradient(to bottom right, rgba(42,128,128,.18) 50%, white 50%);
-  color:var(--text-mid);
-}
-.cal-day.booked{
-  background:rgba(201,149,107,.12);
-  color:var(--text-light);
-  font-weight:400;
-}
-.cal-day.booked::after{
-  content:'';
-  position:absolute;
-  inset:2px;
-  border-radius:2px;
-  background:repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 3px,
-    rgba(201,149,107,.15) 3px,
-    rgba(201,149,107,.15) 4px
-  );
-}
-.cal-day{position:relative;}
 
 @keyframes wA{0%,100%{height:3px}50%{height:12px}}
 </style>
@@ -1382,21 +1337,19 @@ function closeNavMenu(){
 </section>
 
 <section id="calendar" class="calendar-section">
-  <div class="cal-intro">
-    <div>
-      <p class="eyebrow">Check Availability</p>
-      <h2 class="h2">When would you like<br><em>to stay?</em></h2>
-      <p class="body-text">Our calendar syncs automatically with VRBO and direct bookings — no double bookings, always up to date. Book directly below or through your preferred platform.</p>
-      <div class="platform-badges">
-        
-        <a href="https://www.vrbo.com/5311116" target="_blank" rel="noopener noreferrer" class="platform-badge"><span class="platform-badge-icon">🏡</span>Book on VRBO</a>
-        <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer" class="platform-badge" style="background:var(--teal);color:white;border-color:var(--teal)"><span class="platform-badge-icon">✉️</span>Book Direct</a>
-      </div>
-      <div class="cal-sync-note">
-        <span>🔄</span>
-        <span><strong>Synced calendar:</strong> Bookings on VRBO and this site all update the same calendar automatically via iCal. What you see is always accurate.</span>
-      </div>
+  <div style="max-width:700px;margin:0 auto 3rem;text-align:center">
+    <p class="eyebrow">Book Your Stay</p>
+    <h2 class="h2">When would you like<br><em>to stay?</em></h2>
+    <p class="body-text">Good Tides Only is available through two trusted, fully protected platforms. Book whichever you prefer — same property, same hosts, either way.</p>
+    <div class="platform-badges" style="justify-content:center">
+      <a href="https://www.vrbo.com/5311116" target="_blank" rel="noopener noreferrer" class="platform-badge"><span class="platform-badge-icon">🏡</span>Book on VRBO</a>
+      <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer" class="platform-badge" style="background:var(--teal);color:white;border-color:var(--teal)"><span class="platform-badge-icon">✉️</span>Book Direct</a>
     </div>
+  </div>
+
+  <!-- THREE-COLUMN: Quick info / Rolling reviews / Quote + CTAs -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem;align-items:stretch;width:100%">
+
     <div style="background:white;padding:2rem;border:1px solid var(--sky-mid);border-radius:2px">
       <p class="eyebrow">Quick Booking Info</p>
       <div style="display:flex;flex-direction:column;gap:.8rem;margin-top:1rem">
@@ -1412,7 +1365,7 @@ function closeNavMenu(){
       </div>
     </div>
 
-    <!-- RIGHT: Rolling reviews panel -->
+    <!-- Rolling reviews panel -->
     <div style="display:flex;flex-direction:column;justify-content:center">
       <p class="eyebrow">What Guests Are Saying</p>
       <div id="rolling-reviews" aria-live="polite" aria-label="Guest reviews carousel" style="position:relative;overflow:hidden;min-height:280px">
@@ -1424,37 +1377,95 @@ function closeNavMenu(){
       </div>
     </div>
 
-  </div>
-
-  <!-- TWO-MONTH CALENDAR + BOOKING QUOTE -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem;align-items:stretch;width:100%">
-
-    <!-- MONTH 1 -->
-    <div class="cal-wrap" id="cal-month-0" aria-label="June 2026 availability calendar" style="height:100%"></div>
-
-    <!-- MONTH 2 -->
-    <div class="cal-wrap" id="cal-month-1" aria-label="July 2026 availability calendar" style="height:100%"></div>
-
-    <!-- QUOTE + BOOK CTAs — same height as calendars -->
+    <!-- QUOTE + BOOK CTAs -->
     <div style="background:linear-gradient(150deg,#0d2a2a 0%,#1a4040 100%);border-radius:4px;padding:1.8rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;position:relative;overflow:hidden;border:1px solid rgba(61,168,160,.15);width:100%">
       <div style="position:absolute;inset:0;opacity:.035;background:repeating-linear-gradient(45deg,white 0,white 1px,transparent 0,transparent 50%) center/18px 18px;pointer-events:none"></div>
       <!-- Quote -->
       <div style="position:relative;z-index:1">
         <p style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:white;line-height:1.6;margin-bottom:.8rem">The best time to be here was yesterday.<br>The second best time is now.</p>
-        <p style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);line-height:1.6">White dates are yours.<br>They won't wait.</p>
+        <p style="font-family:'Lato',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);line-height:1.6">Ready when you are.</p>
       </div>
       <!-- CTAs -->
       <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:.65rem">
         <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer" style="font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;background:white;color:var(--teal);padding:.75rem 1rem;text-decoration:none;border-radius:2px;text-align:center;font-weight:700;display:block;transition:all .2s">Book Direct →</a>
         <a href="https://www.vrbo.com/5311116" target="_blank" rel="noopener noreferrer" style="font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,.82);padding:.75rem 1rem;text-decoration:none;border-radius:2px;text-align:center;border:1px solid rgba(255,255,255,.28);display:block;transition:all .2s">View on VRBO →</a>
       </div>
-      <!-- Sync note -->
-      <p style="position:relative;z-index:1;font-family:'Lato',sans-serif;font-size:.56rem;letter-spacing:.06em;color:rgba(255,255,255,.25);text-align:center;line-height:1.5">Syncs with Pam Martin Beach Vacations &amp; VRBO · Always current</p>
+      <!-- Trust note -->
+      <p style="position:relative;z-index:1;font-family:'Lato',sans-serif;font-size:.56rem;letter-spacing:.06em;color:rgba(255,255,255,.25);text-align:center;line-height:1.5">Trusted through Pam Martin Beach Vacations &amp; VRBO</p>
     </div>
 
   </div>
 
 </section>
+
+<script>
+// Rolling reviews carousel — add real guest reviews here as they come in.
+// The carousel automatically starts rotating once there's more than one.
+var ROLLING_REVIEWS = [
+  {
+    title: 'Perfect Beach Stay!',
+    quote: 'Good Tides Only was the perfect place for our family of 5. The accommodations were clean and up to date. All of our basic needs were met in a nicely organized kitchen. The beach was just steps away. The wagon and chairs provided relaxing beach days, and a quick walk on the beach was always accessible. Also, the outdoor showers and washer and dryer made beach clean up a breeze. I would definitely stay here again!',
+    author: 'Andrea H.',
+    meta: 'Stayed June 2026'
+  }
+];
+
+(function(){
+  var container = document.getElementById('rolling-reviews');
+  var dots = document.getElementById('review-dots');
+  if(!container || !ROLLING_REVIEWS.length) return;
+
+  var current = -1;
+
+  function buildCard(review){
+    var card = document.createElement('div');
+    card.className = 'rolling-review-card';
+    card.style.cssText = 'position:absolute;inset:0;opacity:0;transition:opacity .6s ease;background:var(--sky);border-radius:6px;padding:2rem;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center';
+    card.innerHTML =
+      '<div style="color:#f59e0b;font-size:1rem;margin-bottom:.8rem">★★★★★</div>' +
+      '<div style="font-family:\'DM Serif Display\',serif;font-style:italic;font-size:1.1rem;color:var(--text);margin-bottom:.7rem">' + review.title + '</div>' +
+      '<p style="font-size:.88rem;color:var(--text-mid);line-height:1.7;margin-bottom:1rem">"' + review.quote + '"</p>' +
+      '<div style="font-family:\'Lato\',sans-serif;font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-light)">' + review.author + ' · ' + review.meta + '</div>';
+    return card;
+  }
+
+  function renderDots(){
+    dots.innerHTML = '';
+    if(ROLLING_REVIEWS.length < 2) return;
+    ROLLING_REVIEWS.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Show review ' + (i + 1));
+      dot.style.cssText = 'width:6px;height:6px;border-radius:50%;border:none;padding:0;cursor:pointer;background:' + (i === current ? 'var(--teal)' : 'var(--sky-mid)') + ';transition:background .2s';
+      dot.onclick = function(){ show(i); };
+      dots.appendChild(dot);
+    });
+  }
+
+  function show(index){
+    if(index === current) return;
+    current = index;
+    var incoming = buildCard(ROLLING_REVIEWS[current]);
+    container.appendChild(incoming);
+    var outgoing = container.querySelectorAll('.rolling-review-card:not(:last-child)');
+    void incoming.offsetHeight; // force a reflow so the opacity transition below actually registers
+    incoming.style.opacity = '1';
+    outgoing.forEach(function(el){
+      el.style.opacity = '0';
+      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 650);
+    });
+    renderDots();
+  }
+
+  show(0);
+
+  if(ROLLING_REVIEWS.length > 1){
+    setInterval(function(){
+      show((current + 1) % ROLLING_REVIEWS.length);
+    }, 7000);
+  }
+})();
+</script>
 
 <!-- TARGETED REVIEW QUOTES — by audience -->
 <div style="background:var(--ink);padding:2rem 5rem;border-top:1px solid rgba(255,255,255,.05)">
