@@ -677,6 +677,9 @@ a:visited { color: inherit; }
   /* IMAGES — fluid */
   img { max-width: 100% !important; height: auto !important; }
 
+  /* TRUST BAR — 2 col on mobile */
+  #trust-bar-icons { grid-template-columns: 1fr 1fr !important; padding: 1.5rem !important; gap: 1.5rem !important; }
+
   /* CHILL TIDE full-width card — stack on mobile */
   #rooms [style*="grid-template-columns:1.2fr 1fr"] {
     grid-template-columns: 1fr !important;
@@ -768,7 +771,7 @@ a:visited { color: inherit; }
   <div id="top-photo-panel" style="flex:0 0 66.666%;position:relative;overflow:hidden">
 
     <!-- Hero photo — gazebo and deck -->
-    <img src="photos/Gazebo___Deck.png" alt="Good Tides Only — gazebo and deck overlooking The Gulf" class="hero-kenburns" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <img src="photos/Gazebo___Deck%202%20Hero.png" alt="Good Tides Only — gazebo and deck overlooking The Gulf" class="hero-kenburns" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
 
     <!-- Subtle gradient at bottom for text legibility -->
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,20,20,0) 60%,rgba(4,20,20,.18) 100%)"></div>
@@ -777,8 +780,9 @@ a:visited { color: inherit; }
     <!-- Property name overlaid bottom-left -->
     <div style="position:absolute;bottom:2.5rem;left:2.5rem">
       <p style="font-family:'Lato',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem">Gulf Shores, Alabama · Fort Morgan Peninsula</p>
-      <h1 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(2.2rem,4vw,3.6rem);color:white;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.4)">Your private Gulf Coast<br>beach house.</h1>
+      <h1 style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(2.2rem,4vw,3.6rem);color:white;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.4)">Your Private Beach Escape<br>in Fort Morgan</h1>
       <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(.85rem,1.5vw,1.05rem);color:rgba(255,255,255,.65);margin-top:.4rem">Good Tides Only</p>
+      <p style="font-family:'Lato',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.35rem">Relax. Recharge. Make Memories.</p>
     </div>
 
     <!-- Scroll indicator -->
@@ -792,10 +796,11 @@ a:visited { color: inherit; }
   <!-- RIGHT 1/3 — Booking panel -->
   <div style="flex:0 0 33.333%;background:rgba(10,42,42,.97);display:flex;flex-direction:column;justify-content:center;padding:3rem 2.2rem;border-left:1px solid rgba(61,168,160,.18);position:relative;z-index:2;overflow-y:auto">
 
-    <!-- Stars + reviews -->
-    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1.4rem;flex-wrap:wrap">
-      <span style="color:#f59e0b;font-size:.85rem">★★★★★</span>
-      <span style="font-family:'Lato',sans-serif;font-size:.7rem;color:rgba(255,255,255,.55)">5.0 · 1 review</span>
+    <!-- Featured guest review -->
+    <div style="margin-bottom:1.4rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.07)">
+      <div style="color:#f59e0b;font-size:.8rem;margin-bottom:.5rem">★★★★★</div>
+      <p style="font-family:'DM Serif Display',serif;font-style:italic;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5;margin-bottom:.5rem">"Good Tides Only was the perfect place for our family of 5. The beach was just steps away&hellip; I would definitely stay here again!"</p>
+      <div style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">— Andrea H., Verified Guest</div>
     </div>
 
     <!-- Property name in panel -->
@@ -804,10 +809,9 @@ a:visited { color: inherit; }
 
     <!-- Key signals -->
     <div style="display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.8rem;padding-bottom:1.6rem;border-bottom:1px solid rgba(255,255,255,.07)">
-      <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🏖 2-minute walk to the beach</div>
-      <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🌊 The Gulf is your pool</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🏖 Only 80 Steps to the Beach</div>
       <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🏠 Entire house · No shared spaces</div>
-      <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🐾 Two dogs welcome</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem">🐾 Pet Friendly</div>
     </div>
 
     <!-- Price -->
@@ -839,7 +843,7 @@ a:visited { color: inherit; }
        target="_blank" rel="noopener noreferrer"
        class="book-cta-btn"
        style="display:block;background:var(--teal);color:white;padding:.85rem 1rem;border-radius:6px;font-family:'Lato',sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;margin-bottom:.6rem">
-      Write Your Story — Book Now!
+      Your Beach Escape Starts Here
     </a>
 
     <!-- Direct / VRBO toggle -->
@@ -847,7 +851,7 @@ a:visited { color: inherit; }
       <a href="https://www.pammartinbeachvacations.com/good-tides-only-orp5b76ad2x" target="_blank" rel="noopener noreferrer"
          style="text-align:center;padding:.5rem;border:1px solid rgba(255,255,255,.1);border-radius:5px;font-family:'Lato',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase">Book on VRBO</a>
       <a href="https://www.pammartinbeachvacations.com" target="_blank" rel="noopener noreferrer"
-         style="text-align:center;padding:.5rem;border:1px solid rgba(255,255,255,.1);border-radius:5px;font-family:'Lato',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase">Book Direct</a>
+         style="text-align:center;padding:.5rem;border:1px solid rgba(255,255,255,.1);border-radius:5px;font-family:'Lato',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase">Book Direct &amp; Save</a>
     </div>
 
     <!-- Scarcity + trust -->
@@ -893,9 +897,9 @@ function heroUpdateDates(){
 }
 .hero-kenburns{animation:kenBurnsZoom 20s ease-in-out infinite alternate}
 
-/* Hero — fit within one screen (account for sticky nav height) + left gutter for the photo */
+/* Hero — fit within one screen (account for sticky nav height) + top/bottom/left margin around the photo */
 @media (min-width:769px){
-  #top{min-height:0 !important;height:calc(100vh - 58px) !important;padding-left:5rem !important;}
+  #top{min-height:0 !important;height:calc(100vh - 58px) !important;padding:32px 0 32px 5rem !important;box-sizing:border-box !important;}
   #top-photo-panel{border-radius:12px !important;}
 }
 
@@ -964,14 +968,27 @@ function heroUpdateDates(){
 }
 </script>
 
-<div style="background:white;padding:.85rem 3rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid)">
-    <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:var(--text-mid)">🐾 2 dogs welcome</div>
-    <div style="width:1px;height:16px;background:var(--sky-mid)"></div>
-    <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:var(--text-mid)">🏖 Two-minute walk to the Gulf</div>
-    <div style="width:1px;height:16px;background:var(--sky-mid)"></div>
-    <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:var(--text-mid)">🔑 Self check-in · 24/7 keypad</div>
-    <div style="width:1px;height:16px;background:var(--sky-mid)"></div>
-    <div style="font-family:'Lato',sans-serif;font-size:.72rem;color:var(--text-mid)">📶 1 Gbps WiFi</div>
+<div id="trust-bar-icons" style="background:white;padding:2rem 5rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;border-top:1px solid var(--sky-mid);border-bottom:1px solid var(--sky-mid)">
+    <div style="text-align:center">
+      <div style="font-size:1.5rem;margin-bottom:.5rem">🏖️</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.68rem;line-height:1.4;color:var(--text-mid)">Only 80 Steps to the Beach</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:1.5rem;margin-bottom:.5rem">🔑</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.68rem;line-height:1.4;color:var(--text-mid)">Self Check-In with 24/7 Keypad Access</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:1.5rem;margin-bottom:.5rem">🧹</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.68rem;line-height:1.4;color:var(--text-mid)">Professionally Cleaned Before Every Stay</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:1.5rem;margin-bottom:.5rem">🤝</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.68rem;line-height:1.4;color:var(--text-mid)">Locally Managed by Pam Martin Beach Vacations</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:1.5rem;margin-bottom:.5rem">📶</div>
+      <div style="font-family:'Lato',sans-serif;font-size:.68rem;line-height:1.4;color:var(--text-mid)">Fast 1 Gbps Wi-Fi</div>
+    </div>
   </div>
 
 <section id="gallery" style="background:white;padding-top:2rem">
