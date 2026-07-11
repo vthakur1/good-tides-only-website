@@ -615,6 +615,26 @@ a:visited { color: inherit; }
   nav a:first-child { flex-shrink: 0; }
   nav img { height: 32px !important; width: auto !important; max-width: none !important; }
 
+  /* NAV — hamburger menu */
+  #nav-hamburger { display: flex !important; }
+  #nav-links {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: var(--ink);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: .5rem 1.2rem 1rem;
+    box-shadow: 0 12px 24px rgba(0,0,0,.25);
+  }
+  #nav-links.open { display: flex !important; }
+  #nav-links a { width: 100%; box-sizing: border-box; padding: .9rem 0 !important; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; }
+  #nav-links a:last-child { border-bottom: none; margin-top: .5rem; text-align: center; }
+
   /* HERO */
   #top { min-height: 100svh; }
   #top h1 { font-size: 2.4rem !important; }
@@ -759,25 +779,48 @@ a:visited { color: inherit; }
   <a href="#top" style="display:flex;align-items:center;text-decoration:none;padding:.6rem 0">
     <img src="photos/GTO_Mascot_Alt.png" alt="Good Tides Only" style="height:42px;width:auto;display:block">
   </a>
-  <div style="display:flex;align-items:center;gap:2rem">
-    <a href="#gallery" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Photos</a>
-    <a href="#amenities" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Amenities</a>
-    <a href="#pricing" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Rates</a>
-    <a href="#reviews" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Reviews</a>
-    <a href="the-place.html" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Explore</a>
-    <a href="#calendar" style="background:var(--teal);color:white;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none">Book Now</a>
+
+  <button id="nav-hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" onclick="toggleNavMenu()" style="display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px">
+    <span style="display:block;width:100%;height:2px;background:white"></span>
+    <span style="display:block;width:100%;height:2px;background:white"></span>
+    <span style="display:block;width:100%;height:2px;background:white"></span>
+  </button>
+
+  <div id="nav-links" style="display:flex;align-items:center;gap:2rem">
+    <a href="#gallery" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Photos</a>
+    <a href="#amenities" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Amenities</a>
+    <a href="#pricing" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Rates</a>
+    <a href="#reviews" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Reviews</a>
+    <a href="the-place.html" onclick="closeNavMenu()" style="font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none">Explore</a>
+    <a href="#calendar" onclick="closeNavMenu()" style="background:var(--teal);color:white;padding:.5rem 1.3rem;border-radius:100px;font-family:'Lato',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none">Book Now</a>
   </div>
 </nav>
 
-
+<script>
+function toggleNavMenu(){
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  var isOpen = links.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+function closeNavMenu(){
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+}
+</script>
 
 <section id="top" style="position:relative;background:#041414;min-height:100vh;display:flex;overflow:hidden">
 
   <!-- LEFT 2/3 — Photo -->
   <div id="top-photo-panel" style="flex:0 0 66.666%;position:relative;overflow:hidden">
 
-    <!-- Hero photo — gazebo and deck -->
-    <img src="photos/gazebo-deck-2-hero.png" alt="Good Tides Only — gazebo and deck overlooking The Gulf" class="hero-kenburns" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <!-- Hero photo carousel — auto-rotates through 4 photos -->
+    <img src="photos/gazebo-deck-2-hero.png" alt="Good Tides Only — gazebo and deck overlooking The Gulf" class="hero-kenburns hero-slide active" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <img src="photos/beach-access-path.jpg" alt="Path to the private beach access" class="hero-kenburns hero-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <img src="photos/House_Front_Street_View.webp" alt="Good Tides Only — street view of the house" class="hero-kenburns hero-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
+    <img src="photos/beach-shore.jpg" alt="The Gulf shoreline near Good Tides Only" class="hero-kenburns hero-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(1.06) saturate(1.55) contrast(1.08)">
 
     <!-- Subtle gradient at bottom for text legibility -->
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,20,20,0) 60%,rgba(4,20,20,.18) 100%)"></div>
@@ -869,6 +912,19 @@ a:visited { color: inherit; }
 
 <script>
 (function(){
+  var slides = document.querySelectorAll('#top-photo-panel .hero-slide');
+  if(slides.length < 2) return;
+  var idx = 0;
+  setInterval(function(){
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 6000);
+})();
+</script>
+
+<script>
+(function(){
   var today = new Date().toISOString().split('T')[0];
   var ci = document.getElementById('h-checkin');
   var co = document.getElementById('h-checkout');
@@ -902,6 +958,8 @@ function heroUpdateDates(){
   100%{transform:scale(1.08)}
 }
 .hero-kenburns{animation:kenBurnsZoom 20s ease-in-out infinite alternate}
+.hero-slide{opacity:0;transition:opacity 1.4s ease-in-out}
+.hero-slide.active{opacity:1}
 
 /* Hero — fit within one screen (account for sticky nav height) + top/bottom/left margin around the photo */
 @media (min-width:769px){
